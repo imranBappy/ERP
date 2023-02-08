@@ -13,7 +13,8 @@ const Bodypart = ()=>{
                     <h3 className="absolute top-52 left-60  text-white text-6xl">Вручение сертификатов<br /> выпускникам курса 2020 г.</h3>
                 </div>
             </section>
-            <section>
+
+            <section className="">
                 <div className="container m-auto flex mt-20 mb-20">
                     <div className="w-1/2">
                         <img src="./images/secondbodyimg2.png" className="w-11/12" alt="" srcset="" />
@@ -54,8 +55,8 @@ const Bodypart = ()=>{
         <div className="ml-40 text-4xl mb-8 mt-10">
             <h1>Галерея</h1>
         </div>
-        <section >
-            <div className="container flex flex-row ml-40" >
+        <section className="overflow-hidden">
+            <div className="container flex flex-row ml-40 " >
                 
                 <div>
                 <img src="./images/fourthbody1.png" className="" alt="" srcset="" />
