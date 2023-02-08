@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import BodyImage from "./bodyImage";
 
 const Bodypart = ()=>{
-    // const lst =[1,2,3,4,5,6];
-    // const [state,setState] = useState(lst);
     const [imgState,setImgState] = useState(BodyImage);
     
     return(
        
         <>
-            <section className="mt-5">
+            <section className="mt-5 ">
                 <div className="relative container m-auto">
                     <img src="./images/bodyFirstImg1.png" className="relative w-full" alt="" srcset="" />
                     <h3 className="absolute top-52 left-60  text-white text-6xl">Вручение сертификатов<br /> выпускникам курса 2020 г.</h3>
@@ -31,6 +29,9 @@ const Bodypart = ()=>{
             </div>
         </section>
        
+        <div className="ml-28 text-4xl mb-4 mt-16">
+            <h1>Последние новости</h1>
+        </div>
         <section className="container m-auto flex flex-wrap ">
         {
             imgState.map((curEle)=>{
@@ -50,8 +51,11 @@ const Bodypart = ()=>{
         </section>
 
 
+        <div className="ml-40 text-4xl mb-8 mt-10">
+            <h1>Галерея</h1>
+        </div>
         <section >
-            <div className="container flex flex-row m-auto" >
+            <div className="container flex flex-row ml-40" >
                 
                 <div>
                 <img src="./images/fourthbody1.png" className="" alt="" srcset="" />
@@ -61,7 +65,7 @@ const Bodypart = ()=>{
                 </div>
             </div>
 
-            <div className="container m-auto flex">
+            <div className="container m-auto flex ml-40">
              <div>
                     <img src="./images/fourthbody3.png" className="" alt="" srcset="" />
                 </div>
