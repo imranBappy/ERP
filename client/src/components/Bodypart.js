@@ -9,7 +9,7 @@ const Bodypart = ()=>{
     return(
        
         <>
-        <section>
+        <section className="mt-5">
             <div className="relative container m-auto">
                 <img src="./images/bodyFirstImg1.png" className="relative w-full" alt="" srcset="" />
                 <h3 className="absolute top-52 left-60  text-white text-6xl">Вручение сертификатов<br/> выпускникам курса 2020 г.</h3>

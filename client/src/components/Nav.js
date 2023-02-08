@@ -6,7 +6,7 @@ const Nav = () => {
             
             <nav>
 
-<div className="flex justify-between bg-blue-400 h-16 ">
+<div className="flex justify-between  h-16 ">
   
   <div className='ml-7 h-16 w-16 '>
     {/* <h1 className="ml-20 font-bold font-serif text-3xl">Cripto</h1> */}
