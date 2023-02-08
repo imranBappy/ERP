@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import BodyImage from "./bodyImage";
 
 const Bodypart = ()=>{
-    // const lst =[1,2,3,4,5,6];
-    // const [state,setState] = useState(lst);
     const [imgState,setImgState] = useState(BodyImage);
     
     return(
@@ -32,12 +30,19 @@ const Bodypart = ()=>{
             </div>
         </section>
        
+
+        {/* <div className=" container" > */}
+            <div >
+            <h1 className=" flex ml-28 mb-4 text-4xl">Последние новости</h1>
+            </div>
+        {/* </div> */}
         <section className="container m-auto flex flex-wrap ">
+        
         {
             imgState.map((curEle)=>{
             return(
                 <>
-                <div className="w-1/3 p-6 ">
+                <div className="w-1/3 p-8 ">
                 <img src={curEle.image} className="w-full" alt="" srcset="" />
                 <div>
                     <h1 className="text-lg mt-3 mb-3">Вручение сертификатов<br/> выпускникам курса</h1>
@@ -51,18 +56,19 @@ const Bodypart = ()=>{
         </section>
 
 
-        <section >
-            <div className="container flex flex-row m-auto" >
-                
+        <section  className="mt-20">
+        <h1 className="ml-40 text-4xl mb-10">Галерея</h1>
+            <div className="container flex flex-row ml-40" >
+               
                 <div>
-                <img src="./images/fourthbody1.png" className="" alt="" srcset="" />
+                <img src="./images/fourthbody1.png" className="" alt="w-full" srcset="" />
                 </div>
                 <div>
                     <img src="./images/fourthbody2.png" className="w-full" alt="" srcset="" />
                 </div>
             </div>
 
-            <div className="container m-auto flex">
+            <div className="container m-auto flex ml-40">
              <div>
                     <img src="./images/fourthbody3.png" className="" alt="" srcset="" />
                 </div>
@@ -74,9 +80,6 @@ const Bodypart = ()=>{
                 </div>
                 </div>
                 </section>
-
-
-
         </>
     )
 }
