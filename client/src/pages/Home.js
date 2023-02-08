@@ -1,4 +1,5 @@
 import Nav from "../components/Nav"
+import Bodypart from "../components/Bodypart";
 
 const Home = () => {
 
@@ -7,7 +8,7 @@ const Home = () => {
             <Nav />
         </header>
         <main>
-            body
+            <Bodypart />
         </main>
     </>
 }
