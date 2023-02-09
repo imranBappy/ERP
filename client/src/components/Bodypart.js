@@ -9,7 +9,7 @@ const Bodypart = ()=>{
         <>
             <section className="mt-5 ">
                 <div className="relative container m-auto">
-                    <img src="./images/bodyFirstImg1.png" className="relative w-full" alt="" srcset="" />
+                    <img src="./images/bodyFirstImg1.png" className="relative w-full opacity-90" alt="" srcset="" />
                     <h3 className="absolute top-52 left-60  text-white text-6xl">Вручение сертификатов<br /> выпускникам курса 2020 г.</h3>
                 </div>
             </section>
@@ -39,7 +39,7 @@ const Bodypart = ()=>{
             return(
                 <>
                 <div className="w-1/3 p-6 ">
-                <img src={curEle.image} className="w-full" alt="" srcset="" />
+                <img src={curEle.image} className="w-full " alt="" srcset="" />
                 <div>
                     <h1 className="text-lg mt-3 mb-3">Вручение сертификатов<br/> выпускникам курса</h1>
                     <p className="flex justify-center mb-9">Сегодня 3 декабря 2020 года в Академии цифровых инноваций состоялось вручение сертификатов</p>
