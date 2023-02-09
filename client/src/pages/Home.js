@@ -1,4 +1,6 @@
 import Nav from "../components/Nav"
+import Bodypart from "../components/Bodypart";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -7,8 +9,13 @@ const Home = () => {
             <Nav />
         </header>
         <main>
-            body
+            <Bodypart />
         </main>
+
+        <footer>
+            <Footer />
+        </footer>
+
     </>
 }
 export default Home;
