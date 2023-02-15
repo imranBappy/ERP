@@ -1,11 +1,14 @@
-import Home from './pages/Home'
+import React from 'react';
+import { RouterProvider } from 'react-router';
+import router from './Routes/Routes/Routes';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <div className='mx-auto'>
+      <RouterProvider router={router}></RouterProvider>
+
+    </div>
   );
-}
+};
 
 export default App;
