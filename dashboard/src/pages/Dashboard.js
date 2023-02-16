@@ -5,6 +5,8 @@ import DashLink from '../components/DashLink';
 import student from '../imgs/student.png'
 import { AiOutlineClose } from 'react-icons/ai';
 import { GoThreeBars } from 'react-icons/go';
+import Analytics from '../components/Analytics';
+import StartStudent from '../components/StartStudent';
 
 
 const Dashboard = () => {
@@ -24,9 +26,8 @@ const Dashboard = () => {
                     <img className='w-20' src={logo} alt="logo" />
                 </div>
                 <div className="sidebar__menu">
-                    <ul>
+                    <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
                         <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
-                        <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
@@ -46,7 +47,7 @@ const Dashboard = () => {
                     </div>
                     <div className="dashboard__header_right flex gap-2 mr-4 mt-2">
                         <div>
-                            <img className=' w-10 rounded-full ring-1 ring-offset-2' src="https://preschool.dreamguystech.com/template/assets/img/profiles/avatar-01.jpg" alt="profile-ric" />
+                            <img className=' w-10 rounded-full ring-1 ring-offset-2' src="https://avatars.githubusercontent.com/u/61227100?v=4" alt="profile-ric" />
                         </div>
                         <div>
                             <h4 className=' font-medium text-lg leading-5'>Imran Hossen</h4>
@@ -56,7 +57,6 @@ const Dashboard = () => {
                 </div>
                 <div className="dashboard__content  bg-gray-100 p-5 ">
                     <h2 className=' text-2xl font-semibold mb-5'> Welcome Admin!</h2>
-
                     <div className="dashboard__card_wrapper flex  t-5 gap-5  flex-wrap  justify-between">
                         <div className=" flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
@@ -97,7 +97,10 @@ const Dashboard = () => {
                             </div>
                         </div>
                     </div>
+                    <Analytics />
+                    <StartStudent />
                 </div>
+
             </div>
         </div >
     );
