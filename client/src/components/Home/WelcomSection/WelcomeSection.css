@@ -1,10 +1,10 @@
-.welcom_section .welcome_header{
-    margin-top: 5%;
-    text-align: center;
-}
-.welcom_section .cards{
-    margin: 20px;
+.welcom_section{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+}
+.welcom_section .welcome_header{
+    margin-top: 5%;
+    text-align: center;
 }
