@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
 import '../styles/dashboard.css';
-import DashLink from '../components/DashLink';
 import student from '../imgs/student.png'
 import award from '../imgs/award.png'
 import Department from '../imgs/Department.png'
@@ -10,8 +9,8 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { GoThreeBars } from 'react-icons/go';
 import Analytics from '../components/Analytics';
 import StartStudent from '../components/StartStudent';
-import { RxDashboard } from 'react-icons/rx';
-import navLinks from '../data/navLink';
+import SidebarMenu from '../components/SidebarMenu';
+
 
 const Dashboard = () => {
     const [open, setOpen] = React.useState(false);
@@ -30,14 +29,7 @@ const Dashboard = () => {
                 <div className="sidebar__logo flex justify-center mt-5">
                     <img className='w-20' src={logo} alt="logo" />
                 </div>
-                <div className="sidebar__menu">
-                    <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
-                        <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
-                        {
-                            navLinks.map((link) => (<DashLink link={link} />))
-                        }
-                    </ul>
-                </div>
+                <SidebarMenu />
             </div>
             <div className="dashboard__wrapper grow">
                 <div className="dashboard__header flex justify-between  h-14 shadow-md  ">
