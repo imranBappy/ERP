@@ -1,10 +1,59 @@
-.welcom_section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+.welcom_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-.welcom_section .welcome_header{
-    margin-top: 5%;
-    text-align: center;
+.welcome_header h1 {
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #202c45;
+
+  width: 100%;
+  border: #202c45 2px solid;
+
+  color: #ffffff;
+  padding: 20px 0px 20px 0px;
 }
+
+.welcome_header h3 {
+  margin-top: 1%;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  width: 100%;
+
+  border-radius: 5%;
+  color: #202c45;
+  padding: 5px 0px 20px 0px;
+}
+.welcom_section .welcome_header {
+  margin-top: 5%;
+  text-align: center;
+}
+.welcom_section .btn-primary {
+  background: #202c45;
+  width: 300px;
+  border-radius: 0px;
+}
+.welcom_section .btn-primary:hover {
+  background: #f2184f;
+  width: 300px;
+  border-radius: 0px;
+  border: #f2184f 2px solid;
+}
+
+.welcom_section .card.w-96.bg-base-100.shadow-xl.m-2 {
+  border-radius: 0px;
+  border: #202c45 2px solid;
+}
+
+.welcom_section .card.w-96.bg-base-100.shadow-xl.m-2:hover {
+  border-radius: 0px;
+  border: #f2184f 2px solid;
+}
+
