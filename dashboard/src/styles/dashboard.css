@@ -1,5 +1,5 @@
 .drawer {
-  width: 250px;
+  min-width: 250px;
   height: 100vh;
   background-color: #fff;
   z-index: 1;
