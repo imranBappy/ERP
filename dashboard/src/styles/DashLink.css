@@ -1,0 +1,18 @@
+.nav_next {
+  margin-left: 2px;
+  transition-property: margin-left;
+  transition-duration: 0.2s;
+}
+.dash__link {
+  box-sizing: border-box;
+  transition-property: border-left;
+  transition-duration: 0.1s;
+}
+
+.dash__link:hover {
+  border-left: 5px solid #0284c7;
+}
+
+.dash__link:hover .active__link {
+  color: #0284c7;
+}
