@@ -1,0 +1,8 @@
+.nav_next {
+  margin-left: 10px;
+  transition-property: margin-left;
+  transition-duration: 0.2s;
+}
+.dash__link:hover .nav_next {
+  margin-left: 20px;
+}
