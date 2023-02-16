@@ -1,11 +1,12 @@
 .register_container{
     background: linear-gradient(rgba(5, 10, 6, 0.748), rgba(10, 26, 9, 0.733)),
     url("https://i.ibb.co/Ks2jXdT/regibk.jpg") fixed;
-  margin-top: 30px;
+  margin-top: 50px;
   padding: 25px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 8% 0px !important;
   
 }
 .res_inner{
