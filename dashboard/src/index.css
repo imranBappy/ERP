@@ -3,12 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .drawer {
-    @apply basis-60 border-r-2 h-screen bg-white;
-  }
-}
-@layer utilities {
-  .drawer {
-    left: -52rem;
+  .title-h4 {
+    @apply text-xl font-semibold pl-10 py-4;
   }
 }
