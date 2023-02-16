@@ -23,9 +23,9 @@ const Dashboard = () => {
                 <div className="sidebar__logo flex justify-center mt-5">
                     <img className='w-20' src={logo} alt="logo" />
                 </div>
-                <div className="sidebar__menu ">
+                <div className="sidebar__menu">
                     <ul>
-                        <li className=' text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
+                        <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
                         <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
@@ -35,7 +35,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="dashboard__wrapper grow  ">
-                <div className="dashboard__header flex justify-between h-14 shadow-md  ">
+                <div className="dashboard__header flex justify-between  h-14 shadow-md  ">
 
                     <div className="dashboard__header_lift flex gap-6">
                         <div className='close-btn'>
@@ -55,10 +55,10 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="dashboard__content  bg-gray-100 p-5 ">
-                    <h2 className=' text-2xl font-semibold'> Welcome Admin!</h2>
+                    <h2 className=' text-2xl font-semibold mb-5'> Welcome Admin!</h2>
 
-                    <div className="dashboard__card_wrapper flex flex-wrap mt-5 justify-between">
-                        <div className="info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
+                    <div className="dashboard__card_wrapper flex  t-5 gap-5  flex-wrap  justify-between">
+                        <div className=" flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
                                 <p className='text-gray-500 text-lg  font-semibold'>Soudent</p>
                                 <p className=' font-bold text-2xl'>50000</p>
@@ -68,7 +68,7 @@ const Dashboard = () => {
                             </div>
                         </div>
 
-                        <div className="info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
+                        <div className=" flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
                                 <p className='text-gray-500 text-lg  font-semibold'>Soudent</p>
                                 <p className=' font-bold text-2xl'>50000</p>
@@ -77,7 +77,7 @@ const Dashboard = () => {
                                 <img width="50" src={student} alt="" />
                             </div>
                         </div>
-                        <div className="info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
+                        <div className=" flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
                                 <p className='text-gray-500 text-lg  font-semibold'>Soudent</p>
                                 <p className=' font-bold text-2xl'>50000</p>
@@ -87,7 +87,7 @@ const Dashboard = () => {
                             </div>
                         </div>
 
-                        <div className="info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
+                        <div className="flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
                                 <p className='text-gray-500 text-lg  font-semibold'>Soudent</p>
                                 <p className=' font-bold text-2xl'>50000</p>
