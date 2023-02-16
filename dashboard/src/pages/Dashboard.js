@@ -29,20 +29,7 @@ const Dashboard = () => {
                 <div className="sidebar__logo flex justify-center mt-5">
                     <img className='w-20' src={logo} alt="logo" />
                 </div>
-<<<<<<< HEAD
-                <div className="sidebar__menu">
-                    <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
-                        <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Students" />
-                        <DashLink text="Teachers" />
-                        <DashLink text="Departments" />
-                        <DashLink text="Invoices" />
-                    </ul>
-                </div>
-=======
                 <SidebarMenu />
->>>>>>> 505e9ebc2b7dddf034c5af05d59bfb8d29dca877
             </div>
             <div className="dashboard__wrapper grow">
                 <div className="dashboard__header flex justify-between  h-14 shadow-md  ">
