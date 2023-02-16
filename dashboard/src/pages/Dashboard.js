@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
 import '../styles/dashboard.css';
-import DashLink from '../components/DashLink';
 import student from '../imgs/student.png'
 import award from '../imgs/award.png'
 import Department from '../imgs/Department.png'
@@ -10,6 +9,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { GoThreeBars } from 'react-icons/go';
 import Analytics from '../components/Analytics';
 import StartStudent from '../components/StartStudent';
+import SidebarMenu from '../components/SidebarMenu';
 
 
 const Dashboard = () => {
@@ -17,6 +17,7 @@ const Dashboard = () => {
     const handleOpen = () => {
         setOpen(!open)
     }
+
     return (
         <div className='dashboard__wrapper flex w-full relative'>
             <div className={`drawer ${open ? "drawer-open" : "drawer-close"}  `}>
@@ -32,14 +33,20 @@ const Dashboard = () => {
                     <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
                         <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
                         <DashLink text="Dashboard" />
+<<<<<<<<< Temporary merge branch 1
                         <DashLink text="Students" />
                         <DashLink text="Teachers" />
-                        <DashLink text="Departments" />
-                        <DashLink text="Invoices" />
+                        <DashLink text="Department" />
+                        <DashLink text="Invoice" />
+=========
+                        <DashLink text="Dashboard" />
+                        <DashLink text="Dashboard" />
+                        <DashLink text="Dashboard" />
+>>>>>>>>> Temporary merge branch 2
                     </ul>
                 </div>
             </div>
-            <div className="dashboard__wrapper grow  ">
+            <div className="dashboard__wrapper grow">
                 <div className="dashboard__header flex justify-between  h-14 shadow-md  ">
 
                     <div className="dashboard__header_lift flex gap-6">
