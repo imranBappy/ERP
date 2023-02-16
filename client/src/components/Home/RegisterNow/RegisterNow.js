@@ -33,8 +33,24 @@ const RegisterNow = () => {
                 </div>
 
                 <div className="register_right">
-                    <p>Create your free account now and get immediate access to 100s of courses</p>
-                    <button className="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg">Responsive</button>
+                    <div className="card w-96 bg-base-100 shadow-xl">
+                        <div className="card-body frm_crd_body">
+                            <div className="card_title_form">
+                                <p>Create Your free account Now and <br /> Get immidate access to <br /> 100 lines of any cources. </p>
+                            </div>
+                            <h2 className="card-title">Card title!</h2>
+                            <div className="rg_form_container">
+                                <form action="">
+                                    <input type="text" placeholder='Your Name*'/>
+                                    <input type="email" placeholder='Your Email*'/>
+                                    <input type="password" placeholder='Password*'/>
+                                </form>
+                            </div>
+                            <div className="form_btn">
+                                <input type="submit" value="Register" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
