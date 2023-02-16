@@ -32,10 +32,10 @@ const Dashboard = () => {
                     <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
                         <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
                         <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
+                        <DashLink text="Students" />
+                        <DashLink text="Teachers" />
+                        <DashLink text="Departments" />
+                        <DashLink text="Invoices" />
                     </ul>
                 </div>
             </div>
