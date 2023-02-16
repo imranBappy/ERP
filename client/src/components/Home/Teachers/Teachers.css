@@ -1,42 +1,90 @@
-.teacher_section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    
+.teacher_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
 }
-.teacher_header{
-    text-align: center;
-    margin: 20px;
+.teacher_header {
+  text-align: center;
+  margin: 20px;
 }
-.teacher_container{
-    width: 80%;
-    
+.teacher_container {
+  width: 80%;
 }
-.t_img_container{
-    max-width: 300px !important;
-}
-.single_card img{
-    max-width: 250px;
-}
-.crd_bdy_teacher{
-    text-align: left;
-}
-.teacher_btn_con{
+.t_img_container {
+  display: flex;
+  align: center;
+  margin: 30px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  border-image: round;
+  border-radius: 0;
 }
-.teacher_more{
-    margin: 5% 0px;
-    width: 35%;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgb(140, 1, 1);
-    border-radius: 15px;
-    border: 2px solid black;
-    padding: 10px 20px;
+.single_card img {
+  max-width: 250px;
+}
+.crd_bdy_teacher {
+  text-align: left;
+}
+.teacher_btn_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teacher_more {
+  margin: 5% 0px;
+  width: 35%;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #f2184f;
+  border-radius: 0px;
+  border: 2px solid #f2184f;
+  padding: 10px 20px;
+}
+
+.teacher_more:hover {
+  margin: 5% 0px;
+  width: 35%;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #202c45;
+  border-radius: 0px;
+  border: 2px solid #202c45;
+  padding: 10px 20px;
+}
+
+.teacher_header h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #202c45;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #202c45;
+}
+
+.btn-primary {
+  background: #202c45;
+
+  border-radius: 0px;
+}
+
+.btn-primary:hover {
+  background: #f2184f;
+  border-color: #f2184f;
+
+  border-radius: 0px;
+}
+
+.card {
+  border-radius: 0px;
+  border: #202c45 0px solid;
+}
+
+.card:hover {
+  border-radius: 0px;
+  border: #f2184f 2px solid;
 }
