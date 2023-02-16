@@ -1,0 +1,24 @@
+.feature_container{
+    background: linear-gradient(rgba(5, 10, 6, 0.748), rgba(10, 26, 9, 0.733)),
+    url("https://i.ibb.co/7R1rSgZ/back-img-home2.jpg") fixed;
+  margin-top: 50px;
+  padding: 25px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8% 0px !important;
+}
+
+
+.f_card_container{
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    margin: 10px 20px;
+    font-size: 20px;
+}
+
+.f_card_container h2{
+    margin: 20px 0px;
+    font-size: 40px;
+}
