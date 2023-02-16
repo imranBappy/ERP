@@ -1,36 +1,55 @@
-import React from 'react';
-
+import React from "react";
+import "../styles/StartStudent.css";
 const StartStudent = () => {
     return (
-        <div className="start__students bg-white mt-10 rounded-md">
-            <h4 className='title-h4'>Star Students</h4>
-            <table class="table-auto">
-                <thead>
-                    <tr>
-                        <th>Song</th>
-                        <th>Artist</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                        <td>Malcolm Lockyer</td>
-                        <td>1961</td>
-                    </tr>
-                    <tr>
-                        <td>Witchy Woman</td>
-                        <td>The Eagles</td>
-                        <td>1972</td>
-                    </tr>
-                    <tr>
-                        <td>Shining Star</td>
-                        <td>Earth, Wind, and Fire</td>
-                        <td>1975</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <>
+            <div className="start__students w-full bg-white mt-10 rounded-md overflow-x-auto">
+                <h4 className="title-h4">Star Students</h4>
+                <div className="students__list px-10 pb-10 overflow-x-auto" >
+                    <table className=" student__table " width="1000">
+                        <thead className="  bg-sky-800 rounded-md text-white h-10">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Marks</th>
+                                <th>Percentage</th>
+                                <th>Year</th>
+                            </tr>
+                        </thead>
+                        <tbody className=" student__table__body">
+                            <tr>
+                                <td>1</td>
+                                <td>Imran Hossen</td>
+                                <td>1185</td>
+                                <td>99.9%</td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Imran Hossen</td>
+                                <td>1185</td>
+                                <td>99.9%</td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Imran Hossen</td>
+                                <td>1185</td>
+                                <td>99.9%</td>
+                                <td>2023</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Imran Hossen</td>
+                                <td>1185</td>
+                                <td>99.9%</td>
+                                <td>2023</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </>
     );
 };
 

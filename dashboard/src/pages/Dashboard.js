@@ -10,13 +10,15 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { GoThreeBars } from 'react-icons/go';
 import Analytics from '../components/Analytics';
 import StartStudent from '../components/StartStudent';
-
+import { RxDashboard } from 'react-icons/rx';
+import navLinks from '../data/navLink';
 
 const Dashboard = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => {
         setOpen(!open)
     }
+
     return (
         <div className='dashboard__wrapper flex w-full relative'>
             <div className={`drawer ${open ? "drawer-open" : "drawer-close"}  `}>
@@ -31,15 +33,13 @@ const Dashboard = () => {
                 <div className="sidebar__menu">
                     <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
                         <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
-                        <DashLink text="Dashboard" />
+                        {
+                            navLinks.map((link) => (<DashLink link={link} />))
+                        }
                     </ul>
                 </div>
             </div>
-            <div className="dashboard__wrapper grow  ">
+            <div className="dashboard__wrapper grow">
                 <div className="dashboard__header flex justify-between  h-14 shadow-md  ">
 
                     <div className="dashboard__header_lift flex gap-6">

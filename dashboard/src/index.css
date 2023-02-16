@@ -6,4 +6,9 @@
   .title-h4 {
     @apply text-xl font-semibold pl-10 py-4;
   }
+  .link__wrapper {
+    @apply mb-1 h-10 flex pl-5 items-center text-lg;
+  }
 }
+
+
