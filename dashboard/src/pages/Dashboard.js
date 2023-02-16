@@ -1,13 +1,18 @@
 import React from 'react';
 import logo from '../logo.svg';
-import { NavLink } from 'react-router-dom';
+import '../styles/dashboard.css';
 import DashLink from '../components/DashLink';
 const Dashboard = () => {
-
-
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        setOpen(!open)
+    }
     return (
         <div className='dashboard__wrapper flex w-full relative'>
-            <div className={` drawer `}>
+            <div className={`drawer ${open ? "drawer-open" : "drawer-close"}  `}>
+                <div className='close-btn'>
+                    <button onClick={handleOpen} >Close</button>
+                </div>
                 <div className="sidebar__logo flex justify-center mt-5">
                     <img className='w-20' src={logo} alt="logo" />
                 </div>
@@ -19,13 +24,16 @@ const Dashboard = () => {
                         <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
                         <DashLink text="Dashboard" />
-
                     </ul>
                 </div>
             </div>
             <div className="dashboard__wrapper grow  ">
-                <div className="dashboard__header">
-                    <div className="dashboard__header_lift">
+                <div className="dashboard__header flex justify-between">
+
+                    <div className="dashboard__header_lift flex gap-6">
+                        <div className='close-btn'>
+                            <button onClick={handleOpen}>OPEN</button>
+                        </div>
                         <h1>Dashboard</h1>
                     </div>
                     <div className="dashboard__header_right">
