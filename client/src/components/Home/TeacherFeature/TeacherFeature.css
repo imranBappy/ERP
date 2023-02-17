@@ -1,5 +1,7 @@
 
-
+.teacher_feature_container img{
+    max-width: 200px !important;
+}
 .chan_speech h2,p{
-    text-align: start;
+    text-align: justify;
 }
