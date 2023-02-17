@@ -10,7 +10,7 @@
   display: none;
 }
 .close__btn__ops {
-  position: absolute;
+  position: fixed;
   top: 37px;
   right: 10px;
 }
@@ -26,17 +26,17 @@
   }
 
   .drawer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -250px;
   }
   .drawer__close {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -250px;
   }
   .drawer__open {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
   }
