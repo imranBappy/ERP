@@ -38,7 +38,7 @@
     max-height: 900px;
 }
 .slide_img img{
-    border:2px solid #f2184eb1;
+    border:2px solid white;
     border-radius: 30px;
 }
 .slide_img p{
