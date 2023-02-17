@@ -8,6 +8,9 @@
   transition-property: border-left;
   transition-duration: 0.1s;
 }
+.active__link__icon {
+  color: #0284c7;
+}
 
 .dash__link:hover {
   border-left: 5px solid #0284c7;
