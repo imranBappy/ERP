@@ -1,8 +1,6 @@
 import React from 'react';
 import ListHead from './ListHead';
-import startStudentHead from '../data/startSudentHead';
 import ListBody from './ListBody';
-import startStudentsBody from '../data/startStudentsBody';
 import { studentListBody, studentListHead } from '../data/staudentList';
 
 const StudentsList = () => {
