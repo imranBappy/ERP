@@ -1,0 +1,16 @@
+.notice_container{
+    background-color: #202c45;
+    /* padding: 10px; */
+}
+.notice_body{
+    padding: 10px 10px;
+    max-width: 90%;
+}
+.notice-title h2{
+    color:red;
+    font-weight: 600;
+    text-align: center;
+}
+.notice_slide{
+    color: white;
+}

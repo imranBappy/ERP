@@ -35,7 +35,7 @@ const Teachers = () => {
   ];
   return (
     <div className="teacher_section">
-      <div className="teacher_container">
+      <div className="teacher_container max-w-[1500px] mx-auto">
         <div className="teacher_header">
           <h2>Our Teachers</h2>
           <h3>

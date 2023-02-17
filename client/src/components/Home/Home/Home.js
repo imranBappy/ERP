@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import BannerBottom from '../BannerBottom/BannerBottom';
 import FeatureContent from '../FeatureContent/FeatureContent';
 import RegisterNow from '../RegisterNow/RegisterNow';
 import Teachers from '../Teachers/Teachers';
@@ -9,6 +10,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <BannerBottom></BannerBottom>
             <WelcomeSection></WelcomeSection>
             <RegisterNow></RegisterNow>
             <Teachers></Teachers>

@@ -1,0 +1,16 @@
+.nav_top_container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #202c45;
+    color: white;
+    padding: 10px;
+}
+.nav_top_body{
+    font-size: 14px;
+    font-weight: 600;
+}
+.have_ques{
+    color: rgb(233, 233, 233);
+    font-weight: 400;
+}

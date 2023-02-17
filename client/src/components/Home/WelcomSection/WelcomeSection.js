@@ -31,14 +31,14 @@ const WelcomeSection = () => {
     ]
 
     return (
-        <div className='welcom_section mx-auto '>
-            <div className="wel_container">
+        <div className='welcom_section'>
+            <div className="wel_container max-w-[1500px] mx-auto">
                 <div className='welcome_header'>
                     <h1 className='text-4xl'>Welcome to University</h1>
                     <h3>Study Point is a international leader in teaching students to write effectively,learn from each other and think for themselves.</h3>
                 </div>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 cards'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {
                         cardData.map(card => <SingleCard
                             key={card.id}

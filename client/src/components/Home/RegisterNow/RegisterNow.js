@@ -4,7 +4,7 @@ import "./RegisterNow.css";
 const RegisterNow = () => {
     return (
         <div className="register_container">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 res_inner">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 res_inner max-w-[1500px] mx-auto">
 
                 <div className="register_left">
                     <h2>REGISTER NOW</h2>
@@ -32,7 +32,7 @@ const RegisterNow = () => {
                     </div>
                 </div>
 
-                <div className="register_right">
+                <div className="register_right sm:max-w-xs">
                     <div className="card w-96 bg-base-100 shadow-xl">
                         <div className="card-body frm_crd_body">
                             <div className="card_title_form">

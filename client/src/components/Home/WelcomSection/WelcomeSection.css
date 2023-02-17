@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  /* width: 80%; */
+}
+.wel_container{
+  /* width: 80%; */
 }
 .welcom_section .welcome_header {
   margin-top: 5%;
@@ -10,22 +14,22 @@
 }
 .welcom_section .btn-primary {
   background: #202c45;
-  width: 300px;
+  width: 200px;
   border-radius: 0px;
 }
 .welcom_section .btn-primary:hover {
   background: #f2184f;
-  width: 300px;
+  width: 200px;
   border-radius: 0px;
   border: #f2184f 2px solid;
 }
 
-.welcom_section .card.w-96.bg-base-100.shadow-xl.m-2 {
+.welcom_section  {
   border-radius: 0px;
   border: #202c45 2px solid;
 }
 
-.welcom_section .card.w-96.bg-base-100.shadow-xl.m-2:hover {
+.welcom_section hover {
   border-radius: 0px;
   border: #f2184f 2px solid;
 }
