@@ -1,15 +1,49 @@
 
 #banner_container_full{
     width: 100%;
-    height: 750px;
-    background:linear-gradient(rgba(30, 29, 31, 0.791), rgba(13, 13, 13, 0.734)), url("https://i.ibb.co/8NLC0PP/graduation-21.jpg") fixed;
+    height: 780px;
+    background:linear-gradient(rgba(30, 29, 31, 0.791), rgba(13, 13, 13, 0.734)), url("https://i.ibb.co/Ks2jXdT/regibk.jpg") fixed;
+    /* background:linear-gradient(rgba(30, 29, 31, 0.791), rgba(13, 13, 13, 0.734)), url("https://i.ibb.co/8NLC0PP/graduation-21.jpg") fixed; */
     /* background:linear-gradient(rgba(30, 29, 31, 0.782), rgba(13, 13, 13, 0.658)), url("https://i.ibb.co/5GJdX8v/bannerback.jpg") fixed; */
     /* background:linear-gradient(rgba(30, 29, 31, 0.782), rgba(13, 13, 13, 0.658)), url("https://i.ibb.co/wg2Kndv/bancak222.jpg") fixed; */
     
     padding: 10% 0;
 }
 
+.banner_left{
+    text-align: justify;
+    color: white;
+}
+.banner_left h2{
+    font-size: 35px;
+    font-weight: 700;
+    font-family: serif;
+    margin-bottom: 30px;
+}
+.banner_left p{
+    font-size: 22px;
+    font-family: serif;
+}
 
+.banner_left button{
+    background-color: #f2184f;
+    padding: 12px 18px;
+    margin-top: 20px;
+    margin-left: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 .carousel-item{
     max-height: 900px;
+}
+.slide_img img{
+    border:2px solid #f2184eb1;
+    border-radius: 30px;
+}
+.slide_img p{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
 }

@@ -73,9 +73,9 @@ const BannerBottom = () => {
         <div className='notice_container'>
             <div className="notice_body">
               <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4'>
-                <div className="notice-title">
+                <div className="notice-title animate__animated animate__lightSpeedInLeft animate__infinite	infinite animate__slower	3s" >
                   
-                  <h2>Latest Notice</h2>
+                  <h2>New Notice</h2>
                 </div>
                 <div className="col-span-3 notice_slide">
                   <Slider {...settings}>

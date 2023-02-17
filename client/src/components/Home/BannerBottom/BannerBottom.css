@@ -3,13 +3,14 @@
     /* padding: 10px; */
 }
 .notice_body{
-    padding: 10px 10px;
+    padding: 14px 10px;
     max-width: 90%;
 }
 .notice-title h2{
-    color:red;
-    font-weight: 600;
+    color:#f2184f;
+    font-weight: 800;
     text-align: center;
+    font-size: 18px;
 }
 .notice_slide{
     color: white;

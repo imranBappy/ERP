@@ -1,34 +1,93 @@
 import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Banner.css";
+import BannerImages from './BannerImages';
+
+
 
 const Banner = () => {
+    const settings = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 6000,
+        autoplaySpeed: 6000,
+        cssEase: "ease-out",
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      };
+
+      const ban_imgs = [
+        {
+          id:1,
+          img:"https://i.ibb.co/RSx0JLt/slider-1s.jpg",
+          des:"University Main Campus View.",
+          
+        },
+        {
+          id:2,
+          img:"https://i.ibb.co/qC6ss6h/slider-2.jpg",
+          des:"Students' Celebrating their Graduation Moment.",
+        },
+        {
+          id:3,
+          img:"https://i.ibb.co/L1yJW31/slider-3.jpg",
+          des:"The Glorious Journey and Proud moment with President.",
+        },
+        {
+          id:4,
+          img:"https://i.ibb.co/D5Gm8FM/slider-4.jpg",
+          des:"Award ceremony for successfull Students. ",
+        },
+
+
+      ]
     return (
         <div id='banner_container_full'>
-            <div className="carousel w-full">
-                {/* <div id="slide1" className="carousel-item relative w-full caro_img">
-                    <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide4" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-4/5 mx-auto">
+                <div className="banner_left w-4/5 mx-auto ">
+                    <h2>Welcome to the University of We Pointer</h2>
+                    <p>On the first day of July 1921 the University of Dhaka opened its doors to students with Sir P.J. Hartog ...Founded : 1921 Faculty Members : 2000+.....</p>
+                    <button>Read More</button>
                 </div>
-
-
-                <div id="slide2" className="carousel-item relative w-full">
-                <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
-                    </div>
+                <div className="banner_right w-4/5 mx-auto">
+                    <Slider {...settings}>
+                        {
+                            ban_imgs.map(slide => <BannerImages
+                                key={slide.id}
+                                slide = {slide}
+                            ></BannerImages>)
+                        }
+                        
+                    </Slider>
                 </div>
-                
-                <div id="slide3" className="carousel-item relative w-full">
-                <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" className="w-full" />
-                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
-                    </div>
-                </div> */}
 
             </div>
         </div>
