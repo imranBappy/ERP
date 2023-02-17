@@ -1,5 +1,6 @@
 import React from 'react';
 import TableImg from './TableImg';
+import ActionBtn from './ActionBtn';
 
 const ListBody = (props) => {
     const { body } = props;
@@ -17,9 +18,10 @@ const ListBody = (props) => {
                                 case "check":
                                     return <td key={index}><input type="checkbox" /></td>
                                 case "action":
-                                    return <td key={index}> <button className='mr-3'>View</button>   <button>Edit</button> </td>
+                                    return <ActionBtn key={index} />
                                 case "name":
-                                    return <TableImg key={index} name={item[key]} image={item['image']} />
+                                    return props.img ? <TableImg key={index} name={item[key]} image={item['image']} /> : <td key={index}>{item["name"]}</td>;
+
                                 default:
                                     return <td key={index}>{item[key]}</td>
                             }
