@@ -52,7 +52,7 @@ const Footer = () => {
 
 
             </div>
-            <div className="footer_bottom mx-auto">
+            <div className="footer_bottom text-center mx-auto">
                 <p>© 2023 Study Point. All Rights Reserved. Design, Development and Maintenance by Return Zero</p>
             </div>
         </div>

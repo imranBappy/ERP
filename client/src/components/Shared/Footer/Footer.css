@@ -48,4 +48,8 @@
     color: white;
     text-align: center;
     padding: 10px;
+    text-align: center !important;
+}
+.footer_bottom p{
+    text-align: center !important;
 }
