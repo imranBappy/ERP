@@ -22,7 +22,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl nav_icon_re sm: text-sm lg:text-xl"> <img src="https://i.ibb.co/BtsJtmg/logo.png" alt="" /> Return <span className='zero'> Zero; </span> University</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-xl nav_icon_re sm:text-sm lg:text-xl"> <img className='sm : hidden lg:inline' src="https://i.ibb.co/BtsJtmg/logo.png" alt="" /> Return <span className='zero'> Zero; </span>University</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
