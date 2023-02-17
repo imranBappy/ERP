@@ -1,6 +1,7 @@
 # Return Zero University
 
 <p style="font-size:10px;"> On Going Project </p>
+
 ### Main Site Link
 
 ```
@@ -13,7 +14,7 @@ https://return-zero.netlify.app/
 https://dashboard-return-zero.netlify.app
 ```
 
-<img src="./doc/img"/>
+<img src="./doc/img/logo.png"/>
 
 <h2>Overview</h2>
 
