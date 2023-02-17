@@ -22,3 +22,10 @@
     margin: 20px 0px;
     font-size: 40px;
 }
+.last_card_icon{
+    font-size: 80px;
+    color: #f2184f;
+    border: 2px solid white;
+    border-radius: 120px;
+    margin-bottom: 20px;
+}

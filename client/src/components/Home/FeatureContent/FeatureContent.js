@@ -5,25 +5,25 @@ const FeatureContent = () => {
     const feature_card = [
         {
             id:1,
-            icon:<i class="fa-regular fa-mask-ventilator"></i>,
+            icon:<i class="fa-solid fa-calendar-check"></i>,
             num: "1200",
             des: "EVENT PARTICIPATED"
         },
         {
             id:2,
-            icon:<i class="fa-solid fa-clipboard-list-check"></i>,
+            icon:<i class="fa-solid fa-floppy-disk"></i>,
             num: "1000",
             des: "CLASSES COMPLETE"
         },
         {
             id:3,
-            icon:<i class="fa-sharp fa-regular fa-trophy"></i>,
+            icon:<i class="fa-solid fa-award"></i>,
             num: "500",
             des: "AWRADS WON"
         },
         {
             id:4,
-            icon:<i class="fa-solid fa-file-check"></i>,
+            icon:<i class="fa-brands fa-centercode"></i>,
             num: "300",
             des: "STUDENT ENROLLED"
         }

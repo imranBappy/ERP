@@ -57,7 +57,8 @@
 .teacher_header h2 {
   font-size: 30px;
   font-weight: 600;
-  color: #202c45;
+  color: white;
+  
 }
 
 .card-title {
@@ -87,4 +88,13 @@
 .card:hover {
   border-radius: 0px;
   border: #f2184f 2px solid;
+}
+.tech_hed{
+  background-color: #202c45;
+  color: white;
+  padding: 12px;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  margin-bottom: 20px;
+  font-family: serif;
 }

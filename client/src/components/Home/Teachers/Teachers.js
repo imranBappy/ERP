@@ -37,8 +37,8 @@ const Teachers = () => {
     <div className="teacher_section">
       <div className="teacher_container max-w-[1500px] mx-auto">
         <div className="teacher_header">
-          <h2>Our Teachers</h2>
-          <h3>
+          <h2 className="tech_hed">Our Teachers</h2>
+          <h3 className="hed_pera mb-4">
             Find online courses and a wide range of related learning content.
           </h3>
         </div>
