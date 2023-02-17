@@ -5,3 +5,18 @@
 .chan_speech h2,p{
     text-align: justify;
 }
+
+.heading_h1{
+    background-color: #202c45;
+    color: white;
+    padding: 12px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    margin-bottom: 20px;
+    font-family: serif;
+}
+.hed_pera{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+}

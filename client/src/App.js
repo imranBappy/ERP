@@ -4,7 +4,7 @@ import router from './Routes/Routes/Routes';
 
 const App = () => {
   return (
-    <div className='mx-auto bg-white'>
+    <div className='mx-auto'>
       <RouterProvider router={router}></RouterProvider>
 
     </div>
