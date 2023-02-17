@@ -45,27 +45,27 @@ const BannerBottom = () => {
       const notices = [
         {
           id:1,
-          n1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae."
+          n1:"🔴 2020 degree 3rd year final exam result release."
         },
         {
           id:2,
-          n1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae."
+          n1:"2023 power to power routine change. 🔴 In 2023 academic year"
         },
         {
           id:3,
-          n1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae."
+          n1:"🔴 Admission to Masters Professional Course in 2023 academic year has started."
         },
         {
           id:4,
-          n1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae."
+          n1:"🔴 2023 Master's Final Exam Center List Released"
         },
         {
           id:5,
-          n1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae."
+          n1:"🔴 2023 LLB first and last phase exam routine release."
         },
         {
           id:6,
-          n1:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repudiandae."
+          n1:"🔴 Degree 1st Year Admission Result (2nd Merit List) Publication."
         },
       ]
 

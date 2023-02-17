@@ -49,9 +49,11 @@
 
 
 /* Rigth side */
+
 .frm_crd_body{
     border: 4px solid rgb(155, 8, 8);
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    background: none;
 }
 .card-body input{
     width: 100%;
