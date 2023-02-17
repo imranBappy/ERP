@@ -56,7 +56,7 @@ const Dashboard = () => {
                     <div className="dashboard__card_wrapper flex  t-5 gap-5  flex-wrap  justify-between">
                         <div className=" flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
-                                <p className='text-gray-500 text-lg  font-semibold'>Students</p>
+                                <p className='text-gray-500 text-lg  font-semibold'>students</p>
                                 <p className=' font-bold text-2xl'>50055</p>
                             </div>
                             <div className="card__right">
@@ -66,7 +66,7 @@ const Dashboard = () => {
 
                         <div className=" flex-grow info_card flex bg-white  basis-80 justify-between p-5 rounded-md shawdow-md">
                             <div className="card__left">
-                                <p className='text-gray-500 text-lg  font-semibold'>Award</p>
+                                <p className='text-gray-500 text-lg  font-semibold'>award</p>
                                 <p className=' font-bold text-2xl'>50+</p>
                             </div>
                             <div className="card__right">
@@ -98,7 +98,7 @@ const Dashboard = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 
