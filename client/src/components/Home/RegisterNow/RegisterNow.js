@@ -33,12 +33,12 @@ const RegisterNow = () => {
                 </div>
 
                 <div className="register_right sm:max-w-xs">
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card w-96 bg-base-100 shadow-xl card_back">
                         <div className="card-body frm_crd_body">
-                            <div className="card_title_form">
+                            <div className="card_title_form mb-4">
                                 <p>Create Your free account Now and <br /> Get immidate access to <br /> 100 lines of any cources. </p>
                             </div>
-                            <h2 className="card-title">Card title!</h2>
+                            
                             <div className="rg_form_container">
                                 <form action="">
                                     <input type="text" placeholder='Your Name*'/>

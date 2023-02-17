@@ -73,8 +73,8 @@ const Banner = () => {
         <div id='banner_container_full'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-4/5 mx-auto">
                 <div className="banner_left w-4/5 mx-auto ">
-                    <h2>Welcome to the University of We Pointer</h2>
-                    <p>On the first day of July 1921 the University of Dhaka opened its doors to students with Sir P.J. Hartog ...Founded : 1921 Faculty Members : 2000+.....</p>
+                    <h2>Welcome to the Retrun Zero University</h2>
+                    <p>On the first day of July 1921 the Retrun Zero University opened its doors to students with Sir P.J. Hartog ...Founded : 1921 Faculty Members : 2000+.....</p>
                     <button>Read More</button>
                 </div>
                 <div className="banner_right w-4/5 mx-auto">

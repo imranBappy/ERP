@@ -26,10 +26,16 @@
 
 .welcom_section  {
   border-radius: 0px;
-  border: #202c45 2px solid;
+  /* border: #202c45 2px solid; */
 }
 
 .welcom_section hover {
   border-radius: 0px;
   border: #f2184f 2px solid;
+}
+.wel_icon{
+  font-size: 60px;
+  border: 2px solid #f2184f;
+  padding:10px 20px;
+  border-radius: 65%;
 }

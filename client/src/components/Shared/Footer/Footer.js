@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Footer.css";
 
 
@@ -12,14 +13,14 @@ const Footer = () => {
                         <p>Sign up to receive email updates about courses</p>
                     </div>
                     <div className='lg:ml-32'>
-                        <input type="email" placeholder='Enter your email'/>
+                        <input type="email" placeholder='Enter your email' />
                         <button type="submit">SubsCribe</button>
                     </div>
                 </div>
             </div>
             <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  max-w-[1400px] mx-auto">
                 <div className='mr-4'>
-                    <h2 className='mb-3 footer_head2'>Study Point</h2>
+                    <Link to="/" className="btn btn-ghost normal-case nav_icon_re sm: text-sm lg:text-lg text-left mb-3">Return <span className='zero'> Zero; </span> University</Link>
                     <p className='mb-3'><i class="fa-solid fa-location-dot ft_angle_icon"></i> Administrative Building (Ground Floor)Dhaka-1000, Bangladesh</p>
                     <p className='mb-3'><i class="fa-solid fa-phone ft_angle_icon"></i> +88-09666911463</p>
                     <p className='mb-3'><i class="fa-solid fa-fax ft_angle_icon"></i> Fax: 880-2-9667222</p>
@@ -51,7 +52,7 @@ const Footer = () => {
 
 
             </div>
-            <div className="footer_bottom mx-auto">
+            <div className="footer_bottom text-center mx-auto">
                 <p>© 2023 Study Point. All Rights Reserved. Design, Development and Maintenance by Return Zero</p>
             </div>
         </div>
