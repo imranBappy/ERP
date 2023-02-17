@@ -1,7 +1,6 @@
 import { RxDashboard } from 'react-icons/rx';
 import { SlGraduation } from 'react-icons/sl';
-import { FaChalkboardTeacher } from 'react-icons/fa';
-import { FcDepartment } from 'react-icons/fc';
+
 import { FaFileInvoiceDollar } from 'react-icons/fa';
 import { TbFileInvoice } from 'react-icons/tb';
 import { GiTeacher } from 'react-icons/gi';
