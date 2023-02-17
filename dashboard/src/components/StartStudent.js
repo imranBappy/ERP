@@ -3,11 +3,11 @@ import "../styles/StartStudent.css";
 const StartStudent = () => {
     return (
         <>
-            <div className="start__students w-full bg-white mt-10 rounded-md overflow-x-auto">
+            <div className="start__students w-full bg-white mt-10 rounded-md ">
                 <h4 className="title-h4">Star Students</h4>
-                <div className="students__list px-10 pb-10 overflow-x-auto" >
-                    <table className=" student__table " width="1000">
-                        <thead className="  bg-sky-800 rounded-md text-white h-10">
+                <div className="students__list w-full px-10 pb-10 overflow-x-auto" >
+                    <table className=" table-auto student__table min-w-max w-full" style={{ minWidth: "750px" }}>
+                        <thead className="bg-sky-800 rounded-md  text-white h-10">
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>

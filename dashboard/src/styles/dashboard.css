@@ -4,18 +4,24 @@
   background-color: #fff;
   z-index: 1;
   transition-property: position, left;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 }
-.close-btn {
+.close__btn {
   display: none;
 }
-.close-btn-ops{
-    position: absolute;
-    top: 37px;
-    right: 10px;
+.close__btn__ops {
+  position: absolute;
+  top: 37px;
+  right: 10px;
 }
+
+/* my__table */
+
 @media screen and (max-width: 1200px) {
-  .close-btn {
+  .dashboard__wrapper {
+    width: 100%;
+  }
+  .close__btn {
     display: block;
   }
 
@@ -24,12 +30,12 @@
     top: 0;
     left: -250px;
   }
-  .drawer-close {
+  .drawer__close {
     position: absolute;
     top: 0;
     left: -250px;
   }
-  .drawer-open {
+  .drawer__open {
     position: absolute;
     top: 0;
     left: 0;
