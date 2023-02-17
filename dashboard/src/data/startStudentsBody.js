@@ -217,40 +217,6 @@ const startStudentsBody = [
         mark: "1185",
         percentage: "99.9%",
         year: "2023"
-    }, {
-        id: "PRE2209",
-        name: "Aaliyah",
-        mark: "1185",
-        percentage: "99.9%",
-        year: "2023"
-    },
-    {
-        id: "PRE2209",
-        name: "Aaliyah",
-        mark: "1185",
-        percentage: "99.9%",
-        year: "2023"
-    },
-    {
-        id: "PRE2209",
-        name: "Aaliyah",
-        mark: "1185",
-        percentage: "99.9%",
-        year: "2023"
-    },
-    {
-        id: "PRE2209",
-        name: "Aaliyah",
-        mark: "1185",
-        percentage: "99.9%",
-        year: "2023"
-    },
-    {
-        id: "PRE2209",
-        name: "Aaliyah",
-        mark: "1185",
-        percentage: "99.9%",
-        year: "2023"
     }
 ]
 

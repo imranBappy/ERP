@@ -10,7 +10,7 @@
   display: none;
 }
 .close__btn__ops {
-  position: fixed;
+  position: absolute;
   top: 37px;
   right: 10px;
 }

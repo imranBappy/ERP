@@ -5,7 +5,6 @@ import { MdNavigateNext } from "react-icons/md";
 import "../styles/DashLink.css";
 const DashLink = (props) => {
     const { path, text, element } = props.link;
-    console.log(props.link);
     return (
         <>
             {
