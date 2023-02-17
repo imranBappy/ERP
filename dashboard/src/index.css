@@ -9,6 +9,7 @@
   .link__wrapper {
     @apply mb-1 h-10 flex pl-5 items-center text-lg;
   }
+  .page__title {
+    @apply text-2xl font-semibold mb-5;
+  }
 }
-
-

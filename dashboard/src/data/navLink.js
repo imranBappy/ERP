@@ -16,28 +16,28 @@ const navLinks = [
         text: 'Dashboard'
     },
     {
-        path: '/',
+        path: '/students',
         element: <SlGraduation className='active__link' />,
         text: 'Students'
     },
     {
-        path: '/',
+        path: '/teachers',
         element: <GiTeacher className='active__link' />,
         text: 'Teachers'
     }, {
-        path: '/',
+        path: '/departments',
         element: <BiBuildingHouse className='active__link' />,
         text: 'Departments'
     }, {
-        path: '/',
+        path: '/invoices',
         element: <TbFileInvoice className='active__link' />,
         text: 'Invoices'
     }, {
-        path: '/',
+        path: '/accounts',
         element: <FaFileInvoiceDollar className='active__link' />,
         text: 'Accounts'
     }, {
-        path: '/',
+        path: '/holiday',
         element: <MdOutlineHolidayVillage className='active__link' />,
         text: 'Holiday'
     }
