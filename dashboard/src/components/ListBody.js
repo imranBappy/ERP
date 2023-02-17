@@ -4,26 +4,24 @@ import ActionBtn from './ActionBtn';
 
 const ListBody = (props) => {
     const { body } = props;
-    console.log(props.img);
     return (
         <tbody className=" student__table__body">
             {
                 body.map((item, index) => {
                     return <tr key={index}>
-                        {Object.keys(item).map((key, index) => {
-                            console.log(key);
+                        {Object.keys(item).map((key, index2) => {
+
                             switch (key) {
                                 case "image":
                                     break;
                                 case "check":
-                                    return <td key={index}><input type="checkbox" /></td>
+                                    return <td className={index2 === 0 && 'pl-2'} key={index2}><input type="checkbox" /></td>
                                 case "action":
-                                    return <ActionBtn key={index} />
+                                    return <ActionBtn key={index2} />
                                 case "name":
-                                    return props.img ? <TableImg key={index} name={item[key]} image={item['image']} /> : <td key={index}>{item["name"]}</td>;
-
+                                    return props.img ? <TableImg key={index2} name={item[key]} image={item['image']} /> : <td key={index2}>{item["name"]}</td>;
                                 default:
-                                    return <td key={index}>{item[key]}</td>
+                                    return <td key={index2}>{item[key]}</td>
                             }
                         })}
                     </tr>
