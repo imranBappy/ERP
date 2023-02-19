@@ -1,7 +1,6 @@
 .drawer {
   min-width: 250px;
   height: 100vh;
-  background-color: #fff;
   z-index: 1;
   transition-property: position, left;
   transition-duration: 0.2s;
@@ -24,7 +23,6 @@
   .close__btn {
     display: block;
   }
-
   .drawer {
     position: fixed;
     top: 0;

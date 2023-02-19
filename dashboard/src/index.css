@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer components {
+  .nav__next__icon {
+    @apply ml-2 transition-all duration-75;
+  }
+  .light__component {
+    @apply bg-white-900 mt-10 rounded-md text-black-900;
+  }
+  .dark__component {
+    @apply bg-black-700 mt-10 rounded-md  text-white-900;
+  }
+
   .title-h4 {
     @apply text-xl font-semibold pl-10 py-4;
   }

@@ -1,9 +1,4 @@
-.nav_next {
-  margin-left: 2px;
-  transition-property: margin-left;
-  transition-duration: 0.2s;
-}
-.dash__link {
+.nav__link {
   box-sizing: border-box;
   transition-property: border-left;
   transition-duration: 0.1s;
@@ -12,10 +7,10 @@
   color: #0284c7;
 }
 
-.dash__link:hover {
+.nav__link:hover {
   border-left: 5px solid #0284c7;
 }
 
-.dash__link:hover .active__link {
+.nav__link:hover .active__link {
   color: #0284c7;
 }

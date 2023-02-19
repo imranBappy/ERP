@@ -1,27 +1,27 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 
 import { MdNavigateNext } from "react-icons/md";
-import "../styles/DashLink.css";
-const DashLink = (props) => {
+import "../styles/NavLink.css";
+const NavLink = (props) => {
     const { path, text, element } = props.link;
     return (
         <>
             {
-                <NavLink to={path}>
+                <Link to={path}>
                     {(active) => {
                         return <>
-                            <li className="link__wrapper dash__link">
+                            <li className="link__wrapper nav__link">
                                 {element}
                                 <span className={`mx-2 active__link  ${active.isActive && " text-sky-600"}`}> {text}</span>
-                                <MdNavigateNext className={`nav_next  active__link ${active.isActive && 'active__link__icon'}`} />
+                                <MdNavigateNext className={`nav__next__icon  active__link ${active.isActive && 'active__link__icon'}`} />
                             </li>
                         </>
                     }}
-                </NavLink>
+                </Link>
             }
         </>
     );
 };
 
-export default DashLink;
+export default NavLink;

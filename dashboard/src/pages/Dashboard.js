@@ -6,7 +6,7 @@ import StartStudent from '../components/StartStudent';
 const Dashboard = () => {
     return (
         <>
-            <h2 className=' text-2xl font-semibold mb-5'> Welcome Admin!</h2>
+            <h2 className='text-2xl font-semibold'> Welcome Admin!</h2>
             <Card />
             <Analytics />
             <StartStudent />

@@ -1,6 +1,6 @@
 import React from 'react';
 import navLinks from '../data/navLink';
-import DashLink from '../components/DashLink';
+import NavLink from '../components/NavLink';
 
 const SidebarMenu = () => {
     return (
@@ -8,7 +8,7 @@ const SidebarMenu = () => {
             <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
                 <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
                 {
-                    navLinks.map((link) => (<DashLink link={link} />))
+                    navLinks.map((link) => (<NavLink link={link} />))
                 }
             </ul>
         </div>

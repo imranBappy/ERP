@@ -11,7 +11,7 @@ import Holiday from './pages/Holiday';
 
 function App() {
   return (
-    <div className="App">
+    <div className="dark:bg-black-700">
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route path="/" element={<Dashboard />} />

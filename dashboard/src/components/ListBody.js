@@ -8,12 +8,12 @@ const ListBody = (props) => {
         <tbody className=" student__table__body">
             {
                 body.map((item, index) => {
-                    return <tr key={index}>
+                    return <tr key={index} className='even:bg-black-800'>
                         {Object.keys(item).map((key, index2) => {
 
                             switch (key) {
                                 case "image":
-                                    break;
+                                    return null;
                                 case "check":
                                     return <td className={index2 === 0 && 'pl-2'} key={index2}><input type="checkbox" /></td>
                                 case "action":
