@@ -8,7 +8,7 @@ const ListBody = (props) => {
         <tbody className=" student__table__body">
             {
                 body.map((item, index) => {
-                    return <tr key={index} className='even:bg-black-800'>
+                    return <tr key={index} className='even:bg-white-800 dark:even:bg-black-800'>
                         {Object.keys(item).map((key, index2) => {
 
                             switch (key) {
