@@ -3,45 +3,45 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 
 const data = [
     {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
+        name: 'Week 1',
+        Result: 4000,
+        Attendance: 2400,
         amt: 2400,
     },
     {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
+        name: 'Week 2',
+        Result: 3000,
+        Attendance: 1398,
         amt: 2210,
     },
     {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
+        name: 'Week 3',
+        Result: 2000,
+        Attendance: 9800,
         amt: 2290,
     },
     {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
+        name: 'Week 4',
+        Result: 2780,
+        Attendance: 3908,
         amt: 2000,
     },
     {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
+        name: 'Week 5',
+        Result: 1890,
+        Attendance: 4800,
         amt: 2181,
     },
     {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
+        name: 'Week 6',
+        Result: 2390,
+        Attendance: 3800,
         amt: 2500,
     },
     {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
+        name: 'Week 7',
+        Result: 3490,
+        Attendance: 4300,
         amt: 2100,
     },
 ];
@@ -66,8 +66,8 @@ const Overview = () => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                <Line type="monotone" dataKey="Attendance" stroke="#8884d8" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="Result" stroke="#82ca9d" />
             </LineChart>
         </ResponsiveContainer>
     );

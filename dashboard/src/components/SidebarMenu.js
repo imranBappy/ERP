@@ -8,7 +8,7 @@ const SidebarMenu = () => {
             <ul className=' overflow-y-auto ' style={{ height: "92vh" }}>
                 <li className='my-3 text-gray-400 ml-5 text-sm  font-mono'> Main Menu </li>
                 {
-                    navLinks.map((link) => (<NavLink link={link} />))
+                    navLinks.map((link, id) => (<NavLink key={id} link={link} />))
                 }
             </ul>
         </div>

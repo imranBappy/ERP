@@ -7,6 +7,7 @@ const Header = (props) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
+        console.log(222, localStorage.theme);
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true);
@@ -16,11 +17,14 @@ const Header = (props) => {
         }
     }, []);
     const handleMode = () => {
-        setIsDarkMode(!isDarkMode)
-        if (isDarkMode)
+        if (isDarkMode) {
             document.documentElement.classList.remove('dark')
-        else
+        }
+        else {
             document.documentElement.classList.add('dark')
+        }
+        setIsDarkMode(!isDarkMode)
+        localStorage.theme === 'dark' ? localStorage.theme = 'light' : localStorage.theme = 'dark'
     }
 
     return (
