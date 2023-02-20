@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import "./Login.css";
 import { useForm } from "react-hook-form";
 const Login = () => {
     const { register, handleSubmit } = useForm();
-    const [data, setData] = useState("");
-    return (
-        <div className='h-[800px] flex justify-center items-center'>
-            <div>
-                <h2 className='text-4xl'>Login</h2>
+    const [ setData] = useState("");
 
-                <form onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
+    const handleLogin = data =>{
+        console.log(data);
+    }
+    return (
+        <div className='h-[800px] flex justify-center  items-center '>
+            <div className='w-96 p-7 login_card'>
+                <h2 className='text-4xl text-center mb-4'>Login</h2>
+
+                <form onSubmit={handleSubmit(handleLogin)}>
                     
 
                     <div className="form-control w-full max-w-xs">
@@ -19,14 +24,14 @@ const Login = () => {
                     <div className="form-control w-full max-w-xs">
                         <label className="label"><span className="label-text">Password</span></label>
                         <input type="password"  {...register("password")} className="input input-bordered w-full max-w-xs"/>
+                        <label className="label"><span className="label-text">Forget Password?</span></label>
             
                     </div>
 
-
-    
-                    <p>{data}</p>
-                    <input type="submit" />
+                    <input className='btn log_btn w-full' value="Login"  type="submit" />
                 </form>
+                <div className="divider">OR</div>
+                <button  className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );
