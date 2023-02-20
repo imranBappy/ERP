@@ -8,6 +8,8 @@ import Invoices from './pages/Invoices';
 import Accounts from './pages/Accounts';
 import Holiday from './pages/Holiday';
 import AddStudent from './pages/AddStudent';
+import Admission from './pages/Admission';
+import StdProfile from './pages/StdProfile';
 
 
 function App() {
@@ -19,10 +21,13 @@ function App() {
           <Route path="/students" element={<Students />} />
           <Route path="/teachers" element={<Students />} />
           <Route path="/departments" element={<Departments />} />
+          <Route path="/admission" element={<Admission />} />
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/holiday" element={<Holiday />} />
           <Route path='/students/add' element={<AddStudent />} />
+          <Route path='/profile/:stdId' element={<StdProfile />} />
+
           <Route path="*" element={<h1>404</h1>} />
         </Route>
       </Routes>

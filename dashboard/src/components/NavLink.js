@@ -5,7 +5,7 @@ import { MdNavigateNext } from "react-icons/md";
 import "../styles/NavLink.css";
 const NavLink = (props) => {
     const { path, text, element, child } = props.link;
-    console.log({ child });
+
     return (
         <>
             {
@@ -26,7 +26,7 @@ const NavLink = (props) => {
                                                 {
                                                     (active) => {
                                                         console.log(active);
-                                                        return <li key={id} className={`mb-2 hover:bg-sky-600 rounded-md py-1 px-2 mr-3   ${active.isActive ? 'bg-sky-600 text-white-900' : 'bg-white-900  text-black-900'}`}>{link.text} </li>
+                                                        return <li key={id} className={`mb-2 hover:bg-sky-600 rounded-md py-1 px-2 mr-3   ${active.isActive ? 'bg-sky-600 text-white-900' : 'bg-white-900 dark:bg-black-700  text-black-900 dark:text-white-900'}`}>{link.text} </li>
                                                     }
                                                 }
 

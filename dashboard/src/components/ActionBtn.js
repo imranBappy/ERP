@@ -1,10 +1,10 @@
 import React from 'react';
 import { AiOutlineEdit, AiFillEye } from 'react-icons/ai'
 
-
-const ActionBtn = () => {
+import { Link } from 'react-router-dom'
+const ActionBtn = (props) => {
     return (
-        <td > <button className=' shadow-md p-1 rounded-full '><AiFillEye /></button>   <button className='shadow-md p-1 rounded-full '><AiOutlineEdit /></button> </td>
+        <td > <Link to={`/profile/${props.id}`}><button className=' shadow-md p-1 rounded-full '><AiFillEye /></button></Link>    <button className='shadow-md p-1 rounded-full '><AiOutlineEdit /></button> </td>
     );
 };
 
