@@ -16,8 +16,8 @@
   .title-h4 {
     @apply text-xl font-semibold pl-10 py-4;
   }
-  .link__wrapper {
-    @apply mb-1 h-10 flex pl-5 items-center text-lg;
+  .nav__link {
+    @apply mb-1 h-10 flex pl-5 items-center text-lg translate-x-0 transition-all duration-75 ease-in-out;
   }
   .page__title {
     @apply text-2xl font-semibold mb-5;

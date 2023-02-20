@@ -18,7 +18,14 @@ const navLinks = [
     {
         path: '/students',
         element: <SlGraduation className='active__link' />,
-        text: 'Students'
+        text: 'Students',
+        child: [
+         
+            {
+                text: 'Student Add',
+                path: '/students/add',
+            }
+        ]
     },
     {
         path: '/teachers',

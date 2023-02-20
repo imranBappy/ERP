@@ -7,6 +7,7 @@ import Departments from './pages/Departments';
 import Invoices from './pages/Invoices';
 import Accounts from './pages/Accounts';
 import Holiday from './pages/Holiday';
+import AddStudent from './pages/AddStudent';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
           <Route path="/invoices" element={<Invoices />} />
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/holiday" element={<Holiday />} />
-
+          <Route path='/students/add' element={<AddStudent />} />
+          <Route path="*" element={<h1>404</h1>} />
         </Route>
       </Routes>
     </div>
