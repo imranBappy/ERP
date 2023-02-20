@@ -9,8 +9,8 @@ const Login = () => {
         console.log(data);
     }
     return (
-        <div className='h-[800px] flex justify-center  items-center '>
-            <div className='w-96 p-7 login_card'>
+        <div className='h-[800px] flex justify-center  items-center login_full'>
+            <div className='w-96 p-7 login_card bg-white drop-shadow-xl'>
                 <h2 className='text-4xl text-center mb-4'>Login</h2>
 
                 <form onSubmit={handleSubmit(handleLogin)}>
