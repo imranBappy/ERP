@@ -19,3 +19,14 @@
     font-weight: 600;
     font-family: cursive;
 }
+.about_nav{
+    background-color: rgb(76, 76, 76);
+    color: white;
+}
+.drop_bg {
+    border: #1a305f 2px solid;
+}
+
+.ab_nav_li :hover{
+    color: rgb(242, 49, 49);
+}
