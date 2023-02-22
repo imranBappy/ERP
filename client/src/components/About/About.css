@@ -1,0 +1,21 @@
+.about_main{
+    border-top: 4px solid #202c45;
+}
+
+.about_text{
+    color: rgb(79, 79, 79);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.about_welcome h2{
+    font-size: 35px;
+    font-weight: 400;
+    font-family: serif;
+}
+
+.about_welcome h3{
+    font-size: 25px;
+    color: #1a305f;
+    font-weight: 600;
+    font-family: cursive;
+}
