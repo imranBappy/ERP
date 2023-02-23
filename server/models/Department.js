@@ -1,3 +1,5 @@
+const { Schema, model, ObjectId } = require('mongoose')
+
 const departmentSchema = new Schema({
     name: {},
     code: {},
@@ -6,3 +8,6 @@ const departmentSchema = new Schema({
         ref: 'Auth'
     },
 })
+
+const Department = model('Department', departmentSchema)
+module.exports = Department;

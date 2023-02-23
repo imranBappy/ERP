@@ -3,7 +3,10 @@
 
 const studentSchema = new Schema({
     phone: {
-        
+
+    },
+    group: {
+        enum: ['A', 'B', 'C']
     },
     fatherName: {},
     motherName: {},
@@ -20,7 +23,10 @@ const studentSchema = new Schema({
     currnetSemester: {},
     result: {},
     attendance: {},
-    department: {},
+    department: {
+        type: ObjectId,
+        ref: 'Department'
+    },
     payment: {},
     application: {},
 })

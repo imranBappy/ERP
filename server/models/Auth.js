@@ -18,6 +18,7 @@ const authScheme = Schema({
     role: {
         type: String,
         required: [true, 'Role is require!'],
+        enum: ['student', 'teacher', 'admin'],
         min: 2,
     },
 
@@ -36,9 +37,10 @@ const authScheme = Schema({
         required: [true, 'Password is require!']
     }
     ,
+
     profile: {
         type: ObjectId,
-        ref: 'profile'
+        refPath: 'role'
     }
 }, { timestamps: true })
 
