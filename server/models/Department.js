@@ -1,5 +1,8 @@
 const departmentSchema = new Schema({
-    name: {},
+    name: {
+        type:String,
+        required: true
+    },
     code: {},
     hod: {
         type: ObjectId,
