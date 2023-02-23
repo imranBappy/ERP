@@ -1,4 +1,3 @@
-
 const { Schema, model, ObjectId } = require('mongoose')
 const emailValidator = require('../utils/emailValidator')
 

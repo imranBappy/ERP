@@ -1,6 +1,5 @@
 const express = require('express')
 const dotenv = require('dotenv');
-const { signupController } = require('./controllers/authController');
 const connectDB = require('./config/db');
 const errorHandle = require('./middlewares/errorHandle');
 const setRoutes = require('./routes');
