@@ -1,5 +1,5 @@
 
-const { Schema, model } = require('mongoose')
+const { Schema, model, ObjectId } = require('mongoose')
 const emailValidator = require('../utils/emailValidator')
 
 
@@ -11,6 +11,17 @@ const authScheme = Schema({
         min: 2,
         max: 30
     },
+    url: {
+        type: String,
+        required: [true, 'Url is require!'],
+        min: 2,
+    },
+    role: {
+        type: String,
+        required: [true, 'Role is require!'],
+        min: 2,
+    },
+
     email: {
         type: String,
         required: [true, 'Email is require!'],
@@ -24,6 +35,11 @@ const authScheme = Schema({
     password: {
         type: String,
         required: [true, 'Password is require!']
+    }
+    ,
+    profile: {
+        type: ObjectId,
+        ref: 'profile'
     }
 }, { timestamps: true })
 
