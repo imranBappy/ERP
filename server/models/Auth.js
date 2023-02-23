@@ -1,4 +1,4 @@
-const { Schema, model, ObjectId } = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 const emailValidator = require('../utils/emailValidator')
 
 
@@ -39,7 +39,7 @@ const authScheme = Schema({
     ,
 
     profile: {
-        type: ObjectId,
+        type: Types.ObjectId,
         refPath: 'role'
     }
 }, { timestamps: true })
