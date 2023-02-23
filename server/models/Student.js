@@ -22,7 +22,7 @@ const studentSchema = new Schema({
         type: String,
         required: [true, 'Mother Name is require'],
     },
-    guardianEmail: {
+    fatherName: {
         type: String,
         required: [true, 'Email is require']
     },
