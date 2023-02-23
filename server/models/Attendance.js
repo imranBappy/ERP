@@ -10,3 +10,6 @@ const attendanceSchema = new Schema({
     },
     report: {},
 }, { timestamps: true })
+
+const Attendance = model('Attendance', attendanceSchema)
+model.exports = Attendance;

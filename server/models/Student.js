@@ -1,5 +1,5 @@
 // total tution free , payment history, attendance, marks, fees, etc
-
+const { Schema, model, Types } = require('mongoose')
 
 const studentSchema = new Schema({
     phone: {
@@ -20,13 +20,37 @@ const studentSchema = new Schema({
     boardRoll: {},
     registrationNumber: {},
     admissionYear: {},
-    currnetSemester: {},
-    result: {},
-    attendance: {},
+    currnetSemester: {
+        type: Number,
+        default: 1,
+        required: true
+    },
+    result: [
+        {
+            type: Types.ObjectId,
+            ref: 'Result'
+        }
+    ],
+    attendance: [
+        {
+            type: Types.ObjectId,
+            ref: 'Attendance'
+        }
+    ],
     department: {
         type: ObjectId,
         ref: 'Department'
     },
-    payment: {},
-    application: {},
+    payment: [
+        {
+            type: Types.ObjectId,
+            ref: 'Payment'
+        }
+    ],
+    application: [
+        {
+            type: Types.ObjectId,
+            ref: 'Application'
+        }
+    ],
 })

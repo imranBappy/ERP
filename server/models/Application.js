@@ -1,9 +1,21 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
-const paymentSchema = new Schema({
-    student: {
-        type: ObjectId,
+const applicationSchema = new Schema({
+    teacher: {
+        type: Types.ObjectId,
+        ref: 'Auth'
     },
-})
+    sub: {
+        type: String,
+        min: 10
+    }
+    ,
+    text: {
+        type: String,
+        min: 10
+    }
+}, { timestamps: true });
 
 
+
+const application = model('Application', applicationSchema);
