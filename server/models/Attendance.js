@@ -1,12 +1,18 @@
 
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 
 
 const attendanceSchema = new Schema({
-    subject: {},
-    teacher: {
-        type: ObjectId,
-        ref: 'Auth'
+    subject: {
+        type: String,
+        required: [true, 'Subject is require'],
     },
-    report: {},
+    teacher: {
+        type: Types.ObjectId,
+        ref: 'Auth',
+        required: [true, "Teacher Name is require"]
+    },
+    report: {
+        type: String
+    },
 }, { timestamps: true })
