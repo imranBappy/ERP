@@ -24,7 +24,8 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1",
     "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.1"
+    "nodemailer": "^6.9.1",
+    "uuidv4": "^6.2.13"
   },
   "engines": {
     "node": "v18.12.1"

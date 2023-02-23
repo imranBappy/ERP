@@ -38,10 +38,6 @@ const studentSchema = new Schema({
         type: String,
         required: [true, ' Address is require']
     },
-    passingYear: {
-        type: Number,
-        required: [true, ' This field is require']
-    },
     transcript: {
         type: String,
         required: [true, ' This field is require']

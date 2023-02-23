@@ -1,8 +1,7 @@
 const nodemailer = require("nodemailer");
 
 // async..await is not allowed in global scope, must use a wrapper
-async function sendEmail(to, name) {
-
+async function sendEmail(to, name, password) {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -14,7 +13,7 @@ async function sendEmail(to, name) {
     var mailOptions = {
         from: 'imranbappy.official@gmail.com',
         to: to,
-        subject: 'Successfully created your account',
+        subject: 'Approved You Application from Return Zero University!',
         html: `
             <!doctype html>
             <html ⚡4email>
@@ -25,8 +24,9 @@ async function sendEmail(to, name) {
                 <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
             </head>
             <body>
-                <h1>Welcome ${name}</h1>
-                <h4 style="color:red">Your Account is successfully created</h4>
+                <h1>Welcome ${name}!</h1>
+                <h4 style="color:red">You admission application has successfully approved </h4>
+                <p>You Account Password : ${password}</p>
             </body>
             </html>
     `

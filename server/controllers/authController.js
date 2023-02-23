@@ -17,7 +17,7 @@ exports.signupController = async (req, res, next) => {
         const newUser = Auth({ name, email, password })
         await newUser.save();
         sendEmail(email, name)
-
+        
         res.json({
             message: 'Account successfully created!'
         })
