@@ -3,14 +3,21 @@ const { Schema, model, Types } = require('mongoose')
 
 const studentSchema = new Schema({
     phone: {
-        typeof: Number,
+        type: Number,
         required: [true, 'Phone is require']
-
+    },
+    isAmission: {
+        type: Boolean,
+        default: true,
+        require: [true, 'Phone is require']
     },
     group: {
         type: String,
         enum: ['A', 'B', 'C'],
         required: [true, 'Group is require']
+    },
+    tutionFree: {
+        type: Number
     },
     fatherName: {
         type: String,
@@ -34,14 +41,14 @@ const studentSchema = new Schema({
     },
     address: {
         type: String,
-        required: [true,' Address is require']
+        required: [true, ' Address is require']
     },
     passingYear: {
         type: Number,
         required: [true, ' This field is require']
     },
     transcript: {
-        type: data,
+        type: String,
         required: [true, ' This field is require']
     },
     studentId: {
@@ -60,23 +67,9 @@ const studentSchema = new Schema({
         type: String,
         required: [true, 'This field is require']
     },
-<<<<<<< HEAD
-    fatherName: {},
-    motherName: {},
-    guardianEmail: {},
-    guardianPhone: {},
-    guardianNID: {},
-    address: {},
-    passingYear: {},
-    transcript: {},
-    studentId: {},
-    boardRoll: {},
-    registrationNumber: {},
-    admissionYear: {},
     currnetSemester: {
         type: Number,
         default: 1,
-        required: true
     },
     result: [
         {
@@ -90,16 +83,10 @@ const studentSchema = new Schema({
             ref: 'Attendance'
         }
     ],
-=======
-    currnetSemester: {},
-    result: {},
-    attendance: {},
->>>>>>> 0c81b372cffd4a77a8e2a9a6f7718bb071c2d1fd
     department: {
         type: Types.ObjectId,
         ref: 'Department'
     },
-<<<<<<< HEAD
     payment: [
         {
             type: Types.ObjectId,
@@ -113,10 +100,5 @@ const studentSchema = new Schema({
         }
     ],
 })
-=======
-    payment: {},
-    application: {},
-},
-{timestamps: true}
-)
->>>>>>> 0c81b372cffd4a77a8e2a9a6f7718bb071c2d1fd
+const Student = model('Student', studentSchema)
+module.exports = Student;

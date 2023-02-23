@@ -18,26 +18,23 @@ const authScheme = Schema({
     role: {
         type: String,
         required: [true, 'Role is require!'],
-        enum: ['student', 'teacher', 'admin'],
+        enum: ['Student', 'Teacher', 'Admin'],
         min: 2,
     },
-
     email: {
         type: String,
         required: [true, 'Email is require!'],
         lowercase: true,
         validate: {
-            validator: (v) => emailValidator(v)
+            validator: (v) => emailValidator(v),
+            message: props => `${props.value} is a invalid email`
         },
-        message: props => `${props.value} is a invalid email`,
         trim: true
     },
     password: {
         type: String,
         required: [true, 'Password is require!']
-    }
-    ,
-
+    },
     profile: {
         type: Types.ObjectId,
         refPath: 'role'

@@ -4,6 +4,7 @@ const connectDB = require('./config/db');
 const errorHandle = require('./middlewares/errorHandle');
 const setRoutes = require('./routes');
 const setMiddlewares = require('./middlewares');
+const Formet = require('./utils/dataFormet');
 const app = express();
 
 dotenv.config({ path: './config/.env' })
@@ -11,14 +12,17 @@ dotenv.config({ path: './config/.env' })
 // connect Database()
 connectDB()
 
+
+//static file
+app.use(express.static(__dirname + '../public'))
+
 //set middlewares
 setMiddlewares(app)
 
 // all routes set here
 setRoutes(app)
 
-
-
+app.get('/', (req, res) => res.send("Hello World"))
 
 // handle Error
 app.use(errorHandle)
