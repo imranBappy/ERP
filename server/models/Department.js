@@ -17,7 +17,7 @@ const departmentSchema = new Schema({
         ref: 'Auth',
         required: [true, 'The field is require']
     },
-})
+},{timestamps: true})
 
 const Department = model('Department', departmentSchema)
 module.exports = Department;
