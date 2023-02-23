@@ -6,11 +6,6 @@ const studentSchema = new Schema({
         type: Number,
         required: [true, 'Phone is require']
     },
-    isAmission: {
-        type: Boolean,
-        default: true,
-        require: [true, 'Phone is require']
-    },
     group: {
         type: String,
         enum: ['A', 'B', 'C'],
@@ -63,10 +58,6 @@ const studentSchema = new Schema({
         type: Number,
         required: [true, 'Reg number is require']
     },
-    admissionYear: {
-        type: String,
-        required: [true, 'This field is require']
-    },
     currnetSemester: {
         type: Number,
         default: 1,
@@ -99,6 +90,6 @@ const studentSchema = new Schema({
             ref: 'Application'
         }
     ],
-})
+}, { timestamps: true })
 const Student = model('Student', studentSchema)
 module.exports = Student;

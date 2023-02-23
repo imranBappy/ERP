@@ -9,8 +9,10 @@ const resultSchema = new Schema({
         type: ObjectId,
         ref: 'Subject'
     },
-    marks: {},
-    grade: {},
+    marks: {
+        type: Number,
+        require: true
+    },
 }, { timestamps: true });
 
 const Result = model('Result', resultSchema);
