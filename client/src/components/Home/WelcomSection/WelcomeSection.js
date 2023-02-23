@@ -8,21 +8,21 @@ const WelcomeSection = () => {
     const cardData = [
         {
             id: 1,
-            icon: <i class="fa-solid fa-graduation-cap"></i>,
+            icon: <i className="fa-solid fa-graduation-cap"></i>,
             name: "Program",
             description: "The technical writing profession is continuously evolving as technical logitech...",
 
         },
         {
             id: 2,
-            icon: <i class="fa-solid fa-chart-pie"></i>,
+            icon: <i className="fa-solid fa-chart-pie"></i>,
             name: "Affordability",
             description: "The technical writing profession is continuously evolving as technical logitech...",
 
         },
         {
             id: 3,
-            icon: <i class="fa-sharp fa-solid fa-certificate"></i>,
+            icon: <i className="fa-sharp fa-solid fa-certificate"></i>,
             name: "Certification",
             description: "The technical writing profession is continuously evolving as technical logitech...",
 
