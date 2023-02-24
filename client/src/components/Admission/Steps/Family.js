@@ -57,7 +57,7 @@ const Family = () => {
               <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
                 <input
                   onChange={handleChange}
-                  value={userData["guardianNumber"] || ""}
+                  value={userData["guardianPhone"] || ""}
                   name="guardianPhone"
                   placeholder="Guardian Number"
                   type="number"
@@ -110,7 +110,7 @@ const Family = () => {
               <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
                 <input
                   onChange={handleChange}
-                  value={userData["nid"] || ""}
+                  value={userData["guardianNID"] || ""}
                   name="guardianNID"
                   placeholder="Guradian NID Number"
                   type="number"

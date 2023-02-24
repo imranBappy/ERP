@@ -1,48 +1,53 @@
 import React from 'react';
-// import { useStepperContext } from '../SetperContext';
+import { useStepperContext } from '../SetperContext';
 
-const Personal = ({handleChange}) => {
-  
-  // const { userData, setUserData } = useStepperContext();
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setUserData({ ...userData, [name]: value });
-  // };
+const Personal = () => {
+  const { userData, setUserData } = useStepperContext();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
+  };
 
   return (
     <div className="flex flex-col">
       <div>
         
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2'>
-        <div className="mx-2 w-full">
-          <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-            Username
-          </div>
-          <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
-            <input
-              onChange={handleChange}
-              // value={userData["username"] || ""}
-              name="name"
-              placeholder="Student Name"
-              className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
-            />
-          </div>
-        </div>
-        <div className="mx-2 w-full">
-          <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-            Email
-          </div>
-          <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
-            <input
-              onChange={handleChange}
-              // value={userData["email"] || ""}
-              name="studentEmail"
-              placeholder="email"
-              type="email"
-              className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
-            />
-          </div>
-        </div>
+
+      <div className="mx-2 w-full flex-1">
+              <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
+                Student Name
+              </div>
+              <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+                <input
+                  onChange={handleChange}
+                  value={userData["studentName"] || ""}
+                  name="studentName"
+                  placeholder="Student Email"
+                  
+                  className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+                />
+              </div>
+            </div>
+
+        
+            <div className="mx-2 w-full flex-1">
+              <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
+                Email
+              </div>
+              <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+                <input
+                  onChange={handleChange}
+                  value={userData["studentEmail"] || ""}
+                  name="studentEmail"
+                  placeholder="Student Email"
+                  type="email"
+                  className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+                />
+              </div>
+            </div>
+
+
       </div>
 
 
@@ -54,9 +59,9 @@ const Personal = ({handleChange}) => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              // value={userData["number"] || ""}
+              value={userData["studentNumber"] || ""}
               name="studentNumber"
-              placeholder="number"
+              placeholder="Phone Number"
               type="number"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
             />
@@ -71,7 +76,7 @@ const Personal = ({handleChange}) => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              // value={userData["address"] || ""}
+              value={userData["address"] || ""}
               name="address"
               placeholder="address"
               type="text"
@@ -90,7 +95,7 @@ const Personal = ({handleChange}) => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              // value={userData["department"] || ""}
+              value={userData["department"] || ""}
               name="department"
               placeholder="department"
               type="text"
@@ -122,7 +127,7 @@ const Personal = ({handleChange}) => {
               <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
                 <input
                   onChange={handleChange}
-                  // value={userData["photo"] || ""}
+                  value={userData["photo"] || ""}
                   name="url"
                   placeholder="Photo"
                   type="file"
