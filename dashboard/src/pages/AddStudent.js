@@ -19,7 +19,6 @@ const AddStudent = () => {
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
-
         axios(
             {
                 method: "post",

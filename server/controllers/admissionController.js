@@ -21,14 +21,22 @@ exports.admissionGetController = async (req, res, next) => {
 
 exports.admissionPostController = async (req, res, next) => {
     try {
-
-        const { name, email, phone, fatherName, motherName } = req.body;
+        const {
+            name,
+            email,
+            phone,
+            fatherName,
+            motherName,
+            guardianEmail,
+            guardianPhone,
+            guardianNID,
+            address,
+        } = req.body;
         const group = 'A'
         const studentId = `CMT-${group}-${Math.floor(Math.random() * 100)}`
         const transcript = req.files.transcript[0].filename
         const url = req.files.url[0].filename
 
-        // console.log({ url, transcript });
 
         const newAuth = new Auth({
             name, email, url, role: "Admission",
@@ -52,7 +60,7 @@ exports.admissionPostController = async (req, res, next) => {
         })
         await newAuth.save();
         await newStudent.save()
-        res.json(Formet({}, "Successfully Submitted!"))
+        res.json(new Formet({}, "Successfully Submitted!"))
     } catch (error) {
         next(error)
     }
