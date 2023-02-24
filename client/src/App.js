@@ -6,7 +6,6 @@ const App = () => {
   return (
     <div className='mx-auto'>
       <RouterProvider router={router}></RouterProvider>
-
     </div>
   );
 };

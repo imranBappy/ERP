@@ -11,7 +11,8 @@
   "keywords": [
     "erp"
   ],
-  "author": "return-zero"
-
-
+  "author": "return-zero",
+  "dependencies": {
+    "react-helmet": "^6.1.0"
+  }
 }
