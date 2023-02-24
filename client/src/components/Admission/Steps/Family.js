@@ -52,13 +52,13 @@ const Family = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2'>
             <div className="mx-2 w-full flex-1">
               <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-                Guardian Number
+                Guardian Phone Number
               </div>
               <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
                 <input
                   onChange={handleChange}
                   value={userData["guardianNumber"] || ""}
-                  name="guardianNumber"
+                  name="guardianPhone"
                   placeholder="Guardian Number"
                   type="number"
                   className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
@@ -111,7 +111,7 @@ const Family = () => {
                 <input
                   onChange={handleChange}
                   value={userData["nid"] || ""}
-                  name="nid"
+                  name="guardianNID"
                   placeholder="Guradian NID Number"
                   type="number"
                   className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"

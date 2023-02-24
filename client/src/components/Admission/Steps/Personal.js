@@ -21,8 +21,8 @@ const Personal = () => {
             <input
               onChange={handleChange}
               value={userData["username"] || ""}
-              name="username"
-              placeholder="Username"
+              name="name"
+              placeholder="Student Name"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
             />
           </div>
@@ -35,7 +35,7 @@ const Personal = () => {
             <input
               onChange={handleChange}
               value={userData["email"] || ""}
-              name="email"
+              name="studentEmail"
               placeholder="email"
               type="email"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
@@ -54,7 +54,7 @@ const Personal = () => {
             <input
               onChange={handleChange}
               value={userData["number"] || ""}
-              name="number"
+              name="studentNumber"
               placeholder="number"
               type="number"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
@@ -122,7 +122,7 @@ const Personal = () => {
                 <input
                   onChange={handleChange}
                   value={userData["photo"] || ""}
-                  name="photo"
+                  name="url"
                   placeholder="Photo"
                   type="file"
                   className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"

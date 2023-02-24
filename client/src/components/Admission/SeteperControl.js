@@ -1,6 +1,9 @@
 import React from 'react';
 
+
 export default function SeteperControl  ({ handleClick, currentStep, steps }) {
+  
+  
     return (
         <div className="container mt-4 mb-8 flex justify-around">
           <button
@@ -17,6 +20,7 @@ export default function SeteperControl  ({ handleClick, currentStep, steps }) {
             className="cursor-pointer rounded-lg bg-indigo-900 py-2 px-4 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-slate-700 hover:text-white"
           >
             {currentStep === steps.length -1? "Confirm" : "Next"}
+            
           </button>
         </div>
       );

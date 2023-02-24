@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Admission.css";
 import Navbar from '../Shared/Navbar/Navbar';
 // import Navbar from '../Shared/Navbar/Navbar';
 import SeteperControl from './SeteperControl';
@@ -48,7 +49,7 @@ const Admission = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center admission_container'>
             <div className="mx-auto rounded-2xl bg-white pb-2 drop-shadow-lg md:w-1/2 mx-8 my-12">
                 {/* Stepper */}
                 <div className="horizontal container mt-5 ">
