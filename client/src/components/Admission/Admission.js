@@ -8,6 +8,7 @@ import Stepper from './Stepper';
 
 import Education from './Steps/Education';
 import Family from './Steps/Family';
+import General from './Steps/General';
 
 import Personal from './Steps/Personal';
 
@@ -16,9 +17,10 @@ const Admission = () => {
 
     const steps = [
         
-        "2.Personal",
-        "3.Family",
-        "4.Education",
+        "1.Personal",
+        "2.Family",
+        "3.Education",
+        "4.Finish"
     ];
 
     const displayStep = (step) => {
@@ -29,6 +31,8 @@ const Admission = () => {
                 return <Family></Family>;
             case 3:
                 return <Education></Education>;
+            case 4:
+                return <General></General>
             default:
         }
     };
@@ -44,7 +48,8 @@ const Admission = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="mx-auto rounded-2xl bg-white pb-2 drop-shadow-lg md:w-1/2 my-12">
+            <div className='flex items-center justify-center'>
+            <div className="mx-auto rounded-2xl bg-white pb-2 drop-shadow-lg md:w-1/2 mx-8 my-12">
                 {/* Stepper */}
                 <div className="horizontal container mt-5 ">
                     <Stepper steps={steps} currentStep={currentStep} />
@@ -62,6 +67,7 @@ const Admission = () => {
                         steps={steps}
                     />
                 )}
+            </div>
             </div>
         </div>
     );
