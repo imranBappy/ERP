@@ -15,9 +15,7 @@ const AddStudent = () => {
     }
     const handleSubmit = (e) => {
         const formData = new FormData()
-        // formData.append('url', std['url'])
-        // formData.append('transcript', std['transcript'])
-
+        console.log(std);
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
