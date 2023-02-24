@@ -1,12 +1,13 @@
 import React from 'react';
-import { useStepperContext } from '../SetperContext';
+// import { useStepperContext } from '../SetperContext';
 
-const Personal = () => {
-  const { userData, setUserData } = useStepperContext();
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
+const Personal = ({handleChange}) => {
+  
+  // const { userData, setUserData } = useStepperContext();
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setUserData({ ...userData, [name]: value });
+  // };
 
   return (
     <div className="flex flex-col">
@@ -20,7 +21,7 @@ const Personal = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              value={userData["username"] || ""}
+              // value={userData["username"] || ""}
               name="name"
               placeholder="Student Name"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
@@ -34,7 +35,7 @@ const Personal = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              value={userData["email"] || ""}
+              // value={userData["email"] || ""}
               name="studentEmail"
               placeholder="email"
               type="email"
@@ -53,7 +54,7 @@ const Personal = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              value={userData["number"] || ""}
+              // value={userData["number"] || ""}
               name="studentNumber"
               placeholder="number"
               type="number"
@@ -70,7 +71,7 @@ const Personal = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              value={userData["address"] || ""}
+              // value={userData["address"] || ""}
               name="address"
               placeholder="address"
               type="text"
@@ -89,7 +90,7 @@ const Personal = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              value={userData["department"] || ""}
+              // value={userData["department"] || ""}
               name="department"
               placeholder="department"
               type="text"
@@ -121,7 +122,7 @@ const Personal = () => {
               <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
                 <input
                   onChange={handleChange}
-                  value={userData["photo"] || ""}
+                  // value={userData["photo"] || ""}
                   name="url"
                   placeholder="Photo"
                   type="file"

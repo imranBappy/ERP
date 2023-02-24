@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  padding: 20px;
+  padding-top: 5%;
+  background-color: rgb(252, 253, 254);
 }
 .teacher_header {
   text-align: center;
@@ -97,4 +99,8 @@
   border-bottom-left-radius: 100px;
   margin-bottom: 20px;
   font-family: serif;
+}
+
+.hed_pera{
+  margin-bottom: 5% !important;
 }
