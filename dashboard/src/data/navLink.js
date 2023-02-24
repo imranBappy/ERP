@@ -18,7 +18,14 @@ const navLinks = [
     {
         path: '/students',
         element: <SlGraduation className='active__link' />,
-        text: 'Students'
+        text: 'Students',
+        child: [
+
+            {
+                text: 'Student Add',
+                path: '/students/add',
+            }
+        ]
     },
     {
         path: '/teachers',
@@ -28,7 +35,13 @@ const navLinks = [
         path: '/departments',
         element: <BiBuildingHouse className='active__link' />,
         text: 'Departments'
-    }, {
+    },
+    {
+        path: '/admission',
+        element: <BiBuildingHouse className='active__link' />,
+        text: 'Admission'
+    },
+    {
         path: '/invoices',
         element: <TbFileInvoice className='active__link' />,
         text: 'Invoices'

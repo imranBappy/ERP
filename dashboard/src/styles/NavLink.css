@@ -1,8 +1,3 @@
-.nav__link {
-  box-sizing: border-box;
-  transition-property: border-left;
-  transition-duration: 0.1s;
-}
 .active__link__icon {
   color: #0284c7;
 }
@@ -14,3 +9,9 @@
 .nav__link:hover .active__link {
   color: #0284c7;
 }
+
+.nav__list_:hover .drop__down {
+  display: block;
+  opacity: 1;
+}
+
