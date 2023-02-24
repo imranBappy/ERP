@@ -48,11 +48,9 @@ const studentSchema = new Schema({
     },
     boardRoll: {
         type: Number,
-        required: [true, 'Roll is require']
     },
     registrationNumber: {
         type: Number,
-        required: [true, 'Reg number is require']
     },
     currnetSemester: {
         type: Number,

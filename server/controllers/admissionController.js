@@ -4,6 +4,8 @@ const Student = require("../models/Student");
 const { uuid } = require('uuidv4');
 const sendEmail = require("../utils/sentEmail");
 const Formet = require("../utils/dataFormet");
+
+// /admission
 exports.admissionGetController = async (req, res, next) => {
     try {
         const { page = 1, limit = 10 } = req.query;
@@ -19,10 +21,13 @@ exports.admissionGetController = async (req, res, next) => {
 
 exports.admissionPostController = async (req, res, next) => {
     try {
+
         const { name, email, phone, fatherName, motherName } = req.body;
         const group = 'A'
         const studentId = `CMT-${group}-${Math.floor(Math.random() * 100)}`
-        const url = req.file.filename;
+        const url = req.file[1].filename;
+        const transcript = req.file[0].filename;
+
         const newAuth = new Auth({
             name, email, url, role: "Admission",
         })

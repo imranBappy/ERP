@@ -1,10 +1,8 @@
 const { admissionPostController, admissionGetController, admissionAprovePulController } = require('../controllers/admissionController')
 const upload = require('../middlewares/uploadMiddleware')
 const router = require('express').Router()
-
-// router.post('/', upload.single('profile'), admissionPostController)
-router.post('/', admissionPostController)
-
+const cpUpload = upload.fields([{ name: 'url', maxCount: 1 }, { name: 'transcript', maxCount: 1 }])
+router.post('/', cpUpload, admissionPostController)
 router.get('/', admissionGetController)
 router.put('/', admissionAprovePulController)
 
