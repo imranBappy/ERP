@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Navbar from '../../Shared/Navbar/Navbar';
 import AboutHome from '../AboutHome/AboutHome';
 import Banner from '../Banner/Banner';
@@ -12,7 +13,7 @@ import WelcomeSection from '../WelcomSection/WelcomeSection';
 
 const Home = () => {
     return (
-        <div>
+        <div className='landing_page'>
             <NavTop></NavTop>
             <Navbar></Navbar>
             <Banner></Banner>
