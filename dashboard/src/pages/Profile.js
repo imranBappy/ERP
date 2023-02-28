@@ -1,6 +1,6 @@
 import React from "react";
 import img from '../imgs/student.png'
-const StdProfile = () => {
+const Profile = () => {
     return (
         <div className="light__component  dark:dark__component  ">
             <div className=" m-auto w-80 ">
@@ -47,4 +47,4 @@ const StdProfile = () => {
     );
 };
 
-export default StdProfile;
+export default Profile;
