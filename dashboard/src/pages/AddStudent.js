@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-const input_field = require("./AddStudentInputfield")
+import { connect } from 'react-redux';
 
-const AddStudent = () => {
+import { admissionPostAction } from '../app/actions/admissionAction'
+
+const input_field = require("./AddStudentInputfield")
+const AddStudent = (props) => {
+    console.log(props.admission);
     const [input,] = useState(input_field);
-    const [std, setStd] = useState({
-    })
+    const [std, setStd] = useState({})
     const handleChange = (e) => {
         if (e.target.name === 'url' || e.target.name === 'transcript') {
             setStd({ ...std, [e.target.name]: e.target.files[0] })
@@ -14,23 +16,27 @@ const AddStudent = () => {
         }
     }
     const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('clicked');
         const formData = new FormData()
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
-        axios(
-            {
-                method: "post",
-                url: "http://localhost:5000/admission",
-                data: formData,
-                headers: { "Content-Type": "multipart/form-data" },
-            }
-        ).then((response) => response.json())
-            .then((data) => console.log(data))
-            .catch((error) => console.log(error));
-        e.preventDefault()
-        console.log(std);
-        setStd({})
+
+        // axios(
+        //     {
+        //         method: "post",
+        //         url: "http://localhost:5000/admission",
+        //         data: formData,
+        //         headers: { "Content-Type": "multipart/form-data" },
+        //     }
+        // ).then((response) => response.json())
+        //     .then((data) => console.log(data))
+        //     .catch((error) => console.log(error));
+        // e.preventDefault()
+        // console.log(std);
+        // setStd({})
+        props.admissionPostAction({ data: props.admission.data, newData: formData })
         alert('Student Added Successfully')
     }
 
@@ -61,5 +67,9 @@ const AddStudent = () => {
         </>
     );
 };
-
-export default AddStudent;
+const mapStateToProps = (state) => {
+    return {
+        admission: state.admission
+    }
+};
+export default connect(mapStateToProps, { admissionPostAction })(AddStudent);

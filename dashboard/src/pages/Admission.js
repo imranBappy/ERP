@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AdmissionApply from '../components/AdmissionList';
-import { useGetStudentQuery } from '../app/services/admissionApi';
-const Admission = () => {
-    const data = useGetStudentQuery()
-    const post = () => {
-
-        console.log({ data });
-    }
-
+import { connect } from 'react-redux';
+import { admissionGetAction } from '../app/actions/admissionAction';
+const Admission = (props) => {
+    useEffect(() => {
+        props.admissionGetAction({ data: props.admission.data, page: 1 });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     return (
         <div>
-            <AdmissionApply />
-            <button onClick={post}>POst</button>
+            {
+                props.admission.isLoading ? <h1>Loading...</h1> : <AdmissionApply std={props.admission.data} />
+            }
         </div>
     );
 };
-
-export default Admission;
+const stateToProps = (state) => {
+    return {
+        admission: state.admission
+    }
+};
+export default connect(stateToProps, { admissionGetAction })(Admission);
