@@ -9,7 +9,7 @@ import Accounts from './pages/Accounts';
 import Holiday from './pages/Holiday';
 import AddStudent from './pages/AddStudent';
 import Admission from './pages/Admission';
-import StdProfile from './pages/StdProfile';
+import Profile from './pages/Profile';
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/holiday" element={<Holiday />} />
           <Route path='/students/add' element={<AddStudent />} />
-          <Route path='/profile/:stdId' element={<StdProfile />} />
+          <Route path='/profile/:stdId' element={<Profile />} />
 
           <Route path="*" element={<h1>404</h1>} />
         </Route>
