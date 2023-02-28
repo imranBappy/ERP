@@ -13,7 +13,6 @@ const AdmissionApply = () => {
             })
             .catch(err => { console.log(err) })
     }, [])
-    console.log(std);
     return (
         <div>
             <List head={studentListHead} body={std} />

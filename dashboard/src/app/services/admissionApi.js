@@ -23,7 +23,7 @@ export const admissionApi = createApi({
         getStudent: builder.query({
             query: (page) => {
                 console.log({ page });
-                return `/`
+                return `?page=${1}`
             },
             providesTags: ['admission']
         })

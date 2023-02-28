@@ -1,5 +1,4 @@
 import React from 'react';
-import StudentsList from '../components/StudentsList';
 import AdmissionApply from '../components/AdmissionList';
 
 const Students = () => {
