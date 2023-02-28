@@ -4,7 +4,7 @@ const { Schema, model, Types } = require('mongoose')
 const studentSchema = new Schema({
 
     phone: {
-        type: Number,
+        type: String,
         required: [true, 'Phone is require']
     },
     group: {
