@@ -1,12 +1,14 @@
 import React from 'react';
-// import { useStepperContext } from './SetperContext';
+import { useStepperContext } from './SetperContext';
 
 
 export default function SeteperControl  ({ handleClick, currentStep, steps }) {
-  // const { userData } = useStepperContext();
-  // // const handleSubmit =()=>{
-  // //   console.log(userData);
-  // // }
+  const { userData } = useStepperContext();
+  const showdat =()=>{
+    console.log(userData);
+  }
+    
+    
   
     return (
         <div className="container mt-4 mb-8 flex justify-around">
@@ -30,8 +32,11 @@ export default function SeteperControl  ({ handleClick, currentStep, steps }) {
                   </button>
           : 
           <button
-          onClick={() => handleClick("next")}
-          className="cursor-pointer rounded-lg bg-indigo-900 py-2 px-4 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-slate-700 hover:text-white"
+          onClick={() => 
+           { handleClick("next")
+            showdat()}
+          }
+          className="cursor-pointer rounded-lg bg-indigo-900 py-2 px-4 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-slate-700 hover:text-white" type='submit'
         >
           {/* {currentStep === steps.length -1? "Confirm" : "Next"} */}
           Next

@@ -5,8 +5,8 @@ import { useStepperContext } from '../SetperContext';
 
 const General = () => {
   const { userData } = useStepperContext();
+  
   const haldeSubmit = () => {
-
     axios(
       {
         method: "post",
@@ -20,6 +20,7 @@ const General = () => {
     
     console.log(userData);
   }
+  
   return (
     <div className="container md:mt-10">
       <div className="flex flex-col items-center">

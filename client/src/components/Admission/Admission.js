@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Admission.css";
-import Navbar from '../Shared/Navbar/Navbar';
+// import Navbar from '../Shared/Navbar/Navbar';
 // import Navbar from '../Shared/Navbar/Navbar';
 import SeteperControl from './SeteperControl';
 import { UseContextProvider } from './SetperContext';
@@ -12,6 +12,7 @@ import Family from './Steps/Family';
 import General from './Steps/General';
 
 import Personal from './Steps/Personal';
+
 // import axios from 'axios';
 
 const Admission = () => {
@@ -78,7 +79,8 @@ const Admission = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
+            
+            {/* <Navbar></Navbar> */}
             <div className='flex items-center justify-center admission_container'>
             <div className="mx-auto rounded-2xl bg-white pb-2 drop-shadow-lg md:w-1/2 mx-8 my-12">
                 {/* Stepper */}

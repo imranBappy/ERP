@@ -1,9 +1,11 @@
 
 .login_full{
-    background-color: rgb(239, 239, 239) !important;
+    background-color: rgb(244, 244, 251) !important;
+    
 }
-.login_card{
-    /* border: 3px solid #202c45; */
+.login_text{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
 }
 .log_btn{
     background-color: #202c45;

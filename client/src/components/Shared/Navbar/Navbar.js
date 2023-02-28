@@ -7,7 +7,8 @@ const Navbar = () => {
         <li className='nav_li'><Link to="/" >Home</Link></li>
         <li className='nav_li'><Link to="/about" >About Us</Link></li>
         <li className='nav_li'><Link to="/admission" >Admission</Link></li>
-        <li className='nav_li'><Link to="/" >Contact</Link></li>
+        <li className='nav_li'><Link to="/notice" >Notice</Link></li>
+        <li className='nav_li'><Link to="/contact" >Contact</Link></li>
         <li className='nav_li'><Link to="https://dashboard-return-zero.netlify.app" >Dashboard</Link></li>
         <li className='nav_li'><Link to="/login" >Login</Link></li>
     </>
