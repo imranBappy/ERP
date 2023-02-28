@@ -1,21 +1,9 @@
+import { applyMiddleware, compose, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './reducers/reducers.js';
 
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { admissionApi } from './services/admissionApi'
-import { admissionSlice } from './features/admissionSlice'
+const middleware = [thunk];
+const store = createStore(reducers, compose(applyMiddleware(...middleware)))
 
-
-
-
-const rootReducer = combineReducers({
-    [admissionApi.reducerPath]: admissionApi.reducer,
-    admissionReducer: admissionSlice.reducer
-})
-
-
-
-export default configureStore({
-    middleware: (getDefaultMiddleware) => {
-        return getDefaultMiddleware().concat(admissionApi.middleware)
-    },
-    reducer: rootReducer
-})
+export default store;
+// window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

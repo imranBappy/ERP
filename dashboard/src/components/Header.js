@@ -7,7 +7,6 @@ const Header = (props) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        console.log(222, localStorage.theme);
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true);

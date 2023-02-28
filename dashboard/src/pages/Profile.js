@@ -1,24 +1,10 @@
 import React, { useEffect, useState } from "react";
 import coverPhoto from '../imgs/cover_pic.jpg'
-import profilePhoto from '../imgs/profile_pic.jpg'
-import transCript from '../imgs/transCript.webp'
+
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const Bio = {
-    coverPhoto,
-    profilePhoto,
-    name: "Dilraba Dilmurat",
-    email: "dilraba@gmail.com",
-    call: 10943439,
-    departMent: "CSE",
-    ads: "china shanghai, rode-1532",
-    father: "Miller Mirik",
-    mother: "Malika",
-    parent_call: 10943439,
-    parent_email: "guardian@gmail.com",
-    nid: 23934943
-}
+
 const URL_PREFIX = 'http://localhost:5000/uploads/'
 
 const Profile = () => {

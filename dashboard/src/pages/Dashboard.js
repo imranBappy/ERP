@@ -9,7 +9,7 @@ const Dashboard = () => {
             <h2 className='text-2xl font-semibold'> Welcome Admin!</h2>
             <Card />
             <Analytics />
-            <StartStudent />
+            {/* <StartStudent /> */}
         </>
     );
 };
