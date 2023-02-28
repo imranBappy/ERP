@@ -11,16 +11,12 @@ exports.admissionGetController = async (req, res, next) => {
         const { page = 1, limit = 10 } = req.query;
         const students = await Auth.find({})
             .populate({
-
-                path: 'Students',
-                strictPopulate: false,
-                select: 'group url name studentId transcript',
-
+                path: 'profile',
+                model: Student,
+                select: 'phone'
             })
-        // .limit(limit)
-        // .skip((page - 1) * limit)
-        // console.log(students);
-        // console.log(students);
+            .limit(limit)
+            .skip((page - 1) * limit)
         res.json(students);
     } catch (error) {
         next(error)
@@ -45,12 +41,7 @@ exports.admissionPostController = async (req, res, next) => {
         const transcript = req.files.transcript[0].filename
         const url = req.files.url[0].filename
 
-
-        const newAuth = new Auth({
-            name, email, url, role: "Students",
-        })
         const newStudent = new Student({
-            auth: newAuth._id,
             phone,
             group,
             fatherName,
@@ -65,6 +56,11 @@ exports.admissionPostController = async (req, res, next) => {
             attendance: [],
             payment: [],
             application: []
+        })
+
+        const newAuth = new Auth({
+            profile: newStudent._id,
+            name, email, url, role: "Students",
         })
         await newAuth.save();
         await newStudent.save()

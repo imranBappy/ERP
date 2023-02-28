@@ -2,6 +2,7 @@
 const { Schema, model, Types } = require('mongoose')
 
 const studentSchema = new Schema({
+
     phone: {
         type: Number,
         required: [true, 'Phone is require']
