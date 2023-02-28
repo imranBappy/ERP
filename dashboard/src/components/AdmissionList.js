@@ -7,14 +7,11 @@ const AdmissionApply = () => {
     const [std, setStd] = useState([])
     console.log('admission');
     useEffect(() => {
-
         axios.get('/admission')
             .then(res => {
                 console.log(res.data);
             })
-
             .catch(err => { console.log(err) })
-
     }, [])
     return (
         <div>
