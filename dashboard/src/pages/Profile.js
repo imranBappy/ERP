@@ -50,9 +50,9 @@ const Profile = () => {
             
             </div>
         
-            <div className="mt-16 lg:mt-20">
+            <div className="mt-16 ml-3 lg:mt-20">
                 <h3 className="text-center font-bold mb-5 text-2xl uppercase">Transcript</h3>
-                <img className="w-screen lg:w-2/3 mb-10 lg:mb-0 mx-auto" src={transCript} alt="" />
+                <img className="w-screen lg:w-2/3 mb-10 pb-4  mx-auto" src={transCript} alt="" />
             </div>
 
             </div>
