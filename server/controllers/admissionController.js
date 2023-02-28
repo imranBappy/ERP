@@ -9,10 +9,14 @@ const Formet = require("../utils/dataFormet");
 exports.admissionGetController = async (req, res, next) => {
     try {
         const { page = 1, limit = 10 } = req.query;
-        const students = await Student.find({})
+        const students = await Auth.find({})
+            .populate({
+                path: 'profile',
+                model: Student,
+                select: 'phone'
+            })
             .limit(limit)
             .skip((page - 1) * limit)
-        console.log(students);
         res.json(students);
     } catch (error) {
         next(error)
@@ -37,12 +41,7 @@ exports.admissionPostController = async (req, res, next) => {
         const transcript = req.files.transcript[0].filename
         const url = req.files.url[0].filename
 
-
-        const newAuth = new Auth({
-            name, email, url, role: "Admission",
-        })
         const newStudent = new Student({
-            auth: newAuth._id,
             phone,
             group,
             fatherName,
@@ -58,9 +57,14 @@ exports.admissionPostController = async (req, res, next) => {
             payment: [],
             application: []
         })
+
+        const newAuth = new Auth({
+            profile: newStudent._id,
+            name, email, url, role: "Students",
+        })
         await newAuth.save();
         await newStudent.save()
-        res.json(new Formet({}, "Successfully Submitted!"))
+        res.json({ message: "Successfully Submitted!" })
     } catch (error) {
         next(error)
     }

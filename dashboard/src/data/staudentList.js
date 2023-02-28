@@ -12,7 +12,6 @@ const studentListBody = [{
     dob: "2 Feb 2002",
     parent_name: "Jeffrey Wong",
     mobile_number: "097 3584 5870",
-
     address: "911 Deer Ridge Drive, USA",
     action: true,
 }, {
