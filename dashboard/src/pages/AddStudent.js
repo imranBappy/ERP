@@ -30,7 +30,10 @@ const AddStudent = () => {
             .catch((error) => console.log(error));
         e.preventDefault()
         console.log(std);
+        setStd({})
+        alert('Student Added Successfully')
     }
+
     return (
         <>
             <div className='light__component dark:dark__component p-5'>

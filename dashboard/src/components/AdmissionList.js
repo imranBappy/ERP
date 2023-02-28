@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import List from './List';
-import { studentListBody, studentListHead } from '../data/staudentList';
+import { studentListHead } from '../data/staudentList';
 import axios from 'axios';
 
 const AdmissionApply = () => {
@@ -9,13 +9,14 @@ const AdmissionApply = () => {
     useEffect(() => {
         axios.get('/admission')
             .then(res => {
-                console.log(res.data);
+                setStd(res.data)
             })
             .catch(err => { console.log(err) })
     }, [])
+    console.log(std);
     return (
         <div>
-            <List head={studentListHead} body={studentListBody} />
+            <List head={studentListHead} body={std} />
         </div>
     );
 };

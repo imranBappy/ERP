@@ -13,7 +13,7 @@ exports.admissionGetController = async (req, res, next) => {
             .populate({
                 path: 'profile',
                 model: Student,
-                select: 'phone'
+                // select: 'phone'
             })
             .limit(limit)
             .skip((page - 1) * limit)
@@ -23,6 +23,22 @@ exports.admissionGetController = async (req, res, next) => {
     }
 }
 
+exports.admissionGetByIdController = async (req, res, next) => {
+    try {
+        const { stdId } = req.params;
+
+        const students = await Auth.findById(stdId)
+            .populate({
+                path: 'profile',
+                model: Student,
+                // select: 'phone'
+            })
+
+        res.json(students);
+    } catch (error) {
+        next(error)
+    }
+}
 exports.admissionPostController = async (req, res, next) => {
     try {
         const {
@@ -87,3 +103,4 @@ exports.admissionAprovePulController = async (req, res, next) => {
         next(error)
     }
 }
+

@@ -1,5 +1,5 @@
 
-const studentListHead = ["Check", "ID", "Name", "Class", "DOB", "Parent Name", "Mobile Number", "Address", "Action"];
+const studentListHead = ["Check", "ID", "Name", "Phone", "Email", "Address", "Action"];
 
 
 
