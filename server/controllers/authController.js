@@ -4,7 +4,6 @@ const bcrypt = require("bcrypt");
 const sendEmail = require("../utils/sentEmail");
 
 
-
 exports.signupController = async (req, res, next) => {
     try {
         let { name, email, password } = req.body;

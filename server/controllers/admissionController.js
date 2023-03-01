@@ -80,7 +80,7 @@ exports.admissionPostController = async (req, res, next) => {
         })
         await newAuth.save();
         await newStudent.save()
-        res.json({ message: "Successfully Submitted!" })
+        res.json({error:false, message: "Successfully Submitted!" })
     } catch (error) {
         next(error)
     }
