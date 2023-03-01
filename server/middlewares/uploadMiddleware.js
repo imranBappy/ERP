@@ -31,7 +31,7 @@ const upload = multer({
         ) {
             cb(null, true)
         } else {
-            cb(new Error("Only .jpeg, .jpg, .png formet allowed!"))
+            cb(new Error("Only .jpeg, .jpg, .png, .pdf formet allowed!"))
         }
     }
 })
