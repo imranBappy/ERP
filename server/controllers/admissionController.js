@@ -51,6 +51,7 @@ exports.admissionPostController = async (req, res, next) => {
             guardianPhone,
             guardianNID,
             address,
+            department
         } = req.body;
         const group = 'A'
         const studentId = `CMT-${group}-${Math.floor(Math.random() * 100)}`
@@ -58,6 +59,7 @@ exports.admissionPostController = async (req, res, next) => {
         const url = req.files.url[0].filename
 
         const newStudent = new Student({
+            studentId,
             phone,
             group,
             fatherName,
@@ -67,7 +69,6 @@ exports.admissionPostController = async (req, res, next) => {
             guardianNID,
             address,
             transcript,
-            studentId,
             result: [],
             attendance: [],
             payment: [],
