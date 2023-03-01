@@ -27,7 +27,6 @@ function App() {
           <Route path="/holiday" element={<Holiday />} />
           <Route path='/students/add' element={<AddStudent />} />
           <Route path='/profile/:stdId' element={<Profile />} />
-
           <Route path="*" element={<h1>404</h1>} />
         </Route>
       </Routes>
