@@ -52,6 +52,15 @@ const Profile = () => {
                     <img className="w-screen lg:w-2/3 mb-10 pb-4  mx-auto" src={`${URL_PREFIX}${std['profile']['transcript']}`} alt="" />
                 </div>
 
+              <div className="flex justify-center space-x-3">
+              <div className=""> 
+                 <button type="submit" className="bg-sky-600 p-3 mt-3 text-white-900 rounded-md" >APPROVE</button>
+                </div>
+                <div className=""> 
+                 <button type="submit" className="bg-error p-3 mt-3 mb-8 text-white-900 rounded-md" >REJECTED</button>
+                </div>
+              </div>
+
             </div>
         </div>
     );

@@ -29,7 +29,6 @@ const NavLink = (props) => {
                                                         return <li key={id} className={`mb-2 hover:bg-sky-600 rounded-md py-1 px-2 mr-3   ${active.isActive ? 'bg-sky-600 text-white-900' : 'bg-white-900 dark:bg-black-700  text-black-900 dark:text-white-900'}`}>{link.text} </li>
                                                     }
                                                 }
-
                                             </Link>)
                                         }
                                     </ul>

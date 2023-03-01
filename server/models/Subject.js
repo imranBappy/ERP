@@ -9,8 +9,7 @@ const subjectSchema = new Schema({
     name: {
         type: String,
         require: [true, 'Name is require']
-    }
-    ,
+    },
     code: {
         type: String,
         require: [true, 'Name is require']
