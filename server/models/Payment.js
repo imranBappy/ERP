@@ -3,7 +3,7 @@ const { Schema, model, Types } = require('mongoose');
 const Auth = require('./Auth');
 
 const paymentSchema = new Schema({
-    student: {
+    auth: {
         type: Types.ObjectId,
         ref: Auth
     },
@@ -14,16 +14,15 @@ const paymentSchema = new Schema({
     },
     type: {
         type: String,
-        enum: ['Student', 'Teacher', 'Admin'],
+        enum: ['Tuition Fee', 'Admission Fee', 'Semester Fee', 'Mid Fee'],
         required: [true, 'The field is require']
-
     },
     method: {
         type: String,
-        enum: ['Bkash', 'Rocket','Nagod', 'Bank'],
+        enum: ['Bkash', 'Rocket', 'Nagod', 'Bank'],
         required: [true, 'Payment method is require']
     },
-    transactionId: {
+    trxId: {
         type: String,
         required: [true, 'transactionId is require']
     },
@@ -32,3 +31,4 @@ const paymentSchema = new Schema({
 });
 
 const Payment = model('Payment', paymentSchema);
+module.exports = Payment;
