@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
-const Input = ({ label, type, ...rest }) => {
+const Input = ({ label, type, errors, ...rest }) => {
     const [file, setFile] = useState(null);
     const handleChanage = (e) => {
         setFile(URL.createObjectURL(e.target.files[0]));
@@ -34,27 +34,27 @@ const Input = ({ label, type, ...rest }) => {
                 </div>
             </div>
         case 'password':
-            return <div className='flex items-center mt-2'>
-                <div className='grow'>
-                    <label htmlFor="first_name" className="block mb-2 text-sm  dark:text-white ">{label}</label>
-                    <input  {...rest} type={show ? 'text' : 'password'} className="bg-white-800 h-11 border border-black text-sm rounded-lg rounded-r-none border-r-0 focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" required />
+            return <div className=' mt-2'>
+                <div className='flex items-center'>
+                    <div className='grow'>
+                        <label htmlFor="first_name" className="block mb-2 text-sm  dark:text-white ">{label}</label>
+                        <input  {...rest} type={show ? 'text' : 'password'} className="bg-white-800 h-11 border border-black text-sm rounded-lg rounded-r-none border-r-0 focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" />
+                    </div>
+                    <div className='rounded-lg w-9 rounded-l-none border border-l-0 h-11 bg-white-800 dark:bg-black-700 ' style={{ marginTop: "27px" }}>
+                        {
+                            !show ? <AiFillEye onClick={handleShow} className='mt-3 ml-2 ' style={{ cursor: 'pointer' }} /> :
+                                <AiFillEyeInvisible onClick={handleShow} className='mt-3 ml-2 ' style={{ cursor: 'pointer' }} />
+                        }
+                    </div>
                 </div>
-                <div className='rounded-lg w-9 rounded-l-none border border-l-0 h-11 bg-white-800 dark:bg-black-700 ' style={{ marginTop: "27px" }}>
-                    {
-                        !show ? <AiFillEye onClick={handleShow} className='mt-3 ml-2 ' style={{ cursor: 'pointer' }} /> :
-                            <AiFillEyeInvisible onClick={handleShow} className='mt-3 ml-2 ' style={{ cursor: 'pointer' }} />
-                    }
-
-                </div>
+                {errors[rest.name] && <span className='text-error'>{label} is required</span>}
             </div>
-        case 'submit':
-            return <div className='mt-2'>
-                <input {...rest} type={type} className="bg-sky-600 text-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" required />
-            </div>;
+
         default:
             return <div className='mt-2'>
                 <label htmlFor="first_name" className="block mb-2 text-sm font- dark:text-white ">{label}</label>
-                <input {...rest} type={type} className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" required />
+                <input {...rest} type={type} className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" />
+                {errors[rest.name] && <span className='text-error'>{label} is required</span>}
             </div>;
     }
 

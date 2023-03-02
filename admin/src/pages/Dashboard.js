@@ -7,9 +7,8 @@ const Dashboard = () => {
     return (
         <>
             <h2 className='text-2xl font-semibold'> Welcome Admin!</h2>
-            <Card dashboardCard={dashboardCard} />
-                <Analytics />
-            {/* <StartStudent /> */}
+            <Card cards={dashboardCard} />
+            <Analytics />
         </>
     );
 };
