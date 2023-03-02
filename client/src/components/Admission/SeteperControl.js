@@ -1,8 +1,6 @@
 import React from 'react';
 import { useStepperContext } from './SetperContext';
 
-import { useStepperContext } from './SetperContext';
-
 export default function SeteperControl({ handleClick, currentStep, steps }) {
   const x = useStepperContext();
   const test = () => {

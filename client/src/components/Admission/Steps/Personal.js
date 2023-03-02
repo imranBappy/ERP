@@ -131,7 +131,6 @@ const Personal = () => {
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                value={userData["department"] || ""}
                 name="department"
                 placeholder="department"
                 type="text"
@@ -141,7 +140,7 @@ const Personal = () => {
 
           </div>
 
- 
+
           <div className="mx-2 w-full">
             <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
               Photo
@@ -149,7 +148,6 @@ const Personal = () => {
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                value={userData["photo"] || ""}
                 name="url"
                 placeholder="Photo"
                 type="file"
@@ -158,9 +156,8 @@ const Personal = () => {
             </div>
           </div>
         </div>
+      </div>
 
-
-      </Form>
     </div>
   );
 };
