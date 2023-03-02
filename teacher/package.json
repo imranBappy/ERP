@@ -1,5 +1,5 @@
 {
-  "name": "dashboard",
+  "name": "teacher-dashboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,6 +45,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dev-utils": "^12.0.1",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.3",
     "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-refresh": "^0.11.0",

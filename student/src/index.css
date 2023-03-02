@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav__next__icon {
+    @apply ml-2 transition-all duration-75;
+  }
+  .light__component {
+    @apply bg-white-900 mt-10 rounded-md text-black-900;
+  }
+  .dark__component {
+    @apply bg-black-700 mt-10 rounded-md  text-white-900;
+  }
+
+  .title-h4 {
+    @apply text-xl font-semibold pl-10 py-4;
+  }
+  .nav__link {
+    @apply mb-1 h-10 flex pl-5 items-center text-lg translate-x-0 transition-all duration-75 ease-in-out;
+  }
+  .page__title {
+    @apply text-2xl font-semibold mb-5;
+  }
+}
