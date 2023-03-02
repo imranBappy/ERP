@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
-import Navbar from '../Shared/Navbar/Navbar';
+
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
@@ -11,15 +11,15 @@ const Login = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
-            <div className='h-[800px] flex justify-center  items-center login_full'>
+            
+            <div className='h-[800px] flex justify-center  items-center login_full px-4'>
                 <div className='w-96 p-7 login_card bg-white drop-shadow-xl'>
-                    <h2 className='text-4xl text-center mb-4'>Login</h2>
+                    <h2 className='text-4xl text-center login_text mb-4'>Login</h2>
 
                     <form onSubmit={handleSubmit(handleLogin)}>
 
 
-                        <div className="form-control w-full max-w-xs">
+                        <div className="form-control w-full max-w-xs mb-4">
                             <label className="label"><span className="label-text">Email</span></label>
                             <input type="email"
                                 {...register("email", { required: "Email Address is required" })}
@@ -37,15 +37,15 @@ const Login = () => {
                                 className="input input-bordered w-full max-w-xs" />
                             {errors.password && <p role="alert" className='text-red-600'>{errors.password?.message}</p>}
 
-                            <label className="label"><span className="label-text">Forget Password?</span></label>
+                            <label className="label"><span className="label-text mt-2">Forget Password?</span></label>
 
 
                         </div>
 
-                        <input className='btn log_btn w-full' value="Login" type="submit" />
+                        <input className='btn log_btn w-full my-8' value="Login" type="submit" />
                     </form>
-                    <div className="divider">OR</div>
-                    <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                    {/* <div className="divider">OR</div>
+                    <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button> */}
                 </div>
             </div>
         </div>

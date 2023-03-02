@@ -1,0 +1,24 @@
+.notice_head{
+    border: 4px solid rgb(37, 37, 117);
+    background-color: #202c45;
+    padding: 10px 0;
+    color:  white;
+}
+
+.notice_height{
+    height: 600px;
+}
+
+.nt_head{
+    font-size: 20px;
+}
+.nt_pdf{
+    color: rgb(200, 47, 47);
+}
+.nt_data{
+    color: #2e65dc;
+}
+
+.nt_row:nth-child(even) {
+    background-color: #202c45;    
+}
