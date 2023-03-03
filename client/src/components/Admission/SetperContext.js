@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import axios from 'axios'
 
 const StepperContext = createContext({
   handleChange: () => { }, handleSubmit: () => { }
@@ -9,7 +8,7 @@ export function UseContextProvider({ children }) {
   // console.log(userData);
 
   return (
-    <StepperContext.Provider value={{ std, setStd, handleChange, handleSubmit }}>
+    <StepperContext.Provider value={[userData, setUserData]}>
       {children}
     </StepperContext.Provider>
   );
@@ -17,11 +16,7 @@ export function UseContextProvider({ children }) {
 
 
 export function useStepperContext() {
-  const {
-    std, setStd, handleChange, handleSubmit
-  } = useContext(StepperContext);
+  const [userData, setUserData] = useContext(StepperContext);
 
-  return {
-    std, setStd, handleChange, handleSubmit
-  };
+  return [userData, setUserData];
 }

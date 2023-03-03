@@ -1,0 +1,41 @@
+.drawer {
+  min-width: 250px;
+  height: 100vh;
+  z-index: 1;
+  transition-property: position, left;
+  transition-duration: 0.2s;
+}
+.close__btn {
+  display: none;
+}
+.close__btn__ops {
+  position: absolute;
+  top: 37px;
+  right: 10px;
+}
+
+/* my__table */
+
+@media screen and (max-width: 1200px) {
+  .dashboard__wrapper {
+    width: 100%;
+  }
+  .close__btn {
+    display: block;
+  }
+  .drawer {
+    position: fixed;
+    top: 0;
+    left: -250px;
+  }
+  .drawer__close {
+    position: fixed;
+    top: 0;
+    left: -250px;
+  }
+  .drawer__open {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
