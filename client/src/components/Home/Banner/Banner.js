@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Banner.css";
 import BannerImages from './BannerImages';
+import { Link } from 'react-router-dom';
 
 
 
@@ -75,7 +76,8 @@ const Banner = () => {
                 <div className="banner_left w-11/12 md:w-4/5 lg:w-4/5 mx-auto ">
                     <h2>Welcome to the Retrun Zero University</h2>
                     <p>On the first day of July 1921 the Retrun Zero University opened its doors to students with Sir P.J. Hartog ...Founded : 1921 Faculty Members : 2000+.....</p>
-                    <button>Read More</button>
+                    <Link to="/about"><button>Read More</button></Link>
+                    
                 </div>
                 <div className="banner_right w-11/12 md:w-4/5 lg:w-4/5 mx-auto">
                     <Slider {...settings}>
