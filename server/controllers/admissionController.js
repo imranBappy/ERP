@@ -91,15 +91,16 @@ exports.admissionAprovePulController = async (req, res, next) => {
         const { _id } = req.body
         const password = uuid();
         const hashPass = await hash(password, 10);
-        const std = await Student.findById(_id)
-        await Student.findOAndUpdate(_id, {
+        const std = await Auth.findById(_id)
+        await Auth.findOneAndUpdate(_id, {
             $set: {
                 password: hashPass,
                 role: "Student"
             }
         });
+        console.log(hashPass)
         sendEmail(std.email, std.name, password)
-        res.json(Formet(std, "Successfully Approved!"))
+        res.json(new Formet(std, "Successfully Approved!"))
     } catch (error) {
         next(error)
     }

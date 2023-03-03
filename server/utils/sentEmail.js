@@ -25,7 +25,7 @@ async function sendEmail(to, name, password) {
             </head>
             <body>
                 <h1>Welcome ${name}!</h1>
-                <h4 style="color:red">You admission application has successfully approved </h4>
+                <h4 style="color:green">You admission application has successfully approved </h4>
                 <p>You Account Password : ${password}</p>
             </body>
             </html>
