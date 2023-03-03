@@ -72,6 +72,7 @@ margin-bottom: 5%;
     background-color: rgb(32, 32, 96);
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
 }
 
 .con_frm label{
