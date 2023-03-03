@@ -34,7 +34,6 @@ const Navbar = () => {
             </div>
 
 
-
         </div>
 
         // <div className="navbar bg-base-100 max-w-screen-xl mx-auto">

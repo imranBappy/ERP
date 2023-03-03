@@ -10,11 +10,11 @@ const app = express();
 dotenv.config({ path: './config/.env' })
 
 // connect Database()
-connectDB()
+connectDB();
 
 
 //static file
-app.use(express.static(__dirname + '../public'))
+app.use(express.static(__dirname + '\\public'))
 
 //set middlewares
 setMiddlewares(app)

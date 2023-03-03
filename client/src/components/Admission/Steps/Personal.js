@@ -3,54 +3,41 @@ import { Form } from 'react-router-dom';
 import { useStepperContext } from '../SetperContext';
 
 const Personal = () => {
-  const { userData, setUserData } = useStepperContext();
-  const handleChange = (e) => {
-    const { name, value} = e.target;
-    setUserData({ ...userData, [name]: value });
-  };
+  const { handleChange, handleSubmit } = useStepperContext();
+
 
   return (
     <div className="flex flex-col">
-      <Form>
+      <div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2'>
-
-          <div className="mx-2 w-full flex-1">
+          <div className="mx-2 w-full">
             <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
-              Student Name
+              Username
             </div>
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                // value={userData["studentName"]}
-                name="studentName"
+                name="name"
                 placeholder="Student Name"
-                required
-                type='text'
                 className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
               />
             </div>
           </div>
-
-
-          <div className="mx-2 w-full flex-1">
+          <div className="mx-2 w-full">
             <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
               Email
             </div>
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                // value={userData["studentEmail"]}
                 name="studentEmail"
-                placeholder="Student Email"
+                placeholder="email"
                 type="email"
-                required
                 className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
               />
             </div>
           </div>
-
-
         </div>
 
 
@@ -62,11 +49,9 @@ const Personal = () => {
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                value={userData["studentNumber"]}
                 name="studentNumber"
-                placeholder="Phone Number"
+                placeholder="number"
                 type="number"
-                required
                 className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
               />
             </div>
@@ -80,7 +65,6 @@ const Personal = () => {
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                value={userData["address"]}
                 name="address"
                 placeholder="address"
                 type="text"
@@ -99,7 +83,6 @@ const Personal = () => {
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                value={userData["department"] || ""}
                 name="department"
                 placeholder="department"
                 type="text"
@@ -109,7 +92,20 @@ const Personal = () => {
 
           </div>
 
- 
+          {/* <div className="mx-2 w-full flex-1">
+          <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
+          Profile Photo
+          </div>
+          <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+            <input
+              onChange={handleChange}
+              name="Photo"
+              placeholder="photo"
+              type="file"
+              className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+            />
+          </div>
+        </div> */}
           <div className="mx-2 w-full">
             <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
               Photo
@@ -117,7 +113,6 @@ const Personal = () => {
             <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
               <input
                 onChange={handleChange}
-                value={userData["photo"] || ""}
                 name="url"
                 placeholder="Photo"
                 type="file"
@@ -128,7 +123,41 @@ const Personal = () => {
         </div>
 
 
-      </Form>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2'>
+          <div className="mx-2 w-full">
+            <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
+              Department
+            </div>
+            <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+              <input
+                onChange={handleChange}
+                name="department"
+                placeholder="department"
+                type="text"
+                className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+              />
+            </div>
+
+          </div>
+
+
+          <div className="mx-2 w-full">
+            <div className="mt-3 h-6 text-xs font-bold uppercase leading-8 text-gray-500">
+              Photo
+            </div>
+            <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
+              <input
+                onChange={handleChange}
+                name="url"
+                placeholder="Photo"
+                type="file"
+                className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -5,8 +5,6 @@ import axios from 'axios';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
-
-
     const handleLogin = data => {
         console.log(data);
         axios(
@@ -23,21 +21,17 @@ const Login = () => {
     }
     return (
         <div>
-            
+
             <div className='h-[800px] flex justify-center  items-center login_full px-4'>
                 <div className='w-96 p-7 login_card bg-white drop-shadow-xl'>
                     <h2 className='text-4xl text-center login_text mb-4'>Login</h2>
-
                     <form onSubmit={handleSubmit(handleLogin)}>
-
-
                         <div className="form-control w-full max-w-xs mb-4">
                             <label className="label"><span className="label-text">Email</span></label>
                             <input type="email"
                                 {...register("email", { required: "Email Address is required" })}
                                 className="input input-bordered w-full max-w-xs" />
                             {errors.email && <p role="alert" className='text-red-600'>{errors.email?.message}</p>}
-
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label"><span className="label-text">Password</span></label>

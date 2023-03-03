@@ -19,7 +19,6 @@ const Admission = () => {
     const [currentStep, setCurrentStep] = useState(1);
 
     const steps = [
-        
         "1.Personal",
         "2.Family",
         "3.Education",
@@ -82,25 +81,25 @@ const Admission = () => {
             
             {/* <Navbar></Navbar> */}
             <div className='flex items-center justify-center admission_container'>
-            <div className="mx-auto rounded-2xl bg-white pb-2 drop-shadow-lg md:w-1/2 mx-8 my-12">
-                {/* Stepper */}
-                <div className="horizontal container mt-5 ">
-                    <Stepper steps={steps} currentStep={currentStep} />
+                <div className="mx-auto rounded-2xl bg-white pb-2 drop-shadow-lg md:w-1/2 mx-8 my-12">
+                    {/* Stepper */}
+                    <div className="horizontal container mt-5 ">
+                        <Stepper steps={steps} currentStep={currentStep} />
 
-                    <div className="my-10 p-10 ">
-                        <UseContextProvider>{displayStep(currentStep)}</UseContextProvider>
+                        <div className="my-10 p-10 ">
+                            <UseContextProvider>{displayStep(currentStep)}</UseContextProvider>
+                        </div>
                     </div>
-                </div>
 
-                {/* navigation button */}
-                {currentStep !== steps.length && (
-                    <SeteperControl
-                        handleClick={handleClick}
-                        currentStep={currentStep}
-                        steps={steps}
-                    />
-                )}
-            </div>
+                    {/* navigation button */}
+                    {currentStep !== steps.length && (
+                        <SeteperControl
+                            handleClick={handleClick}
+                            currentStep={currentStep}
+                            steps={steps}
+                        />
+                    )}
+                </div>
             </div>
         </div>
     );
