@@ -65,3 +65,19 @@ margin-bottom: 5%;
     color: grey;
     font-weight: 700;
 }
+
+.contact_btn{
+    padding: 10px 18px;
+    color: white;
+    background-color: rgb(32, 32, 96);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.con_frm label{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: grey;
+    
+}
