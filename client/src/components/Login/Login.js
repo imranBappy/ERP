@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -8,6 +9,17 @@ const Login = () => {
 
     const handleLogin = data => {
         console.log(data);
+        axios(
+            {
+              method: "post",
+              url: "http://localhost:5000/auth",
+              data: data,
+              headers: { "Content-Type": "multipart/form-data" },
+            }
+          ).then((response) => response.json())
+            .then((data) => console.log(data))
+            .catch((error) => console.log(error));
+            
     }
     return (
         <div>
