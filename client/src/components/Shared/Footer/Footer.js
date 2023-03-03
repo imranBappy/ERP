@@ -13,8 +13,10 @@ const Footer = () => {
                         <p>Sign up to receive email updates about courses</p>
                     </div>
                     <div className='lg:ml-32'>
+                        <form action="">
                         <input type="email" placeholder='Enter your email' />
                         <button type="submit">SubsCribe</button>
+                        </form>
                     </div>
                 </div>
             </div>
