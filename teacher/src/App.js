@@ -11,6 +11,11 @@ import AddStudent from './pages/AddStudent';
 import Admission from './pages/Admission';
 import Profile from './pages/Profile';
 import DepartmentAdd from './pages/DepartmentAdd';
+<<<<<<< HEAD
+=======
+import AddAccount from './pages/AddAccount';
+import Test from './pages/Test';
+>>>>>>> mehedi
 
 
 function App() {
@@ -30,8 +35,20 @@ function App() {
 
           <Route path="/admission" element={<Admission />} />
           <Route path="/invoices" element={<Invoices />} />
+<<<<<<< HEAD
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/holiday" element={<Holiday />} />
+=======
+
+          <Route path="/accounts" element={<Accounts />} />
+          <Route path="/accounts/add" element={<AddAccount />} />
+
+          <Route path="/holiday" element={<Holiday />} />
+
+          <Route path="/test" element={<Test />} />
+
+
+>>>>>>> mehedi
           <Route path='/profile/:stdId' element={<Profile />} />
           <Route path="*" element={<h1>404</h1>} />
         </Route>
