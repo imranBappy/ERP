@@ -11,9 +11,6 @@ const AddAccount = () => {
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });
-        // formData.append('xxx', data['url'])
-        // console.log(data, formData);
-
         axios.post('/admin', formData)
             .then(res => {
                 alert(res.data.message)

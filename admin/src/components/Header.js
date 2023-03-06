@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { GoThreeBars } from 'react-icons/go';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { BsSun } from 'react-icons/bs';
-
+import { connect } from 'react-redux';
+import { authGetAction } from '../app/actions/authAction'
 const Header = (props) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -14,6 +15,7 @@ const Header = (props) => {
             document.documentElement.classList.remove('dark')
             setIsDarkMode(false);
         }
+        props.authGetAction();
     }, []);
     const handleMode = () => {
         if (isDarkMode) {
@@ -42,15 +44,19 @@ const Header = (props) => {
                     </div>
                 </div>
                 <div>
-                    <img className=' w-8 mt-1 ml-2 rounded-full ring-1 ring-offset-2' src="https://avatars.githubusercontent.com/u/61227100?v=4" alt="profile-ric" />
+                    <img className=' w-8  h-8 mt-1 ml-2 rounded-full ring-1 ring-offset-2' src={`http://localhost:5000/uploads/${props.auth.data?.url}`} alt="profile-ric" />
                 </div>
                 <div>
-                    <h4 className=' font-semibold  text-base leading-5 '>Imran Hossen</h4>
-                    <p className=' text-sm	dark:text-black-600'>Admin</p>
+                    <h4 className=' font-semibold  text-base leading-5 '>{props.auth.data?.name}</h4>
+                    <p className=' text-sm	dark:text-black-600'>{props.auth.data?.role}</p>
                 </div>
             </div>
         </div>
     );
 };
-
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        auth: state.auth
+    }
+};
+export default connect(mapStateToProps, { authGetAction })(Header);

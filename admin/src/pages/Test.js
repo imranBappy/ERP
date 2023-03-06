@@ -1,25 +1,31 @@
+import axios from "axios";
 import { useForm } from "react-hook-form";
 
 export default function Test() {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        console.log(data)
+        axios.post('/auth', data)
+            .then(res => { console.log(res) })
+            .catch(err => { console.log(err) })
+    };
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <input
-                    {...register("firstName", { required: true })}
+                    {...register("email", { required: true })}
                     aria-invalid={errors.firstName ? "true" : "false"}
                 />
-                {errors.firstName?.type === 'required' && <p className="text-error" role="alert">First name is required</p>}
+                {errors.email?.type === 'required' && <p className="text-error" role="alert">Email is required</p>}
 
             </div>
-
+            <br />
             <div>
                 <input
-                    {...register("mail", { required: "Email Address is required" })}
-                    aria-invalid={errors.mail ? "true" : "false"}
+                    {...register("password", { required: "Password  is required" })}
+                    aria-invalid={errors.email ? "true" : "false"}
                 />
-                {errors.mail && <p role="alert" className="text-error">{errors.mail?.message}</p>}
+                {errors.password && <p role="alert" className="text-error">{errors.password?.message}</p>}
 
             </div>
 
