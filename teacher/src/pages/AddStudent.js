@@ -22,6 +22,7 @@ const AddStudent = (props) => {
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
+<<<<<<< HEAD
 
         // axios(
         //     {
@@ -36,6 +37,8 @@ const AddStudent = (props) => {
         // e.preventDefault()
         // console.log(std);
         // setStd({})
+=======
+>>>>>>> mehedi
         props.admissionPostAction({ data: props.admission.data, newData: formData })
         alert('Student Added Successfully')
     }

@@ -9,7 +9,10 @@ const dashboardCard = [
     { id: 2, title: 'Award', value: '50+', avater: award },
     { id: 1, title: 'Department', value: '30+', avater: Department },
     { id: 1, title: 'Revenue', value: '$505', avater: Revenue },
+<<<<<<< HEAD
 
+=======
+>>>>>>> mehedi
 ];
 
 export default dashboardCard;

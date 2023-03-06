@@ -5,6 +5,10 @@ import { admissionPostAction } from '../app/actions/admissionAction'
 
 const input_field = require("./AddStudentInputfield")
 const AddStudent = (props) => {
+<<<<<<< HEAD
+=======
+    console.log(props.admission);
+>>>>>>> mehedi
     const [input,] = useState(input_field);
     const [std, setStd] = useState({})
     const handleChange = (e) => {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { GoThreeBars } from 'react-icons/go';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { BsSun } from 'react-icons/bs';
+<<<<<<< HEAD
 import { connect } from 'react-redux';
 import { authGetAction } from '../app/actions/authAction'
 import { useSearchParams } from 'react-router-dom';
@@ -13,6 +14,13 @@ const Header = (props) => {
         if (searchParams.get('token')) {
             localStorage.setItem('token', searchParams.get('token'));
         }
+=======
+
+const Header = (props) => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    useEffect(() => {
+>>>>>>> mehedi
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true);
@@ -20,7 +28,10 @@ const Header = (props) => {
             document.documentElement.classList.remove('dark')
             setIsDarkMode(false);
         }
+<<<<<<< HEAD
         props.authGetAction();
+=======
+>>>>>>> mehedi
     }, []);
     const handleMode = () => {
         if (isDarkMode) {
@@ -49,19 +60,32 @@ const Header = (props) => {
                     </div>
                 </div>
                 <div>
+<<<<<<< HEAD
                     <img className=' w-8  h-8 mt-1 ml-2 rounded-full ring-1 ring-offset-2' src={`http://localhost:5000/uploads/${props.auth.data?.url}`} alt="profile-ric" />
                 </div>
                 <div>
                     <h4 className=' font-semibold  text-base leading-5 '>{props.auth.data?.name}</h4>
                     <p className=' text-sm	dark:text-black-600'>{props.auth.data?.role}</p>
+=======
+                    <img className=' w-8 mt-1 ml-2 rounded-full ring-1 ring-offset-2' src="https://avatars.githubusercontent.com/u/61227100?v=4" alt="profile-ric" />
+                </div>
+                <div>
+                    <h4 className=' font-semibold  text-base leading-5 '>Imran Hossen</h4>
+                    <p className=' text-sm	dark:text-black-600'>Admin</p>
+>>>>>>> mehedi
                 </div>
             </div>
         </div>
     );
 };
+<<<<<<< HEAD
 const mapStateToProps = (state) => {
     return {
         auth: state.auth
     }
 };
 export default connect(mapStateToProps, { authGetAction })(Header);
+=======
+
+export default Header;
+>>>>>>> mehedi
