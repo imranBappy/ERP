@@ -22,4 +22,5 @@
   .page__title {
     @apply text-2xl font-semibold mb-5;
   }
+
 }

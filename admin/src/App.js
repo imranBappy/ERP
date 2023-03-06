@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import './styles/App.css';
 import Dashboard from './pages/Dashboard';
 import Layout from './pages/Layout';
 import Students from './pages/Students';
@@ -13,11 +13,13 @@ import Profile from './pages/Profile';
 import DepartmentAdd from './pages/DepartmentAdd';
 import AddAccount from './pages/AddAccount';
 import Test from './pages/Test';
+import Notify from './components/Notify';
 
 
 function App() {
   return (
     <div className="dark:bg-black-700">
+      <Notify />
       <Routes>
         <Route path="/" element={<Layout />} >
           <Route path="/" element={<Dashboard />} />
@@ -45,6 +47,7 @@ function App() {
           <Route path="*" element={<h1>404</h1>} />
         </Route>
       </Routes>
+
     </div>
   );
 }
