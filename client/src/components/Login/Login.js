@@ -2,7 +2,7 @@ import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-// import swal from "sweetalert";
+import swal from "sweetalert";
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -11,10 +11,21 @@ const Login = () => {
             .then(res => {
                 console.log(res.data,
                     res.data.token)
+                swal({
+                    title: "Good job!",
+                    text: "Your are logged in successfullly!!",
+                    icon: "error",
+                    button: "Aww yiss!",
+                });
                 window.open(`http://localhost:3000?token=${res.data.token}`)
             }).then(err => {
                 console.log(err);
-                alert(err.message)
+                swal({
+                    title: "OPPS !!!",
+                    text: err.message,
+                    icon: "Faild",
+                    button: "Aww Try Again",
+                });
             })
     }
     return (
