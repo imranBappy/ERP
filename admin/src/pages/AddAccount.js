@@ -21,7 +21,9 @@ const AddAccount = () => {
     useEffect(() => {
         const subscription = watch((value, { name, type }) => {
             if (name === 'url') {
-                setFile(URL.createObjectURL(value.url[0]));
+
+                    setFile(URL.createObjectURL(value.url[0]));
+              
             }
         });
         return () => subscription.unsubscribe();
