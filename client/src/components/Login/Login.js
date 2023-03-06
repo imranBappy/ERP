@@ -2,35 +2,11 @@ import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-<<<<<<< HEAD
-import swal from "sweetalert";
-=======
-import { redirect } from "react-router-dom";
->>>>>>> imran
+// import swal from "sweetalert";
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {
-<<<<<<< HEAD
-        console.log(data);
-        swal({
-            title: "Good job!",
-            text: "Login successfullly",
-            icon: "success",
-            button: "Aww yiss!",
-          });
-        axios(
-            {
-              method: "post",
-              url: "http://localhost:5000/auth",
-              data: data,
-              headers: { "Content-Type": "multipart/form-data" },
-            }
-          ).then((response) => response.json())
-            .then((data) => console.log(data))
-            .catch((error) => console.log(error));
-            
-=======
         axios.post('/auth', data)
             .then(res => {
                 console.log(res.data,
@@ -40,7 +16,6 @@ const Login = () => {
                 console.log(err);
                 alert(err.message)
             })
->>>>>>> imran
     }
     return (
         <div>
