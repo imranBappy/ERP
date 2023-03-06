@@ -3,10 +3,7 @@ const routes = [
     { path: '/admission', router: require('./admissionRoutes.js') },
     { path: '/department', router: require('./departmentRoutes.js') },
     { path: '/payment', router: require('./paymentRoutes.js') },
-<<<<<<< HEAD
     {path: '/notice', router: require('./noticeRoutes')},
-=======
->>>>>>> imran
     { path: '/admin', router: require('./adminRoutes.js') }
 ]
 

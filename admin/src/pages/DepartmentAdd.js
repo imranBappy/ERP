@@ -3,7 +3,6 @@ import Input from '../components/Input';
 import DepartmentAddField from '../data/DepartmentAdd';
 
 
-
 const DepartmentAdd = () => {
 
     const [inputField, setInputField] = useState(DepartmentAddField);
@@ -22,15 +21,6 @@ const DepartmentAdd = () => {
                 })
             }
 
-        </div>
-    );
-};
-import React from 'react';
-
-const DepartmentAdd = () => {
-    return (
-        <div>
-            <h1>Department Add</h1>
         </div>
     );
 };

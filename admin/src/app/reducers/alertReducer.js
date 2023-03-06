@@ -1,10 +1,6 @@
 import * as Types from '../actions/types.js';
 const init = {
-<<<<<<< HEAD
     message: '',
-=======
-    message: 'successfully',
->>>>>>> imran
     error: false
 }
 

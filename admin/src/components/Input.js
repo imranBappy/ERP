@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
-<<<<<<< HEAD
 const Input = ({ label, type, errors, ...rest }) => {
     const [file, setFile] = useState(null);
     const handleChanage = (e) => {
         setFile(URL.createObjectURL(e.target.files[0]));
     }
-=======
-const Input = ({ file,label, type, errors, register, ...rest }) => {
-  
->>>>>>> imran
     const [show, setShow] = useState(false);
     const handleShow = () => { setShow(!show) }
     switch (type) {
@@ -32,38 +27,18 @@ const Input = ({ file,label, type, errors, register, ...rest }) => {
                                             Attach a file</p>
                                     </div>
                                 }
-<<<<<<< HEAD
                                 <input onChange={handleChanage} type="file" className="opacity-0" />
-=======
-                                <input
-                                    aria-invalid={errors[rest.name] ? "true" : "false"}
-                                    {...register(rest.name)} type="file" className="opacity-0" />
->>>>>>> imran
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
         case 'password':
-<<<<<<< HEAD
             return <div className=' mt-2'>
                 <div className='flex items-center'>
                     <div className='grow'>
                         <label htmlFor="first_name" className="block mb-2 text-sm  dark:text-white ">{label}</label>
                         <input  {...rest} type={show ? 'text' : 'password'} className="bg-white-800 h-11 border border-black text-sm rounded-lg rounded-r-none border-r-0 focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" />
-=======
-            return <div className='mt-2'>
-                <div className='flex items-center'>
-                    <div className='grow'>
-                        <label htmlFor="first_name" className="block mb-2 text-sm  dark:text-white ">{label}</label>
-                        <input
-                            {...rest}
-                            {...register(rest.name, { required: true })}
-                            type={show ? 'text' : 'password'}
-                            className="bg-white-800 h-11 border border-black text-sm rounded-lg rounded-r-none border-r-0 focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600"
-                            aria-invalid={errors[rest.name] ? "true" : "false"}
-                        />
->>>>>>> imran
                     </div>
                     <div className='rounded-lg w-9 rounded-l-none border border-l-0 h-11 bg-white-800 dark:bg-black-700 ' style={{ marginTop: "27px" }}>
                         {
@@ -72,7 +47,6 @@ const Input = ({ file,label, type, errors, register, ...rest }) => {
                         }
                     </div>
                 </div>
-<<<<<<< HEAD
                 {errors[rest.name] && <span className='text-error'>{label} is required</span>}
             </div>
 
@@ -81,18 +55,6 @@ const Input = ({ file,label, type, errors, register, ...rest }) => {
                 <label htmlFor="first_name" className="block mb-2 text-sm font- dark:text-white ">{label}</label>
                 <input {...rest} type={type} className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" />
                 {errors[rest.name] && <span className='text-error'>{label} is required</span>}
-=======
-                {errors[rest.name] && <span className='text-error'>{rest.name} is required</span>}
-            </div>
-        default:
-            return <div className='mt-2'>
-                <label htmlFor="first_name" className="block mb-2 text-sm font- dark:text-white ">{label}</label>
-                <input
-                    {...register(rest.name, { required: true })}
-                    aria-invalid={errors[rest.name] ? "true" : "false"}
-                    {...rest} type={type} className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" />
-                {errors[rest.name] && <span className='text-error'>{rest.name} is required</span>}
->>>>>>> imran
             </div>;
     }
 
