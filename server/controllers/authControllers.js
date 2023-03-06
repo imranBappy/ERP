@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const sendEmail = require("../utils/sentEmail");
 var jwt = require('jsonwebtoken');
 
-<<<<<<< HEAD
 exports.authGetController = async (req, res, next) => {
     try {
         console.log(req.query.id);
@@ -16,9 +15,6 @@ exports.authGetController = async (req, res, next) => {
         next(error)
     }
 }
-=======
-
->>>>>>> mehedi
 exports.signupController = async (req, res, next) => {
     try {
         let { name, email, password } = req.body;
