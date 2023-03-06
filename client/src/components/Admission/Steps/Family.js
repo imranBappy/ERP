@@ -2,9 +2,8 @@ import React from 'react';
 import { useStepperContext } from '../SetperContext';
 
 const Family = () => {
-  const { userData, setUserData } = useStepperContext();
-  const handleChange = (e) => {
-  };
+ 
+  const { handleChange} = useStepperContext();
 
   return (
     <div className="flex flex-col">

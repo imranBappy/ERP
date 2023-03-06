@@ -1,9 +1,9 @@
 import React from 'react';
-import { Form } from 'react-router-dom';
+// import { Form } from 'react-router-dom';
 import { useStepperContext } from '../SetperContext';
 
 const Personal = () => {
-  const { handleChange, handleSubmit } = useStepperContext();
+  const { handleChange} = useStepperContext();
 
 
   return (
