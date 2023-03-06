@@ -1,8 +1,6 @@
 const { Schema, model, Types } = require('mongoose')
 const emailValidator = require('../utils/emailValidator')
 
-
-
 const authScheme = Schema({
     name: {
         type: String,
@@ -18,7 +16,7 @@ const authScheme = Schema({
     role: {
         type: String,
         required: [true, 'Role is require!'],
-        enum: ['Student', 'Teacher', 'Admin', 'Admission'],
+        enum: ['Students', 'Teacher', 'Admin', 'Applicant'],
         min: 2,
     },
     email: {

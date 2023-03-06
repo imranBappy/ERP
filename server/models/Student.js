@@ -2,8 +2,18 @@
 const { Schema, model, Types } = require('mongoose')
 
 const studentSchema = new Schema({
+    isAdmitted: {
+        type: String,
+        enum: ['No', 'Yes', 'Panding'],
+        default: 'No',
+    },
+    department: {
+        type: Types.ObjectId,
+        // required: [true, 'Department is require'],
+        ref: 'Department',
+    },
     phone: {
-        type: Number,
+        type: String,
         required: [true, 'Phone is require']
     },
     group: {
@@ -12,7 +22,8 @@ const studentSchema = new Schema({
         required: [true, 'Group is require']
     },
     tutionFree: {
-        type: Number
+        type: Number,
+        default: 0,
     },
     fatherName: {
         type: String,
@@ -68,10 +79,6 @@ const studentSchema = new Schema({
             ref: 'Attendance'
         }
     ],
-    department: {
-        type: Types.ObjectId,
-        ref: 'Department'
-    },
     payment: [
         {
             type: Types.ObjectId,

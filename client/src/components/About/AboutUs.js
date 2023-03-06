@@ -1,22 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import Navbar from '../Shared/Navbar/Navbar';
 import "./About.css";
 // import AboutNavbar from './AboutNavbar';
 
 
 const AboutUs = () => {
-    const menuItems = <>
-    <li className='nav_li ab_nav_li'><Link to="/" >Home</Link></li>
-    <li className='nav_li ab_nav_li'><a href="#msg_vice_Chanclr" >Message from the Vice Chancellor</a></li>
-    <li className='nav_li ab_nav_li'><a href="#vice_chan" >List of Vice Chancellors</a></li>
-    {/* <li className='nav_li'><Link to="/" >Contact</Link></li>
-    <li className='nav_li'><Link to="/login" >Login</Link></li> */}
-    </>
+    // const menuItems = <>
+    // <li className='nav_li ab_nav_li'><Link to="/" >Home</Link></li>
+    // <li className='nav_li ab_nav_li'><a href="#msg_vice_Chanclr" >Message from the Vice Chancellor</a></li>
+    // <li className='nav_li ab_nav_li'><a href="#vice_chan" >List of Vice Chancellors</a></li>
+    // {/* <li className='nav_li'><Link to="/" >Contact</Link></li>
+    // <li className='nav_li'><Link to="/login" >Login</Link></li> */}
+    // </>
     return (
 
         <div>
-            <div className="navbar bg-base-100 about_nav max-w-screen-xl  mx-auto">
+            {/* <div className="navbar bg-base-100 about_nav max-w-screen-xl  mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -35,10 +35,8 @@ const AboutUs = () => {
                 </ul>
             </div>
 
-
-
-        </div>
-            <div className='mx-4 my-12'>
+        </div> */}
+            <div className='mx-4 mt-12 mb-32'>
                 <div className='max-w-screen-xl mx-auto about_main p-4 bg-white drop-shadow-xl mb-12 about_welcome'>
                     <h2 className='text-center about_welcome mt-8'>Welcome to University of Return Zero</h2>
                     <h3 className='text-center my-4'>University of Return Zero</h3>
@@ -97,12 +95,12 @@ const AboutUs = () => {
 
                     </div>
                 </div>
-                <div id='msg_vice_Chanclr'>
+                {/* <div id='msg_vice_Chanclr'>
                    List of Vice Chancellors
                 </div>
                 <div id='vice_chan'>
                    List of Vice Chancellors
-                </div>
+                </div> */}
             </div>
         </div>
     );
