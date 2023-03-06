@@ -16,6 +16,7 @@ const navLinks = [
         text: 'Dashboard'
     },
     {
+<<<<<<< HEAD
         path: '/students',
         element: <SlGraduation className='active__link' />,
         text: 'Students',
@@ -23,6 +24,15 @@ const navLinks = [
             {
                 text: 'Student Add',
                 path: '/students/add',
+=======
+        path: '/teacher',
+        element: <SlGraduation className='active__link' />,
+        text: 'Teacher',
+        child: [
+            {
+                text: 'Teacher Add',
+                path: '/teacher/add',
+>>>>>>> mehedi
             }
         ]
     },
@@ -53,7 +63,13 @@ const navLinks = [
     }, {
         path: '/accounts',
         element: <FaFileInvoiceDollar className='active__link' />,
-        text: 'Accounts'
+        text: 'Accounts',
+        child: [
+            {
+                text: 'Account Add',
+                path: '/accounts/add',
+            }
+        ]
     }, {
         path: '/holiday',
         element: <MdOutlineHolidayVillage className='active__link' />,

@@ -5,7 +5,6 @@ import { admissionPostAction } from '../app/actions/admissionAction'
 
 const input_field = require("./AddStudentInputfield")
 const AddStudent = (props) => {
-    console.log(props.admission);
     const [input,] = useState(input_field);
     const [std, setStd] = useState({})
     const handleChange = (e) => {
