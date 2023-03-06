@@ -53,6 +53,7 @@ const navLinks = [
     }, {
         path: '/accounts',
         element: <FaFileInvoiceDollar className='active__link' />,
+<<<<<<< HEAD
         text: 'Accounts',
         child: [
             {
@@ -60,6 +61,9 @@ const navLinks = [
                 path: '/accounts/add',
             }
         ]
+=======
+        text: 'Accounts'
+>>>>>>> imran
     }, {
         path: '/holiday',
         element: <MdOutlineHolidayVillage className='active__link' />,

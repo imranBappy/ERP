@@ -9,7 +9,7 @@ const Formet = require("../utils/dataFormet");
 exports.admissionGetController = async (req, res, next) => {
     try {
         const { page = 1, limit = 10 } = req.query;
-        const students = await Auth.find({})
+        const students = await Auth.find({ role: "Applicant" })
             .populate({
                 path: 'profile',
                 model: Student,
@@ -77,7 +77,7 @@ exports.admissionPostController = async (req, res, next) => {
 
         const newAuth = new Auth({
             profile: newStudent._id,
-            name, email, url, role: "Students",
+            name, email, url, role: "Applicant",
         })
         await newAuth.save();
         await newStudent.save()
@@ -91,15 +91,16 @@ exports.admissionAprovePulController = async (req, res, next) => {
         const { _id } = req.body
         const password = uuid();
         const hashPass = await hash(password, 10);
-        const std = await Student.findById(_id)
-        await Student.findOAndUpdate(_id, {
+        const std = await Auth.findById(_id)
+        await Auth.findOneAndUpdate(_id, {
             $set: {
                 password: hashPass,
                 role: "Student"
             }
         });
+        console.log(hashPass)
         sendEmail(std.email, std.name, password)
-        res.json(Formet(std, "Successfully Approved!"))
+        res.json(new Formet(std, "Successfully Approved!"))
     } catch (error) {
         next(error)
     }

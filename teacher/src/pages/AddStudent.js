@@ -22,6 +22,23 @@ const AddStudent = (props) => {
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
+<<<<<<< HEAD
+=======
+
+        // axios(
+        //     {
+        //         method: "post",
+        //         url: "http://localhost:5000/admission",
+        //         data: formData,
+        //         headers: { "Content-Type": "multipart/form-data" },
+        //     }
+        // ).then((response) => response.json())
+        //     .then((data) => console.log(data))
+        //     .catch((error) => console.log(error));
+        // e.preventDefault()
+        // console.log(std);
+        // setStd({})
+>>>>>>> imran
         props.admissionPostAction({ data: props.admission.data, newData: formData })
         alert('Student Added Successfully')
     }

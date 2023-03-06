@@ -16,6 +16,7 @@ const navLinks = [
         text: 'Dashboard'
     },
     {
+<<<<<<< HEAD
         path: '/teacher',
         element: <SlGraduation className='active__link' />,
         text: 'Teacher',
@@ -23,6 +24,15 @@ const navLinks = [
             {
                 text: 'Teacher Add',
                 path: '/teacher/add',
+=======
+        path: '/students',
+        element: <SlGraduation className='active__link' />,
+        text: 'Students',
+        child: [
+            {
+                text: 'Student Add',
+                path: '/students/add',
+>>>>>>> imran
             }
         ]
     },

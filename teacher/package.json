@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "dashboard",
+=======
+  "name": "teacher-dashboard",
+>>>>>>> imran
   "version": "0.1.0",
   "private": true,
   "dependencies": {
