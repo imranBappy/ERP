@@ -13,7 +13,7 @@ exports.adminSignupPostController = async (req, res, next) => {
         }
         if (password.length < 6) return res.json({ message: 'Min length 6' });
         password = await bcrypt.hash(password, 10);
-        const newUser = new Auth({ name, url, email, roll: "Admin", password })
+        const newUser = new Auth({ name, url, email, role: "Admin", password })
         await newUser.save();
         sendEmail(email, name)
         res.json({

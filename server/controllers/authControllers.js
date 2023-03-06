@@ -3,6 +3,18 @@ const bcrypt = require("bcrypt");
 const sendEmail = require("../utils/sentEmail");
 var jwt = require('jsonwebtoken');
 
+exports.authGetController = async (req, res, next) => {
+    try {
+        console.log(req.query.id);
+        const user = await Auth.findById(req.query.id)
+        res.json({
+            isAuthintication: true,
+            data: user
+        })
+    } catch (error) {
+        next(error)
+    }
+}
 exports.signupController = async (req, res, next) => {
     try {
         let { name, email, password } = req.body;
@@ -26,26 +38,28 @@ exports.signupController = async (req, res, next) => {
 
 exports.singinPostController = async (req, res, next) => {
     try {
-        const { email, password} = req.body;
-        const std = await Auth.findOne({email:email});
-        if(!std ){
+        const { email, password } = req.body;
+        const std = await Auth.findOne({ email: email });
+        if (!std) {
             return res.json({
+                isAuthintication: false,
                 message: "Account is not exit"
             })
-        
         }
         const match = await bcrypt.compare(password, std.password);
 
-        if(!match){
+        if (!match) {
             return res.json({
-                message: "Password is worng"
+                isAuthintication: false,
+                message: "Password is waring"
             })
         }
-       
+
         const token = jwt.sign({
-            data: std
-        }, process.env.PRIVATE_KEY,{ expiresIn: '7d' })
+            data: { id: std._id }
+        }, process.env.JWT_SECRET, { expiresIn: '7d' })
         return res.json({
+            isAuthintication: true,
             data: std,
             message: "Account Success Fully Singin",
             token: token

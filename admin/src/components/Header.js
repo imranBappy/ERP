@@ -4,10 +4,15 @@ import { MdOutlineDarkMode } from 'react-icons/md';
 import { BsSun } from 'react-icons/bs';
 import { connect } from 'react-redux';
 import { authGetAction } from '../app/actions/authAction'
+import { useSearchParams } from 'react-router-dom';
 const Header = (props) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
+    const [searchParams] = useSearchParams();
 
     useEffect(() => {
+        if (searchParams.get('token')) {
+            localStorage.setItem('token', searchParams.get('token'));
+        }
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true);

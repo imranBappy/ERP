@@ -4,6 +4,7 @@ import ActionBtn from './ActionBtn';
 const URL_PREFIX = 'http://localhost:5000/uploads/'
 const ListBody = (props) => {
     const { body } = props;
+    console.log(body);
     return (
         <tbody className="student__table__body">
             {

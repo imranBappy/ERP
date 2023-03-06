@@ -9,7 +9,7 @@ const Formet = require("../utils/dataFormet");
 exports.admissionGetController = async (req, res, next) => {
     try {
         const { page = 1, limit = 10 } = req.query;
-        const students = await Auth.find({})
+        const students = await Auth.find({ role: "Applicant" })
             .populate({
                 path: 'profile',
                 model: Student,
@@ -77,7 +77,7 @@ exports.admissionPostController = async (req, res, next) => {
 
         const newAuth = new Auth({
             profile: newStudent._id,
-            name, email, url, role: "Students",
+            name, email, url, role: "Applicant",
         })
         await newAuth.save();
         await newStudent.save()
