@@ -2,11 +2,18 @@ import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import swal from "sweetalert";
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {
         console.log(data);
+        swal({
+            title: "Good job!",
+            text: "Login successfullly",
+            icon: "success",
+            button: "Aww yiss!",
+          });
         axios(
             {
               method: "post",
