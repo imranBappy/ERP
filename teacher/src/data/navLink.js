@@ -53,7 +53,7 @@ const navLinks = [
     }, {
         path: '/accounts',
         element: <FaFileInvoiceDollar className='active__link' />,
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
         text: 'Accounts',
         child: [
             {
@@ -61,9 +61,9 @@ const navLinks = [
                 path: '/accounts/add',
             }
         ]
-=======
+=========
         text: 'Accounts'
->>>>>>> imran
+>>>>>>>>> Temporary merge branch 2
     }, {
         path: '/holiday',
         element: <MdOutlineHolidayVillage className='active__link' />,

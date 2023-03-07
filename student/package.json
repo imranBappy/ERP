@@ -1,9 +1,9 @@
 {
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
   "name": "dashboard",
-=======
+=========
   "name": "student-dashboard",
->>>>>>> imran
+>>>>>>>>> Temporary merge branch 2
   "version": "0.1.0",
   "private": true,
   "dependencies": {

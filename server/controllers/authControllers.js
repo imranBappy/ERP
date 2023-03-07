@@ -3,6 +3,18 @@ const bcrypt = require("bcrypt");
 const sendEmail = require("../utils/sentEmail");
 var jwt = require('jsonwebtoken');
 
+exports.authGetController = async (req, res, next) => {
+    try {
+        console.log(req.query.id);
+        const user = await Auth.findById(req.query.id)
+        res.json({
+            isAuthintication: true,
+            data: user
+        })
+    } catch (error) {
+        next(error)
+    }
+}
 exports.signupController = async (req, res, next) => {
     try {
         let { name, email, password } = req.body;

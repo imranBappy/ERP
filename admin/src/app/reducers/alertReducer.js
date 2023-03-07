@@ -1,6 +1,6 @@
 import * as Types from '../actions/types.js';
 const init = {
-    message: '',
+    message: 'successfully',
     error: false
 }
 

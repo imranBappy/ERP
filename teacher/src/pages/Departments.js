@@ -1,18 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
 import Card from '../components/Card';
 import departmentCard from '../data/departmentCard';
-=======
->>>>>>> imran
+=========
+>>>>>>>>> Temporary merge branch 2
 
 const Departments = () => {
     return (
         <div>
             <h1 className='page__title'>Welcome To Departments Page !</h1>
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
             <Card cards={departmentCard} />
-=======
->>>>>>> imran
+=========
+>>>>>>>>> Temporary merge branch 2
         </div>
     );
 };

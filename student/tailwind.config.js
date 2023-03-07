@@ -3,7 +3,7 @@ module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{html,js}"],
   theme: {
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
     extend: {
       spacing: {
         '200': '-52rem',
@@ -19,7 +19,7 @@ module.exports = {
         },
         'sky': { '600': '#0284c7' },
         'error': '#ff0000',
-=======
+=========
     colors: {
       'white': { '900': '#ffffff', '800': '#f1f5f9' },
       'black': {
@@ -34,7 +34,7 @@ module.exports = {
     extend: {
       spacing: {
         '200': '-52rem',
->>>>>>> imran
+>>>>>>>>> Temporary merge branch 2
       }
     },
   },
