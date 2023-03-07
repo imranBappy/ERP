@@ -11,6 +11,8 @@ import AddStudent from './pages/AddStudent';
 import Admission from './pages/Admission';
 import Profile from './pages/Profile';
 import DepartmentAdd from './pages/DepartmentAdd';
+import TeacherAdd from './pages/TeacherAdd';
+import NoticeAdd from './pages/NoticeAdd';
 import AddAccount from './pages/AddAccount';
 import Test from './pages/Test';
 import Notify from './components/Notify';
@@ -37,6 +39,8 @@ function App() {
 
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/accounts/add" element={<AddAccount />} />
+          <Route path="/teachers/add" element={<TeacherAdd />} />
+          <Route path="/notice/add" element={<NoticeAdd />} />
 
           <Route path="/holiday" element={<Holiday />} />
 

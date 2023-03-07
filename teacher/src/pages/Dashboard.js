@@ -1,24 +1,24 @@
 import React from 'react';
 import Card from '../components/Card';
 import Analytics from '../components/Analytics';
-<<<<<<< HEAD
-import StartStudent from '../components/StartStudent';
-=======
+<<<<<<<<< Temporary merge branch 1
 import dashboardCard from '../data/dashboardCard';
->>>>>>> mehedi
+=========
+import StartStudent from '../components/StartStudent';
+>>>>>>>>> Temporary merge branch 2
 
 const Dashboard = () => {
     return (
         <>
             <h2 className='text-2xl font-semibold'> Welcome Admin!</h2>
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
+            <Card cards={dashboardCard} />
+            <Analytics />
+=========
             <Card />
             <Analytics />
             {/* <StartStudent /> */}
-=======
-            <Card cards={dashboardCard} />
-            <Analytics />
->>>>>>> mehedi
+>>>>>>>>> Temporary merge branch 2
         </>
     );
 };

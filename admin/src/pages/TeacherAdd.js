@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Input from '../components/Input';
-import DepartmentAddField from '../data/DepartmentAdd';
+import TeacherAddField from '../data/teacherAddField';
 
 
-const DepartmentAdd = () => {
+const TeacherAdd = () => {
 
-    const [inputField, setInputField] = useState(DepartmentAddField);
+    const [inputField, setInputField] = useState(TeacherAddField);
 
     return (
         <div className='light__component dark:dark__component p-5'>
-            <h1 className='page__title'>Add Admin</h1>
+            <h1 className='page__title'>Add Teacher</h1>
 
             {
                 inputField.map((curEle)=>{
@@ -25,4 +25,4 @@ const DepartmentAdd = () => {
     );
 };
 
-export default DepartmentAdd;
+export default TeacherAdd;

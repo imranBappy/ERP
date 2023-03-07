@@ -1,8 +1,13 @@
 import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
+<<<<<<<<< Temporary merge branch 1
+=========
 import axios from 'axios';
-    
+import { redirect } from "react-router-dom";
+
+=======
+>>>>>>> mehedi
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {
@@ -10,7 +15,11 @@ const Login = () => {
             .then(res => {
                 console.log(res.data,
                     res.data.token)
-                window.open(`http://localhost:3000?token=${res.data.token}`)
+                alert(res.data.message)
+                setTimeout(() => {
+                    window.open(`http://localhost:3000?token=${res.data.token}`)
+                }, 300);
+
             }).then(err => {
                 console.log(err);
                 alert(err.message)

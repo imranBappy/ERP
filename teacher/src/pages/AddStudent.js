@@ -22,7 +22,8 @@ const AddStudent = (props) => {
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
-<<<<<<< HEAD
+<<<<<<<<< Temporary merge branch 1
+=========
 
         // axios(
         //     {
@@ -37,8 +38,7 @@ const AddStudent = (props) => {
         // e.preventDefault()
         // console.log(std);
         // setStd({})
-=======
->>>>>>> mehedi
+>>>>>>>>> Temporary merge branch 2
         props.admissionPostAction({ data: props.admission.data, newData: formData })
         alert('Student Added Successfully')
     }
