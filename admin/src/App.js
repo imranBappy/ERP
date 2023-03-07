@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import './styles/App.css';
 import Dashboard from './pages/Dashboard';
 import Layout from './pages/Layout';
-import Students from './pages/Students';
 import Departments from './pages/Departments';
 import Invoices from './pages/Invoices';
 import Accounts from './pages/Accounts';
