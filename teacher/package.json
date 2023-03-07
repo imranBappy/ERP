@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
-  "name": "teacher-dashboard",
-=======
+
   "name": "dashboard",
->>>>>>> mehedi
   "version": "0.1.0",
   "private": true,
   "dependencies": {

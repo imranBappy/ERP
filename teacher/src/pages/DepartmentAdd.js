@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const DepartmentAdd = () => {
-    return (
-        <div>
-            <h1>Department Add</h1>
-=======
+<<<<<<<<< Temporary merge branch 1
 import React, { useState } from 'react';
 import Input from '../components/Input';
 import DepartmentAddField from '../data/DepartmentAdd';
@@ -30,7 +23,14 @@ const DepartmentAdd = () => {
                 })
             }
 
->>>>>>> mehedi
+=========
+import React from 'react';
+
+const DepartmentAdd = () => {
+    return (
+        <div>
+            <h1>Department Add</h1>
+>>>>>>>>> Temporary merge branch 2
         </div>
     );
 };

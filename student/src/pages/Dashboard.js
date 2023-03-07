@@ -5,18 +5,20 @@ import Analytics from '../components/Analytics';
 import dashboardCard from '../data/dashboardCard';
 =======
 import StudentDashboardCard from '../data/studentDashboardCard';
->>>>>>> mehedi
+=========
+import dashboardCard from '../data/dashboardCard';
+>>>>>>>>> Temporary merge branch 2
 
 const Dashboard = () => {
     return (
         <>
-<<<<<<< HEAD
-            <h2 className='text-2xl font-semibold'> Welcome Admin!</h2>
-            <Card cards={dashboardCard} />
-=======
+<<<<<<<<< Temporary merge branch 1
             <h2 className='text-2xl font-semibold'> Welcome Adorable Student!</h2>
             <Card cards={StudentDashboardCard} />
->>>>>>> mehedi
+=========
+            <h2 className='text-2xl font-semibold'> Welcome Admin!</h2>
+            <Card cards={dashboardCard} />
+>>>>>>>>> Temporary merge branch 2
             <Analytics />
         </>
     );
