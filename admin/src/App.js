@@ -16,6 +16,7 @@ import NoticeAdd from './pages/NoticeAdd';
 import AddAccount from './pages/AddAccount';
 import Test from './pages/Test';
 import Notify from './components/Notify';
+import Login from './pages/Login';
 
 
 function App() {
@@ -23,8 +24,11 @@ function App() {
     <div className="dark:bg-black-700">
       <Notify />
       <Routes>
+        <Route path="/" element={<Login />} />
+
         <Route path="/" element={<Layout />} >
           <Route path="/" element={<Dashboard />} />
+
 
           <Route path="/students" element={<Admission />} />
           <Route path='/students/add' element={<AddStudent />} />
