@@ -1,6 +1,7 @@
 import * as Types from './types';
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
+import goToLogin from '../../utils/goToLogin';
 
 export const authLoginAction = (newData) => async dispatch => {
     try {
@@ -62,13 +63,7 @@ export const authGetAction = (newData) => async dispatch => {
         if (token === null) {
             localStorage.setItem('token', '');
             token = '';
-            dispatch({
-                type: Types.SET_ALERT,
-                payload: {
-                    message: 'UnAuthenticated User',
-                    error: true
-                }
-            })
+            goToLogin();
             return;
         }
         var decoded = jwt_decode(token);
@@ -77,15 +72,9 @@ export const authGetAction = (newData) => async dispatch => {
                 'Authorization': `${token}`
             }
         });
-        console.log(res);
+
         if (res.data?.isAuthintication === false) {
-            dispatch({
-                type: Types.SET_ALERT,
-                payload: {
-                    message: res.data.message,
-                    error: res.data?.error,
-                }
-            })
+            goToLogin();
         }
         dispatch({
             type: Types.SET_AUTH,
