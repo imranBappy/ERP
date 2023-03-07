@@ -17,7 +17,7 @@ const Login = () => {
                     icon: "error",
                     button: "Aww yiss!",
                 });
-                window.open(`http://localhost:3000?token=${res.data.token}`)
+                window.open(`http://localhost:3001?token=${res.data.token}`)
             }).then(err => {
                 console.log(err);
                 swal({
