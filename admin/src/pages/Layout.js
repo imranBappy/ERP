@@ -2,11 +2,13 @@ import React from 'react';
 import '../styles/dashboard.css';
 import Drawer from '../components/Drawer';
 import Header from '../components/Header';
-import { Outlet } from "react-router-dom";
-const Layout = () => {
+import { Navigate, Outlet } from "react-router-dom";
+const Layout = (props) => {
+    console.log({ props });
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(!open);
-    return (
+    const isLoggedIn = true;
+    return isLoggedIn ?
         <div className='flex w-full relative'>
             <Drawer handleOpen={[open, setOpen]} />
             <div className="dashboard__wrapper grow">
@@ -15,8 +17,9 @@ const Layout = () => {
                     <Outlet />
                 </div>
             </div>
-        </div >
-    );
+        </div > :
+        <Navigate to="/login" />;
+    ;
 };
 
 export default Layout;

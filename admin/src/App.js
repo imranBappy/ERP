@@ -1,7 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, RouterProvider, Routes } from 'react-router-dom';
 import './styles/App.css';
 import Dashboard from './pages/Dashboard';
 import Layout from './pages/Layout';
+import Students from './pages/Students';
 import Departments from './pages/Departments';
 import Invoices from './pages/Invoices';
 import Accounts from './pages/Accounts';
@@ -16,44 +17,14 @@ import AddAccount from './pages/AddAccount';
 import Test from './pages/Test';
 import Notify from './components/Notify';
 import Login from './pages/Login';
+import router from './routes/routes';
 
 
 function App() {
   return (
     <div className="dark:bg-black-700">
       <Notify />
-      <Routes>
-        <Route path="/" element={<Login />} />
-
-        <Route path="/" element={<Layout />} >
-          <Route path="/" element={<Dashboard />} />
-
-
-          <Route path="/students" element={<Admission />} />
-          <Route path='/students/add' element={<AddStudent />} />
-
-          <Route path="/teachers" element={<Admission />} />
-
-          <Route path="/departments" element={<Departments />} />
-          <Route path='/departments/add' element={<DepartmentAdd />} />
-
-          <Route path="/admission" element={<Admission />} />
-          <Route path="/invoices" element={<Invoices />} />
-
-          <Route path="/accounts" element={<Accounts />} />
-          <Route path="/accounts/add" element={<AddAccount />} />
-          <Route path="/teachers/add" element={<TeacherAdd />} />
-          <Route path="/notice/add" element={<NoticeAdd />} />
-
-          <Route path="/holiday" element={<Holiday />} />
-
-          <Route path="/test" element={<Test />} />
-
-
-          <Route path='/profile/:stdId' element={<Profile />} />
-          <Route path="*" element={<h1>404</h1>} />
-        </Route>
-      </Routes>
+      <RouterProvider router={router}> </RouterProvider>
     </div>
   );
 }
