@@ -11,7 +11,7 @@ import AddStudent from './pages/AddStudent';
 import Admission from './pages/Admission';
 import Profile from './pages/Profile';
 import DepartmentAdd from './pages/DepartmentAdd';
-import TeacherAdd from './pages/TeacherAdd';
+import TeacherAdd from './pages/AddTeacher';
 import NoticeAdd from './pages/NoticeAdd';
 import AddAccount from './pages/AddAccount';
 import Test from './pages/Test';
