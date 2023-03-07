@@ -1,9 +1,7 @@
 import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
-=========
 import axios from 'axios';
-import { redirect } from "react-router-dom";
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
