@@ -53,7 +53,7 @@ const General = () => {
         </div>
         <Link className="mt-10" to="/">
           <button onClick={haldeSubmit()} className="h-10 px-5 text-indigo-900 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:indigo-900 hover:text-indigo-900">
-            Close
+            Submit
           </button>
         </Link>
       </div>

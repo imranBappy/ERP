@@ -24,34 +24,7 @@ const Admission = () => {
         "3.Education",
         "4.Finish"
     ];
-    // const [std, setStd] = useState({})
-    // const handleChange = (e) => {
-    //     if (e.target.name === 'url' || e.target.name === 'transcript') {
-    //         setStd({ ...std, [e.target.name]: e.target.files[0] })
-    //     } else {
-    //         setStd({ ...std, [e.target.name]: e.target.value })
-    //     }
-    // }
-    // const handleSubmit = (e) => {
-    //     const formData = new FormData()
-    //     console.log(std);
-    //     Object.keys(std).forEach(key => {
-    //         formData.append(key, std[key])
-    //     });
 
-    //     axios(
-    //         {
-    //             method: "post",
-    //             url: "http://localhost:5000/admission",
-    //             data: formData,
-    //             headers: { "Content-Type": "multipart/form-data" },
-    //         }
-    //     ).then((response) => response.json())
-    //         .then((data) => console.log(data))
-    //         .catch((error) => console.log(error));
-    //     e.preventDefault()
-    //     console.log(std);
-    // }
     const displayStep = (step) => {
         switch (step) {
             case 1:
