@@ -1,6 +1,6 @@
-// const Auth = require("../models/Auth")
+const Auth = require("../models/Auth")
 const Department = require("../models/Department")
-// const Teacher = require("../models/Teacher")
+const Teacher = require("../models/Teacher")
 
 exports.departmentGetConteroller = async (req, res, next) => {
     try {
@@ -13,25 +13,25 @@ exports.departmentGetConteroller = async (req, res, next) => {
 }
 exports.departmentPostController = async (req, res, next) => {
     try {
-        console.log(res.body);
-        // const teacher = await Teacher.findOne({ teacherId: req.body.hod })
-        // if (!teacher) {
-        //     res.json({
-        //         message: 'Head Of Department Not Found',
-        //         error: true,
-        //         data: null
-        //     })
-        // }
-        // res.body.hod = teacher.auth;
         // console.log(req.body);
-        // const newDepartment = new Department(req.body)
-        // const newDepartment_res = await newDepartment.save()
-        // console.log({ newDepartment_res })
-        // res.json({
-        //     message: 'Department created successfully',
-        //     error: false,
-        //     data: res
-        // })
+        // console.log(req.file.filename);
+        const url = req.file.filename;
+
+        const teacher = await Teacher.findOne({ teacherId: req.body.hod })
+        if (!teacher) {
+            res.json({
+                message: 'Head Of Department Not Found',
+                error: true,
+                data: null
+            })
+        }
+        const newDepartment = new Department({ ...req.body, url, hod: teacher.auth })
+        const newDepartment_res = await newDepartment.save()
+        res.json({
+            message: 'Department created successfully',
+            error: false,
+            data: newDepartment_res
+        })
     } catch (error) {
         next(error)
     }
