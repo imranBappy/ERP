@@ -3,9 +3,15 @@ import React from 'react';
 import { useStepperContext } from '../SetperContext';
 
 const Personal = () => {
-  const { handleChange} = useStepperContext();
-
-
+  const { userData, setUserData } = useStepperContext();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (e.target.type === 'file') {
+      setUserData({ ...userData, [name]: e.target.files[0] });
+    } else {
+      setUserData({ ...userData, [name]: value });
+    }
+  };
   return (
     <div className="flex flex-col">
       <div>

@@ -1,7 +1,11 @@
 import { createContext, useContext, useState } from "react";
 
 const StepperContext = createContext({
-  handleChange: () => { }, handleSubmit: () => { }
+  handleChange: (e) => {
+    console.log(e.target);
+    console.log(e.target.files);
+
+  }, handleSubmit: (e) => { }
 });
 export function UseContextProvider({ children }) {
   const [userData, setUserData] = useState("");
