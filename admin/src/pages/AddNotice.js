@@ -1,92 +1,51 @@
-// import React from 'react'
-
-<<<<<<< HEAD:admin/src/pages/NoticeAdd.js
-// const Notice = () => {
-//   return (
-//     <>
-//      <form action="" encType='multipart/form-data'>
-//         <input type="text" name='name' id='name' />
-//         <input type="submit" value="submit" />
-//      </form>
-=======
-const AddNotice = () => {
-  return (
-    <>
-      <form action="" encType='multipart/form-data'>
-        <input type="text" name='name' id='name' />
-        <input type="submit" value="submit" />
-      </form>
->>>>>>> 8a73487666e141f434b4a6bfcdaf8490c9aaa8e0:admin/src/pages/AddNotice.js
-
-//     </>
-//   )
-// }
-
-<<<<<<< HEAD:admin/src/pages/NoticeAdd.js
-// export default Notice;
 
 
+import React, { useEffect, useState } from 'react';
+import Input from '../components/Input';
+import TeacherAddField from '../data/noticeAdd';
+import { useForm } from 'react-hook-form';
+import SubmitBtn from '../components/SubmitBtn';
 
-import React, { useState } from 'react';
-import { connect } from 'react-redux';
 
-import { admissionPostAction } from '../app/actions/admissionAction'
+const TeacherAdd = () => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [file, setFile] = useState(null);
 
-const input_field = require("./AddStudentInputfield")
-const AddStudent = (props) => {
-    const [input,] = useState(input_field);
-    const [std, setStd] = useState({})
-    const handleChange = (e) => {
-        if (e.target.name === 'url' || e.target.name === 'transcript') {
-            setStd({ ...std, [e.target.name]: e.target.files[0] })
-        } else {
-            setStd({ ...std, [e.target.name]: e.target.value })
-        }
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log('clicked');
-        const formData = new FormData()
-        Object.keys(std).forEach(key => {
-            formData.append(key, std[key])
+    const formData = new FormData()
+    const onSubmit = ({ url, ...rest }) => {
+        const data = { ...rest, url: url[0] }
+        Object.keys(data).forEach(key => {
+            if (key === 'pdf') {
+                formData.append(key, data[key][0])
+            } else {
+                formData.append(key, data[key])
+            }
         });
-        props.admissionPostAction({ data: props.admission.data, newData: formData })
-        alert('Student Added Successfully')
-    }
 
+    };
     return (
-        <>
-            <div className='light__component dark:dark__component p-5'>
-                <h1 className='page__title'>Add Student</h1>
-                <form onSubmit={handleSubmit}>
-                    <div className="columns-3 gap-8 md:columns-2 sm:columns-1">
-                        {
-                            input.map((curr, index) => {
-                                return (
-                                    <>
-                                        <div key={index}>
-                                            <label htmlFor="first_name" className="block mb-2 text-sm font- dark:text-white ">{curr.label}</label>
-                                            <input onChange={handleChange} type={curr.type} name={curr.name} id="first_name" className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" placeholder={curr.placeHolder} required />
-                                        </div>
-                                    </>
-                                )
-                            })
-                        }
-                    </div>
-                    <div>
-                        <button type="submit" className="text-white-900  mt-6 bg-sky-600 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-skbg-sky-600">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </>
+        <div className='light__component dark:dark__component p-5 max-w-5xl m-auto'>
+            <h1 className='page__title'>Add Notice</h1>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                {
+                    TeacherAddField.map((input, i) => {
+                        return (
+                            <Input
+                                file={file}
+                                errors={errors} register={register}
+                                key={i}
+                                {...input}
+                            />
+
+                        )
+                    })
+                }
+                <SubmitBtn value="Add Teacher" />
+
+            </form>
+
+        </div>
     );
 };
-const mapStateToProps = (state) => {
-    return {
-        admission: state.admission
-    }
-};
-export default connect(mapStateToProps, { admissionPostAction })(AddStudent);
-=======
-export default AddNotice;
->>>>>>> 8a73487666e141f434b4a6bfcdaf8490c9aaa8e0:admin/src/pages/AddNotice.js
+
+export default TeacherAdd;
