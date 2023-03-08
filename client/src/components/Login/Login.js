@@ -1,11 +1,8 @@
 import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
-<<<<<<<<< Temporary merge branch 1
-=========
 import axios from 'axios';
 
->>>>>>>>> Temporary merge branch 2
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {

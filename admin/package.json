@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "dashboard",
+=======
+  "name": "student-dashboard",
+>>>>>>> a313087f728fcb714fa363acd6b547965f5222b8
   "version": "0.1.0",
   "private": true,
   "dependencies": {

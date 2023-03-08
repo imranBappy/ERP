@@ -8,11 +8,11 @@ import { useSearchParams } from 'react-router-dom';
 const Header = (props) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [searchParams] = useSearchParams();
-
+    const token = searchParams.get('token')
     useEffect(() => {
-        if (searchParams.get('token')) {
-            localStorage.setItem('token', searchParams.get('token'));
-        }
+        if (token) {
+            localStorage.setItem('token', token);
+        } 
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true);
