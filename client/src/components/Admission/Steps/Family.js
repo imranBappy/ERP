@@ -107,7 +107,7 @@ const Family = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              name="guardianPhone"
+              name="guardianNID"
               placeholder="Guradian NID Number"
               type="number"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
