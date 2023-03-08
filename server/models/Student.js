@@ -33,10 +33,6 @@ const studentSchema = new Schema({
         type: String,
         required: [true, 'Mother Name is require'],
     },
-    fatherName: {
-        type: String,
-        required: [true, 'Email is require']
-    },
     guardianPhone: {
         type: String,
         required: [true, 'Number is require'],

@@ -3,7 +3,7 @@ import Input from '../components/Input';
 import departmentInput from '../data/departmentInput';
 import { useForm } from "react-hook-form";
 import { connect } from 'react-redux';
-import { accountPostAction } from '../app/actions/accountAction';
+import { departmentPostAction } from '../app/actions/departmentAction';
 
 import SubmitBtn from '../components/SubmitBtn';
 const AddDepartment = (props) => {
@@ -14,8 +14,8 @@ const AddDepartment = (props) => {
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });
-        console.log(data);
-        // props.accountPostAction(formData)
+        // console.log(data);
+        props.departmentPostAction(formData)
 
     };
     const [file, setFile] = useState(null);
@@ -44,4 +44,4 @@ const AddDepartment = (props) => {
     );
 };
 
-export default connect(null, { accountPostAction })(AddDepartment);
+export default connect(null, { departmentPostAction })(AddDepartment);

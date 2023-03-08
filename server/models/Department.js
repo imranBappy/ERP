@@ -2,6 +2,10 @@ const { Schema, model, Types } = require('mongoose');
 const Auth = require('./Auth');
 
 const departmentSchema = new Schema({
+    url: {
+        type: String,
+        required: [true, 'Url is require'],
+    },
     name: {
         type: String,
         required: [true, 'Name is require'],
@@ -16,10 +20,6 @@ const departmentSchema = new Schema({
         type: Types.ObjectId,
         ref: 'Auth',
         required: [true, 'The field is require']
-    },
-    total_std: {
-        type: Number,
-        default: 0
     }
 }, { timestamps: true })
 
