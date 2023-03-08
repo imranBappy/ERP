@@ -11,6 +11,7 @@ const AddDepartment = (props) => {
     const formData = new FormData()
     const onSubmit = ({ url, ...rest }) => {
         const data = { ...rest, url: url[0] }
+        console.log(data);
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });

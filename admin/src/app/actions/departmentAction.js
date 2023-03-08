@@ -1,7 +1,7 @@
 import * as Types from './types';
 import axios from 'axios';
 
-export const departmentPostAction = (newData) => async dispatch => {
+export const departmentPostAction = (newData, data) => async dispatch => {
     console.log(newData);
     try {
         const res = await axios({
@@ -9,7 +9,6 @@ export const departmentPostAction = (newData) => async dispatch => {
             url: "/department",
             headers: { "Content-Type": "multipart/form-data" },
             data: newData,
-
         });
         console.log(res);
         dispatch({
