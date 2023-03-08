@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Banner.css";
 import BannerImages from './BannerImages';
+// import BannerBottom from '../BannerBottom/BannerBottom';
 // import { Link } from 'react-router-dom';
 
 
@@ -71,7 +72,7 @@ const Banner = () => {
 
   ]
   return (
-    <div id='banner_container_full' style={{ height: '80vh' }}>
+    <div id='banner_container_full'>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-4/5 mx-auto">
         <div className="banner_left w-4/5 mx-auto ">
           <h2>Welcome to the Retrun Zero University</h2>
@@ -91,6 +92,7 @@ const Banner = () => {
         </div>
 
       </div>
+      
     </div>
   );
 };

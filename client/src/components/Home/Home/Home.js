@@ -2,8 +2,9 @@ import React from 'react';
 
 // import Navbar from '../../Shared/Navbar/Navbar';
 import AboutHome from '../AboutHome/AboutHome';
-import Banner from '../Banner/Banner';
-import BannerBottom from '../BannerBottom/BannerBottom';
+
+import BannerParent from '../Banner/BannerParent';
+
 import FeatureContent from '../FeatureContent/FeatureContent';
 // import NavTop from '../NavTop/NavTop';
 import RegisterNow from '../RegisterNow/RegisterNow';
@@ -15,8 +16,8 @@ const Home = () => {
     return (
         <div className='landing_page'>
 
-            <Banner></Banner>
-            <BannerBottom></BannerBottom>
+            <BannerParent></BannerParent>
+            
             <TeacherFeature></TeacherFeature>
             <AboutHome></AboutHome>
             <WelcomeSection></WelcomeSection>
