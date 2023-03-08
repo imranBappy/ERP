@@ -1,5 +1,6 @@
 // import React from 'react'
 
+<<<<<<< HEAD:admin/src/pages/NoticeAdd.js
 // const Notice = () => {
 //   return (
 //     <>
@@ -7,11 +8,21 @@
 //         <input type="text" name='name' id='name' />
 //         <input type="submit" value="submit" />
 //      </form>
+=======
+const AddNotice = () => {
+  return (
+    <>
+      <form action="" encType='multipart/form-data'>
+        <input type="text" name='name' id='name' />
+        <input type="submit" value="submit" />
+      </form>
+>>>>>>> 8a73487666e141f434b4a6bfcdaf8490c9aaa8e0:admin/src/pages/AddNotice.js
 
 //     </>
 //   )
 // }
 
+<<<<<<< HEAD:admin/src/pages/NoticeAdd.js
 // export default Notice;
 
 
@@ -76,3 +87,6 @@ const mapStateToProps = (state) => {
     }
 };
 export default connect(mapStateToProps, { admissionPostAction })(AddStudent);
+=======
+export default AddNotice;
+>>>>>>> 8a73487666e141f434b4a6bfcdaf8490c9aaa8e0:admin/src/pages/AddNotice.js

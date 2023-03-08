@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Input from '../components/Input';
 import accountInput from '../data/accountInput';
 import { useForm } from "react-hook-form";
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { accountPostAction } from '../app/actions/accountAction';
+
 import SubmitBtn from '../components/SubmitBtn';
-const AddAccount = () => {
+const AddAccount = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const formData = new FormData()
     const onSubmit = ({ url, ...rest }) => {
@@ -12,11 +14,7 @@ const AddAccount = () => {
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });
-        axios.post('/admin', formData)
-            .then(res => {
-                alert(res.data.message)
-            })
-            .catch(err => { console.log(err); })
+        props.accountPostAction(formData)
     };
     const [file, setFile] = useState(null);
     useEffect(() => {
@@ -44,4 +42,4 @@ const AddAccount = () => {
     );
 };
 
-export default AddAccount;
+export default connect(null, { accountPostAction })(AddAccount);

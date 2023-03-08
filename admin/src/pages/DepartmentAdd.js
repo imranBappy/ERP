@@ -6,7 +6,6 @@ import { useForm } from 'react-hook-form';
 
 const DepartmentAdd = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-
     const [inputField, setInputField] = useState(DepartmentAddField);
     const onSubmit = (data) => {
         console.log(data);

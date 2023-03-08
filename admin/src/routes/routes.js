@@ -1,5 +1,6 @@
 import Accounts from "../pages/Accounts";
 import AddAccount from "../pages/AddAccount";
+import AddNotice from "../pages/AddNotice";
 import AddStudent from "../pages/AddStudent";
 import TeacherAdd from "../pages/AddTeacher";
 import Admission from "../pages/Admission";
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
             {
                 path: "/setting",
                 element: <Holiday />
+            },
+            {
+                path: "/notice",
+                element: <AddNotice />
             }
         ]
     },
@@ -78,7 +83,7 @@ const router = createBrowserRouter([
     },
     {
         path: "*",
-        element: <NotFound/>,
+        element: <NotFound />,
     }
 ])
 
