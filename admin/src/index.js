@@ -10,6 +10,9 @@ import { Provider } from 'react-redux';
 import store from './app/store';
 import jwt_decode from 'jwt-decode'
 
+
+axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const url = new URL(window.location.href);
 const searchParams = new URLSearchParams(url.search);
