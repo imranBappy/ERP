@@ -14,7 +14,7 @@ const Login = () => {
                 swal({
                     title: "Good job!",
                     text: "Your are logged in successfullly!!",
-                    icon: "error",
+                    icon: "success",
                     button: "Aww yiss!",
                 });
                 window.open(`http://localhost:3000?token=${res.data.token}`)
@@ -23,7 +23,7 @@ const Login = () => {
                 swal({
                     title: "OPPS !!!",
                     text: err.message,
-                    icon: "Faild",
+                    icon: "error",
                     button: "Aww Try Again",
                 });
             })
