@@ -1,19 +1,20 @@
 import * as Types from './types';
 import axios from 'axios';
 import jwt_decode from "jwt-decode";
-import goToLogin from '../../utils/goToLogin';
 
 export const authLoginAction = (newData) => async dispatch => {
     try {
         dispatch({
             type: Types.SET_AUTH,
             payload: {
+                isAuthintication: false,
                 isLoading: true,
                 data: null,
                 token: null
             }
         });
-        const res = await axios.post("/auth/login", newData);
+        const res = await axios.post("/auth", newData);
+
         if (res.data.isAuthintication) {
             dispatch({
                 type: Types.SET_AUTH,
@@ -24,6 +25,15 @@ export const authLoginAction = (newData) => async dispatch => {
                     isAuthintication: res.data.isAuthintication
                 }
             });
+            localStorage.setItem('token', res.data.token);
+
+            dispatch({
+                type: Types.SET_ALERT,
+                payload: {
+                    message: res.data.message,
+                    error: false
+                }
+            })
         } else {
             dispatch({
                 type: Types.SET_AUTH,
@@ -46,6 +56,15 @@ export const authLoginAction = (newData) => async dispatch => {
 
     } catch (error) {
         dispatch({
+            type: Types.SET_AUTH,
+            payload: {
+                isAuthintication: false,
+                isLoading: false,
+                data: null,
+                token: null
+            }
+        });
+        dispatch({
             type: Types.SET_ALERT,
             payload: {
                 message: error.message,
@@ -60,25 +79,42 @@ export const authLoginAction = (newData) => async dispatch => {
 export const authGetAction = (newData) => async dispatch => {
     try {
         let token = localStorage.getItem('token');
+        console.log({ token });
         if (token === null) {
             localStorage.setItem('token', '');
             token = '';
-            goToLogin();
-            return;
+            dispatch({
+                type: Types.SET_AUTH,
+                payload: {
+                    isAuthintication: false,
+                    isLoading: false,
+                    data: null,
+                    token: token,
+                }
+            });
+            return
         }
         var decoded = jwt_decode(token);
+        dispatch({
+            type: Types.SET_AUTH,
+            payload: {
+                isAuthintication: false,
+                isLoading: true,
+                data: null,
+                token: token,
+            }
+        });
         const res = await axios.get(`/auth?id=${decoded.data?.id}`, {
             headers: {
                 'Authorization': `${token}`
             }
         });
+        console.log({ res });
 
-        if (res.data?.isAuthintication === false) {
-            goToLogin();
-        }
         dispatch({
             type: Types.SET_AUTH,
             payload: {
+                isAuthintication: true,
                 isLoading: false,
                 data: res.data.data,
                 token: token

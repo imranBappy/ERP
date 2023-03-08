@@ -3,16 +3,10 @@ import { GoThreeBars } from 'react-icons/go';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { BsSun } from 'react-icons/bs';
 import { connect } from 'react-redux';
-import { authGetAction } from '../app/actions/authAction'
-import { useSearchParams } from 'react-router-dom';
 const Header = (props) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
-    const [searchParams] = useSearchParams();
-    const token = searchParams.get('token')
     useEffect(() => {
-        if (token) {
-            localStorage.setItem('token', token);
-        } 
+
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setIsDarkMode(true);
@@ -20,7 +14,6 @@ const Header = (props) => {
             document.documentElement.classList.remove('dark')
             setIsDarkMode(false);
         }
-        props.authGetAction();
     }, []);
     const handleMode = () => {
         if (isDarkMode) {
@@ -63,5 +56,5 @@ const mapStateToProps = (state) => {
     return {
         auth: state.auth
     }
-};
-export default connect(mapStateToProps, { authGetAction })(Header);
+}
+export default connect(mapStateToProps)(Header);

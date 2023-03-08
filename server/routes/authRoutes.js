@@ -1,11 +1,12 @@
 const { authGetController, singinPostController, resetController, updateController } = require('../controllers/authControllers');
+const isAuthenticated = require('../middlewares/isAuthenticated');
 
 const router = require('express').Router();
 
 
-router.get('/', authGetController);
+router.get('/', isAuthenticated, authGetController);
 router.post('/', singinPostController);
-router.patch('/update', updateController);
+router.patch('/update', isAuthenticated, updateController);
 router.post('/reset', resetController);
 
 

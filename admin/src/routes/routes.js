@@ -10,7 +10,7 @@ import Holiday from "../pages/Holiday";
 import Invoices from "../pages/Invoices";
 import Layout from "../pages/Layout";
 import Login from "../pages/Login";
-import Students from "../pages/Students";
+import NotFound from "../pages/NotFound";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
                 path: "/admission",
                 element: <Admission />
             },
-           
+
             {
                 path: "/invoices",
                 element: <Invoices />
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
     },
     {
         path: "*",
-        element: <h1>404</h1>,
+        element: <NotFound/>,
     }
 ])
 

@@ -5,7 +5,6 @@ const init = {
 }
 
 const admissionReducer = (state = init, action) => {
-    console.log(action.payload);
     switch (action.type) {
         case Types.SET_ADMISSION:
             return action.payload

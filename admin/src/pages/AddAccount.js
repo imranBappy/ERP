@@ -3,6 +3,7 @@ import Input from '../components/Input';
 import accountInput from '../data/accountInput';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import SubmitBtn from '../components/SubmitBtn';
 const AddAccount = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const formData = new FormData()
@@ -37,9 +38,7 @@ const AddAccount = () => {
                         />
                     )
                 }
-                <div className='my-5'>
-                    <input type='submit' className="bg-sky-600 cursor-pointer text-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600" />
-                </div>
+                <SubmitBtn disabled={false} value="Submit" />
             </form>
         </div>
     );
