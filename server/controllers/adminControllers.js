@@ -24,4 +24,3 @@ exports.adminSignupPostController = async (req, res, next) => {
         next(error)
     }
 }
-

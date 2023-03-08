@@ -3,6 +3,7 @@ const isAuthenticated = (req, res, next) => {
     try {
         const { authorization } = req.headers;
         if (!authorization) return res.json({
+            isAuthintication: false,
             message: 'User Unauthorized',
             error: true
         })

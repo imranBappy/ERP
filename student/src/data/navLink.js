@@ -16,15 +16,7 @@ const navLinks = [
         text: 'Dashboard'
     },
     {
-<<<<<<< HEAD
-        path: '/students',
-        element: <SlGraduation className='active__link' />,
-        text: 'Students',
-        child: [
-            {
-                text: 'Student Add',
-                path: '/students/add',
-=======
+<<<<<<<<< Temporary merge branch 1
         path: '/teacher',
         element: <SlGraduation className='active__link' />,
         text: 'Teacher',
@@ -32,7 +24,15 @@ const navLinks = [
             {
                 text: 'Teacher Add',
                 path: '/teacher/add',
->>>>>>> mehedi
+=========
+        path: '/students',
+        element: <SlGraduation className='active__link' />,
+        text: 'Students',
+        child: [
+            {
+                text: 'Student Add',
+                path: '/students/add',
+>>>>>>>>> Temporary merge branch 2
             }
         ]
     },
