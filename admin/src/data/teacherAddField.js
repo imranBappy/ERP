@@ -6,12 +6,6 @@ const TeacherAddField = [
         placeholder: 'Upload Image'
     },
     {
-        label: 'Teacher ID',
-        type: 'text',
-        name: "teacherId",
-        placeholder: 'Teacher ID'
-    },
-    {
         label: 'Name',
         type: 'text',
         name: "name",
@@ -25,22 +19,34 @@ const TeacherAddField = [
         options: ['Male', 'Female', 'Other']
     },
     {
+        label: 'NID',
+        type: 'text',
+        name: "NID",
+        placeholder: 'NID'
+    },
+    {
         label: 'Teacher Designation',
         type: 'text',
         name: "designation",
         placeholder: 'Designation'
     },
     {
-        label: 'Teacher Email',
+        label: 'Email',
         type: 'email',
         name: "email",
         placeholder: 'Email'
     },
     {
-        label: 'Teacher Phone',
+        label: 'Phone',
         type: 'number',
         name: "phone",
         placeholder: 'Phone Number'
+    },
+    {
+        label: 'Salary',
+        type: 'number',
+        name: "salary",
+        placeholder: 'Salary'
     },
     {
         label: 'CV',

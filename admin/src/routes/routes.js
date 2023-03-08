@@ -5,16 +5,16 @@ import AddStudent from "../pages/AddStudent";
 import TeacherAdd from "../pages/AddTeacher";
 import Admission from "../pages/Admission";
 import Dashboard from "../pages/Dashboard";
-import DepartmentAdd from "../pages/DepartmentAdd";
+import AddDepartment from "../pages/AddDepartment";
 import Departments from "../pages/Departments";
 import Holiday from "../pages/Holiday";
 import Invoices from "../pages/Invoices";
 import Layout from "../pages/Layout";
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
-
+import Profile from "../pages/Profile";
+import Teachers from "../pages/Teachers";
 const { createBrowserRouter } = require("react-router-dom");
-
 
 
 const router = createBrowserRouter([
@@ -31,12 +31,16 @@ const router = createBrowserRouter([
                 element: <Admission />
             },
             {
-                path: "/students/add'",
+                path: "/profile/:stdId",
+                element: <Profile />
+            },
+            {
+                path: "/students/add",
                 element: <AddStudent />
             },
             {
                 path: "/teachers",
-                element: <Admission />
+                element: <Teachers />
             },
             {
                 path: "/teachers/add",
@@ -48,7 +52,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/departments/add",
-                element: <DepartmentAdd />
+                element: <AddDepartment />
             },
             {
                 path: "/admission",
@@ -65,7 +69,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/accounts/add",
-                element: <AddAccount />
+                element: <AddStudent />
             },
             {
                 path: "/setting",

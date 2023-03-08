@@ -51,13 +51,11 @@ exports.admissionPostController = async (req, res, next) => {
             guardianPhone,
             guardianNID,
             address,
-            department
         } = req.body;
         const group = 'A'
         const studentId = `CMT-${group}-${Math.floor(Math.random() * 100)}`
         const transcript = req.files.transcript[0].filename
         const url = req.files.url[0].filename
-
         const newStudent = new Student({
             studentId,
             phone,
@@ -74,14 +72,13 @@ exports.admissionPostController = async (req, res, next) => {
             payment: [],
             application: []
         })
-
         const newAuth = new Auth({
             profile: newStudent._id,
             name, email, url, role: "Applicant",
         })
         await newAuth.save();
         await newStudent.save()
-        res.json({error:false, message: "Successfully Submitted!" })
+        res.json({ error: false, message: "Successfully Submitted!" })
     } catch (error) {
         next(error)
     }

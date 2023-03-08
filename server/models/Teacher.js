@@ -10,15 +10,20 @@ const teacherSchema = new Schema({
         required: [true, 'ID is require'],
         trim: true,
     },
-    name: {
-        type: String,
-        required: [true, 'Name is require'],
-        trim: true,
-    },
     gender: {
         type: String,
         required: [true, 'Gender is require'],
         enum: ['Male', 'Female', 'Other']
+    },
+    NID: {
+        type: String,
+        required: [true, 'NID is require'],
+        trim: true,
+    },
+    salary: {
+        type: Number,
+        required: [true, 'Salary is require'],
+        min: 0,
     },
     phone: {
         type: String,
@@ -35,8 +40,7 @@ const teacherSchema = new Schema({
         required: [true, 'CV is require'],
         trim: true,
     },
-    password: {
-        type: String,
-    }
-},{ timestamps: true })
-module.exports = model('Teacher', teacherSchema)
+
+}, { timestamps: true })
+const Teacher = model('Teacher', teacherSchema)
+module.exports = Teacher

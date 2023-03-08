@@ -3,9 +3,9 @@ import Input from '../components/Input';
 import TeacherAddField from '../data/teacherAddField';
 import { useForm } from 'react-hook-form';
 import SubmitBtn from '../components/SubmitBtn';
-
-
-const TeacherAdd = () => {
+import { connect } from 'react-redux'
+import { teacherPostAction } from '../app/actions/teacherAction'
+const TeacherAdd = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [file, setFile] = useState(null);
 
@@ -19,16 +19,13 @@ const TeacherAdd = () => {
     }, [watch]);
 
     const formData = new FormData()
-    const onSubmit = ({ url, ...rest }) => {
-        const data = { ...rest, url: url[0] }
+    const onSubmit = ({ url, cv, ...rest }) => {
+        const data = { ...rest, url: url[0], cv: url[0] }
         Object.keys(data).forEach(key => {
-            if (key === 'url', 'cv') {
-                formData.append(key, data[key][0])
-            } else {
-                formData.append(key, data[key])
-            }
+            formData.append(key, data[key])
         });
-
+        console.log(data);
+        props.teacherPostAction(formData)
         // axios.post('/admin', formData)
         //     .then(res => {
         //         alert(res.data.message)
@@ -60,4 +57,8 @@ const TeacherAdd = () => {
     );
 };
 
+<<<<<<< HEAD
 export default TeacherAdd;
+=======
+export default connect(null, { teacherPostAction })(TeacherAdd);
+>>>>>>> imran

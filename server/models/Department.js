@@ -1,4 +1,5 @@
-const { Schema, model, Types } = require('mongoose')
+const { Schema, model, Types } = require('mongoose');
+const Auth = require('./Auth');
 
 const departmentSchema = new Schema({
     name: {
@@ -8,7 +9,7 @@ const departmentSchema = new Schema({
         max: 30
     },
     code: {
-        typeof: String,
+        type: String,
         required: [true, 'Code is require']
     },
     hod: {
