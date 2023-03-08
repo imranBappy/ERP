@@ -7,10 +7,20 @@ exports.authGetController = async (req, res, next) => {
     try {
         const user = await Auth.findById(req.query.id)
             .select('-password')
-        res.json({
-            isAuthintication: true,
-            data: user
-        })
+
+        if (user) {
+            res.json({
+                isAuthintication: true,
+                data: user
+            })
+        } else {
+            res.json({
+                isAuthintication: false,
+                message: 'User not found!',
+                error: true
+            })
+        }
+
     } catch (error) {
         next(error)
     }

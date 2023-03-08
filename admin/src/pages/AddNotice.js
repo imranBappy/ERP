@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Notice = () => {
+const AddNotice = () => {
   return (
     <>
-     <form action="" encType='multipart/form-data'>
+      <form action="" encType='multipart/form-data'>
         <input type="text" name='name' id='name' />
         <input type="submit" value="submit" />
-     </form>
+      </form>
 
     </>
   )
 }
 
-export default Notice;
+export default AddNotice;

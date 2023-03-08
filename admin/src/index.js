@@ -72,8 +72,6 @@ if (!token) {
       })
     }
   }).catch((error) => {
-    console.log(error);
-    
     store.dispatch({
       type: 'SET_AUTH',
       payload: {
