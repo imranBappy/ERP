@@ -5,8 +5,8 @@ var jwt = require('jsonwebtoken');
 
 exports.authGetController = async (req, res, next) => {
     try {
-        console.log(req.query.id);
         const user = await Auth.findById(req.query.id)
+            .select('-password')
         res.json({
             isAuthintication: true,
             data: user
@@ -39,6 +39,7 @@ exports.signupController = async (req, res, next) => {
 exports.singinPostController = async (req, res, next) => {
     try {
         const { email, password } = req.body;
+        console.log(req.body);
         const std = await Auth.findOne({ email: email });
         if (!std) {
             return res.json({
@@ -47,7 +48,7 @@ exports.singinPostController = async (req, res, next) => {
             })
         }
         const match = await bcrypt.compare(password, std.password);
-
+        delete std.password;
         if (!match) {
             return res.json({
                 isAuthintication: false,
@@ -56,15 +57,16 @@ exports.singinPostController = async (req, res, next) => {
         }
 
         const token = jwt.sign({
-            data: { id: std._id }
+            data: { id: std._id, name: std.name, url: std.url }
         }, process.env.JWT_SECRET, { expiresIn: '7d' })
-        return res.json({
+        res.json({
             isAuthintication: true,
             data: std,
-            message: "Account Success Fully Singin",
+            message: "Successfully login!",
             token: token
         })
     }
+
     catch (error) {
         next(error)
     }
