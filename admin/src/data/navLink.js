@@ -29,7 +29,14 @@ const navLinks = [
     {
         path: '/teachers',
         element: <GiTeacher className='active__link' />,
-        text: 'Teachers'
+        text: 'Teachers',
+        child: [
+            {
+                text: 'Teachers Add',
+                path: '/teachers/add',
+            }
+        ]
+
     }, {
         path: '/departments',
         element: <BiBuildingHouse className='active__link' />,
@@ -60,10 +67,22 @@ const navLinks = [
                 path: '/accounts/add',
             }
         ]
-    }, {
-        path: '/holiday',
+    },
+    {
+        path: '/notice',
+        element: <BiBuildingHouse className='active__link' />,
+        text: 'Notice'
+    },
+    {
+        path: '/setting',
         element: <MdOutlineHolidayVillage className='active__link' />,
-        text: 'Holiday'
+        text: 'Setting',
+        child: [
+            {
+                text: 'Notice Add',
+                path: '/setting/notice',
+            }
+        ]
     }
 ]
 

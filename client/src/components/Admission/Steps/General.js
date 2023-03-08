@@ -6,6 +6,7 @@ import { useStepperContext } from '../SetperContext';
 const General = () => {
   const { userData } = useStepperContext();
   
+  
   const haldeSubmit = () => {
     axios(
       {
