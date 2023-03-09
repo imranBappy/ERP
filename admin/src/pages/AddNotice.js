@@ -5,22 +5,23 @@ import Input from '../components/Input';
 import TeacherAddField from '../data/noticeAdd';
 import { useForm } from 'react-hook-form';
 import SubmitBtn from '../components/SubmitBtn';
+import { connect } from 'react-redux';
+import { noticePostAction } from '../app/actions/noticeAction';
 
 
-const TeacherAdd = () => {
+
+const AddNotice = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [file, setFile] = useState(null);
 
     const formData = new FormData()
-    const onSubmit = ({ url, ...rest }) => {
-        const data = { ...rest, url: url[0] }
+    const onSubmit = ({ notice, ...rest }) => {
+        const data = { ...rest, notice: notice[0] }
         Object.keys(data).forEach(key => {
-            if (key === 'pdf') {
-                formData.append(key, data[key][0])
-            } else {
-                formData.append(key, data[key])
-            }
+            formData.append(key, data[key])
         });
+        props.noticePostAction(formData);
+        console.log({ data });
 
     };
     return (
@@ -48,4 +49,6 @@ const TeacherAdd = () => {
     );
 };
 
-export default TeacherAdd;
+// export default AddNotice;
+export default connect(null, { noticePostAction })(AddNotice);
+
