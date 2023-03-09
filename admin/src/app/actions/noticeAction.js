@@ -4,7 +4,6 @@ import axios from 'axios';
 export const noticePostAction = (newData) => async dispatch => {
     try {
         const res = await axios.post(`/notice`, newData);
-        console.log({ res });
         dispatch({
             type: Types.SET_ALERT,
             payload: {
