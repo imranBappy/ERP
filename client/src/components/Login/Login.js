@@ -8,7 +8,7 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {
         axios.post('/auth', data)
-            .then(res => {
+        .then(res => {
                 console.log(res.data,
                     res.data.token)
                 swal({

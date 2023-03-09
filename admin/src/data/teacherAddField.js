@@ -16,7 +16,10 @@ const TeacherAddField = [
         type: 'select',
         name: "gender",
         placeholder: 'Gender',
-        options: ['Male', 'Female', 'Other']
+        options: [
+            { value: "Male", data: 'Male' }, { value: "Female", data: 'Female' }
+            , { value: "Other", data: 'Other' }
+        ]
     },
     {
         label: 'NID',

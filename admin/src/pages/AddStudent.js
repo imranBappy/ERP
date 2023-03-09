@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { admissionPostAction } from '../app/actions/admissionAction'
+import { useNavigate } from 'react-router-dom';
 
 const input_field = require("./AddStudentInputfield")
 const AddStudent = (props) => {
     const [input,] = useState(input_field);
     const [std, setStd] = useState({})
+    let navigate = useNavigate();
+
     const handleChange = (e) => {
         if (e.target.name === 'url' || e.target.name === 'transcript') {
             setStd({ ...std, [e.target.name]: e.target.files[0] })
@@ -16,13 +19,15 @@ const AddStudent = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('clicked');
+
         const formData = new FormData()
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
         props.admissionPostAction({ data: props.admission.data, newData: formData })
         alert('Student Added Successfully')
+        return navigate("/students");
+
     }
 
     return (

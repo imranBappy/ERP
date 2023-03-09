@@ -5,7 +5,7 @@ const Teacher = require("../models/Teacher")
 exports.departmentGetConteroller = async (req, res, next) => {
     try {
         const departments = await Department.find()
-        res.json({ data: departments })
+        res.json(departments)
 
     } catch (error) {
         next(error)

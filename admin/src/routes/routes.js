@@ -14,6 +14,7 @@ import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
 import Profile from "../pages/Profile";
 import Teachers from "../pages/Teachers";
+import AddStudent2 from "../pages/AddStudent2";
 const { createBrowserRouter } = require("react-router-dom");
 
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/students/add",
-                element: <AddStudent />
+                element: <AddStudent2 />
             },
             {
                 path: "/teachers",
