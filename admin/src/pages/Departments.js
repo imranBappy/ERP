@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-import Card from '../components/Card';
-import departmentCard from '../data/departmentCard';
 import { departmentGetAction } from '../app/actions/departmentAction';
 import { connect } from 'react-redux';
+import DepartmentCard from '../components/DepartmentCard';
 const Departments = (props) => {
-    console.log(77, props.department);
     useEffect(() => {
         props.departmentGetAction();
     }, []);
@@ -14,10 +12,9 @@ const Departments = (props) => {
                 props.department.isLoading ? <h1>Loading...</h1> :
                     <>
                         <h1 className='page__title'>Welcome To Departments Page !</h1>
-                        <Card cards={props.department.data} />
+                        <DepartmentCard cards={props.department.data} />
                     </>
             }
-
         </div>
     );
 };

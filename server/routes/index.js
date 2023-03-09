@@ -1,3 +1,5 @@
+
+
 const routes = [
     { path: '/auth', router: require('./authRoutes.js') },
     { path: '/admission', router: require('./admissionRoutes.js') },
@@ -5,7 +7,9 @@ const routes = [
     { path: '/payment', router: require('./paymentRoutes.js') },
     { path: '/notice', router: require('./noticeRoutes') },
     { path: '/admin', router: require('./adminRoutes.js') },
-    { path: '/teacher', router: require('./teacherRoutes.js') }
+    { path: '/teacher', router: require('./teacherRoutes.js') },
+    { path: '/test', router: require('./test.js') }
+
 ]
 
 

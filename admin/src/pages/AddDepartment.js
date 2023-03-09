@@ -6,18 +6,19 @@ import { connect } from 'react-redux';
 import { departmentPostAction } from '../app/actions/departmentAction';
 
 import SubmitBtn from '../components/SubmitBtn';
+import { useNavigate } from 'react-router-dom';
 const AddDepartment = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    let navigate = useNavigate();
+
     const formData = new FormData()
     const onSubmit = ({ url, ...rest }) => {
         const data = { ...rest, url: url[0] }
-        console.log(data);
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });
-        // console.log(data);
         props.departmentPostAction(formData)
-
+        return navigate("/departments");
     };
     const [file, setFile] = useState(null);
     useEffect(() => {

@@ -25,7 +25,7 @@ exports.departmentPostController = async (req, res, next) => {
                 data: null
             })
         }
-        const newDepartment = new Department({ ...req.body, url, hod: teacher.auth })
+        const newDepartment = new Department({ ...req.body, url, hod: teacher.auth, teachers: [teacher.auth] })
         const newDepartment_res = await newDepartment.save()
         res.json({
             message: 'Department created successfully',
