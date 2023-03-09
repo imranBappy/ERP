@@ -4,7 +4,7 @@ const isAuthenticated = require('../middlewares/isAuthenticated');
 const upload = require('../middlewares/uploadMiddleware');
 const cpUpload = upload.fields([{ name: 'url', maxCount: 1 }, { name: 'cv', maxCount: 1 }])
 
-router.get('/', isAuthenticated, teacherGetController);
+router.get('/', teacherGetController);
 router.post('/', isAuthenticated, cpUpload, teacherPostController);
 router.patch('/', isAuthenticated, teacherPatchController);
 router.delete('/', isAuthenticated, teacherDeleteController);
