@@ -13,7 +13,7 @@ const ListBody = (props) => {
                         <td className={'pl-2'} >
                             <input type="checkbox" />
                         </td>
-                        <td >{item['profile']['studentId']}</td>
+                        <td >{item?.profile?.studentId}</td>
                         <TableImg name={item['name']} image={`${URL_PREFIX}${item['url']}`} />
                         <td >{item['profile']['phone']}</td>
                         <td >{item['email']}</td>

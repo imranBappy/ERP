@@ -2,22 +2,30 @@ import React from 'react';
 import "./Login.css";
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import swal from "sweetalert";
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {
         axios.post('/auth', data)
-            .then(res => {
+        .then(res => {
                 console.log(res.data,
                     res.data.token)
-                alert(res.data.message)
-                setTimeout(() => {
-                    window.open(`http://localhost:3000?token=${res.data.token}`)
-                }, 300);
-
+                swal({
+                    title: "Good job!",
+                    text: "Your are logged in successfullly!!",
+                    icon: "error",
+                    button: "Aww yiss!",
+                });
+                window.open(`http://localhost:3001?token=${res.data.token}`)
             }).then(err => {
                 console.log(err);
-                alert(err.message)
+                swal({
+                    title: "OPPS !!!",
+                    text: err.message,
+                    icon: "Faild",
+                    button: "Aww Try Again",
+                });
             })
     }
     return (

@@ -4,7 +4,7 @@ import "./NavTop.css";
 
 const NavTop = () => {
     return (
-        <div className='nav_top_container sm:hidden'>
+        <div className='nav_top_container hidden md:inline lg:block'>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 nav_top_body'>
                 <div className="left_nav_top lg:mr-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">

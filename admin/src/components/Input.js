@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
-const Input = ({ file,label, type, errors, register, ...rest }) => {
-  
+const Input = ({ options, file, label, type, errors, register, ...rest }) => {
+
     const [show, setShow] = useState(false);
     const handleShow = () => { setShow(!show) }
     switch (type) {
@@ -54,6 +54,23 @@ const Input = ({ file,label, type, errors, register, ...rest }) => {
                 </div>
                 {errors[rest.name] && <span className='text-error'>{rest.name} is required</span>}
             </div>
+        case 'select':
+            return <div className='mt-2'>
+                <label htmlFor="first_name" className="block mb-2 text-sm font- dark:text-white ">{label}</label>
+
+                <select   {...register(rest.name, { required: true })}
+                    aria-invalid={errors[rest.name] ? "true" : "false"}
+                    {...rest} type={type}
+                    className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600"
+                >
+                    {
+                        options.map((option, index) => <option value={option.value} key={index} >{option.data}</option>)
+                    }
+
+
+                </select>
+                {errors[rest.name] && <span className='text-error'>{rest.name} is required</span>}
+            </div>;
         default:
             return <div className='mt-2'>
                 <label htmlFor="first_name" className="block mb-2 text-sm font- dark:text-white ">{label}</label>

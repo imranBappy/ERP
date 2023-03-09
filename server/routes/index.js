@@ -3,8 +3,9 @@ const routes = [
     { path: '/admission', router: require('./admissionRoutes.js') },
     { path: '/department', router: require('./departmentRoutes.js') },
     { path: '/payment', router: require('./paymentRoutes.js') },
-    {path: '/notice', router: require('./noticeRoutes')},
-    { path: '/admin', router: require('./adminRoutes.js') }
+    { path: '/notice', router: require('./noticeRoutes') },
+    { path: '/admin', router: require('./adminRoutes.js') },
+    { path: '/teacher', router: require('./teacherRoutes.js') }
 ]
 
 

@@ -67,14 +67,20 @@ const navLinks = [
                 path: '/accounts/add',
             }
         ]
-    }, {
+    },
+    {
+        path: '/notice',
+        element: <BiBuildingHouse className='active__link' />,
+        text: 'Notice'
+    },
+    {
         path: '/setting',
         element: <MdOutlineHolidayVillage className='active__link' />,
         text: 'Setting',
         child: [
             {
                 text: 'Notice Add',
-                path: '/notice/add',
+                path: '/setting/notice',
             }
         ]
     }

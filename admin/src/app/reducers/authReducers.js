@@ -3,6 +3,7 @@ const init = {
     token: null,
     data: null,
     isLoading: false,
+    isAuthintication: false
 }
 
 const authReducer = (state = init, action) => {
