@@ -56,4 +56,8 @@ const TeacherAdd = (props) => {
     );
 };
 
+<<<<<<< HEAD
+export default TeacherAdd;
+=======
 export default connect(null, { teacherPostAction })(TeacherAdd);
+>>>>>>> imran
