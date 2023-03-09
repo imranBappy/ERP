@@ -5,23 +5,23 @@ import { useStepperContext } from '../SetperContext';
 
 const General = () => {
   const { userData } = useStepperContext();
-  
-  
+
+
   const haldeSubmit = () => {
-    axios(
-      {
-        method: "post",
-        url: "http://localhost:5000/admission",
-        data: userData,
-        headers: { "Content-Type": "multipart/form-data" },
-      }
-    ).then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
-    
+    // axios(
+    //   {
+    //     method: "post",
+    //     url: "http://localhost:5000/admission",
+    //     data: userData,
+    //     headers: { "Content-Type": "multipart/form-data" },
+    //   }
+    // ).then((response) => response.json())
+    //   .then((data) => console.log(data))
+    //   .catch((error) => console.log(error));
+
     console.log(userData);
   }
-  
+
   return (
     <div className="container md:mt-10">
       <div className="flex flex-col items-center">
@@ -53,7 +53,7 @@ const General = () => {
           Application Submitted.
         </div>
         <Link className="mt-10" to="/">
-          <button onClick={haldeSubmit()} className="h-10 px-5 text-indigo-900 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:indigo-900 hover:text-indigo-900">
+          <button onClick={haldeSubmit} className="h-10 px-5 text-indigo-900 transition-colors duration-150 border border-gray-300 rounded-lg focus:shadow-outline hover:indigo-900 hover:text-indigo-900">
             Submit
           </button>
         </Link>

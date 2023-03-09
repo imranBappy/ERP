@@ -64,7 +64,7 @@ const Input = ({ options, file, label, type, errors, register, ...rest }) => {
                     className="bg-white-800 border border-black- text-sm rounded-lg focus:ring-sky-600 focus:border-sky-600 block w-full p-2.5 dark:bg-black-800 dark:border-black-600 dark: dark:text-white-900 dark:focus:ring-sky-600 dark:focus:border-sky-600"
                 >
                     {
-                        options.map((option, index) => <option value={option} key={index} >{option}</option>)
+                        options.map((option, index) => <option value={option.value} key={index} >{option.data}</option>)
                     }
 
 

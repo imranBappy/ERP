@@ -8,7 +8,7 @@ const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
     const handleLogin = data => {
         axios.post('/auth', data)
-            .then(res => {
+        .then(res => {
                 console.log(res.data,
                     res.data.token)
                 swal({
@@ -17,7 +17,7 @@ const Login = () => {
                     icon: "success",
                     button: "Aww yiss!",
                 });
-                window.open(`http://localhost:3000?token=${res.data.token}`)
+                window.open(`http://localhost:3001?token=${res.data.token}`)
             }).then(err => {
                 console.log(err);
                 swal({

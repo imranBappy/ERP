@@ -11,7 +11,7 @@ const upload = require('../middlewares/uploadMiddleware');
 
 router.get('/', departmentGetConteroller);
 router.post('/', isAuthenticated, upload.single('url'), departmentPostController);
-router.patch('/', departmentPatchController);
-router.delete('/', departmentDeleteController);
+router.patch('/', isAuthenticated, departmentPatchController);
+router.delete('/', isAuthenticated, departmentDeleteController);
 
 module.exports = router

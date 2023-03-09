@@ -6,6 +6,7 @@ const Education = () => {
   const { userData, setUserData } = useStepperContext();
   const handleChange = (e) => {
     const { name, value } = e.target;
+<<<<<<< HEAD
     if(e.target.name === 'transcript'){
       setUserData({...userData,[e.target.name]:e.target.files[0]})
     }
@@ -13,6 +14,13 @@ const Education = () => {
       setUserData({ ...userData, [name]: value });
     }
     
+=======
+    if (e.target.type === 'file') {
+      setUserData({ ...userData, [name]: e.target.files[0] });
+    } else {
+      setUserData({ ...userData, [name]: value });
+    }
+>>>>>>> imran
   };
   return (
     <div className="flex flex-col ">
