@@ -3,6 +3,8 @@ import coverPhoto from '../imgs/cover_pic.jpg'
 
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import AppriveBtn from "../components/AppriveBtn";
+import RejectBtn from "../components/RejectBtn";
 
 
 const URL_PREFIX = 'http://localhost:5000/uploads/'
@@ -18,7 +20,8 @@ const Profile = () => {
         })
             .catch(err => console.log(err))
     }, [])
-    console.log(std);
+    
+
     return (
         <div className="light__component  dark:dark__component  ">
             <div className=" m-auto w-full ">
@@ -32,35 +35,27 @@ const Profile = () => {
                     <div className=" ml-3 text-lg ">
                         <h2 className="text-xl font-bold">{`${std['name']}`}</h2>
                         <p>{std['email']}</p>
-                        <p><span className="font-bold mr-1">Call:</span>{std['profile']['phone']}</p>
+                        <p><span className="font-bold mr-1">Call:</span>{std?.profile?.phone}</p>
                         <p><span className="font-bold mr-1">Depertment:</span>Computer</p>
-                        <p><span className="font-bold mr-1">Ads:</span>{std['profile']['address']}</p>
+                        <p><span className="font-bold mr-1">Ads:</span>{std?.profile?.address}</p>
                     </div>
                     <div className=" ml-3 mt-10 lg:mt-0 md:mt-0 sm:mt-0 space-y-1">
                         <h2 className="text-2xl font-bold">Parent Details</h2>
-                        <h3><span className="font-bold mr-1">Father:</span>{std['profile']['fatherName']}</h3>
-                        <h3><span className="font-bold mr-1">Mother:</span>{std['profile']['motherName']}</h3>
-                        <p><span className="font-bold mr-1">Call:</span>{std['profile']['guardianPhone']}</p>
+                        <h3><span className="font-bold mr-1">Father:</span>{std?.profile?.fatherName}</h3>
+                        <h3><span className="font-bold mr-1">Mother:</span>{std?.profile?.motherName}</h3>
+                        <p><span className="font-bold mr-1">Call:</span>{std?.profile?.guardianPhone}</p>
                         <p><span className="font-bold mr-1">Email:</span>guardian@gmail.com</p>
-                        <p><span className="font-bold mr-1">Nid:</span>{std['profile']['guardianNID']}</p>
+                        <p><span className="font-bold mr-1">Nid:</span>{std?.profile?.guardianNID}</p>
                     </div>
-
                 </div>
-
                 <div className="mt-16 ml-3 lg:mt-20">
                     <h3 className="text-center font-bold mb-5 text-2xl uppercase">Transcript</h3>
-                    <img className="w-screen lg:w-2/3 mb-10 pb-4  mx-auto" src={`${URL_PREFIX}${std['profile']['transcript']}`} alt="" />
+                    <img className="w-screen lg:w-2/3 mb-10 pb-4  mx-auto" src={`${URL_PREFIX}${std?.profile?.transcript}`} alt="" />
                 </div>
-
-              <div className="flex justify-center space-x-3">
-              <div className=""> 
-                 <button type="submit" className="bg-sky-600 p-3 mt-3 text-white-900 rounded-md" >APPROVE</button>
+                <div className="flex justify-center space-x-3">
+                    <AppriveBtn />
+                    <RejectBtn />
                 </div>
-                <div className=""> 
-                 <button type="submit" className="bg-error p-3 mt-3 mb-8 text-white-900 rounded-md" >REJECTED</button>
-                </div>
-              </div>
-
             </div>
         </div>
     );

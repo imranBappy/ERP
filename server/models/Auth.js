@@ -16,7 +16,7 @@ const authScheme = Schema({
     role: {
         type: String,
         required: [true, 'Role is require!'],
-        enum: ['Students', 'Teacher', 'Admin', 'Applicant'],
+        enum: ['Student', 'Teacher', 'Admin', 'Applicant'],
         min: 2,
     },
     email: {

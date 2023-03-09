@@ -26,15 +26,13 @@ const AddStudent2 = (props) => {
     }, [watch]);
 
     const formData = new FormData()
-    const onSubmit = ({ url, cv, ...rest }) => {
-        const data = { ...rest, url: url[0], transcript: url[0] }
+    const onSubmit = ({ url, transcript, ...rest }) => {
+        const data = { ...rest, url: url[0], transcript: transcript[0] }
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });
-        console.log(data);
-        props.admissionPostAction(formData)
-
-        return navigate("/students");
+        props.admissionPostAction(props.admission, formData)
+        return navigate("/admission");
     };
     const options = [];
     props.department.data.forEach((item) => {
@@ -65,7 +63,8 @@ const AddStudent2 = (props) => {
 };
 const mapStateToProps = (state) => {
     return {
-        department: state.department
+        department: state.department,
+        admission: state.admission.data
     }
 }
 

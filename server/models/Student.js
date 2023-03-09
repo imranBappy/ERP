@@ -9,7 +9,7 @@ const studentSchema = new Schema({
     },
     department: {
         type: Types.ObjectId,
-        // required: [true, 'Department is require'],
+        required: [true, 'Department is require'],
         ref: 'Department',
     },
     phone: {
@@ -21,7 +21,7 @@ const studentSchema = new Schema({
         enum: ['A', 'B', 'C'],
         required: [true, 'Group is require']
     },
-    tutionFree: {
+    tutionFee: {
         type: Number,
         default: 0,
     },

@@ -20,7 +20,19 @@ const departmentSchema = new Schema({
         type: Types.ObjectId,
         ref: 'Auth',
         required: [true, 'The field is require']
-    }
+    },
+    students: [
+        {
+            type: Types.ObjectId,
+            ref: 'Auth',
+        }
+    ],
+    teachers: [
+        {
+            type: Types.ObjectId,
+            ref: 'Auth',
+        }
+    ]
 }, { timestamps: true })
 
 const Department = model('Department', departmentSchema)

@@ -11,6 +11,7 @@ export const admissionGetAction = ({ data, page }) => async dispatch => {
             }
         });
         const res = await axios.get(`/admission?page=${page}`);
+        console.log({ res });
         dispatch({
             type: Types.SET_ADMISSION,
             payload: {
@@ -19,10 +20,11 @@ export const admissionGetAction = ({ data, page }) => async dispatch => {
             }
         });
     } catch (error) {
+        console.log({ error });
         dispatch({
             type: Types.SET_ALERT,
             payload: {
-                message: 'Server was a side error',
+                message: error.message,
                 error: true
             }
         })
@@ -30,7 +32,7 @@ export const admissionGetAction = ({ data, page }) => async dispatch => {
 };
 
 
-export const admissionPostAction = ({ data, newData }) => async dispatch => {
+export const admissionPostAction = (data, newData) => async dispatch => {
     try {
         dispatch({
             type: Types.SET_ADMISSION,
@@ -64,3 +66,28 @@ export const admissionPostAction = ({ data, newData }) => async dispatch => {
         })
     }
 };
+
+
+
+export const admissionAprovePutAction = ({ _id, tutionFee }) => async dispatch => {
+    try {
+        const res = await axios.put(`/admission`, { _id, tutionFee })
+        dispatch({
+            type: Types.SET_ALERT,
+            payload: {
+                message: res.data.message,
+                error: false
+            }
+        })
+    } catch (error) {
+        dispatch({
+            type: Types.SET_ALERT,
+            payload: {
+                message: 'Server was a side error',
+                error: true
+            }
+        })
+    }
+};
+
+

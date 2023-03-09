@@ -4,6 +4,7 @@ const Student = require("../models/Student");
 const { uuid } = require('uuidv4');
 const sendEmail = require("../utils/sentEmail");
 const Formet = require("../utils/dataFormet");
+const Department = require("../models/Department");
 
 // /admission
 exports.admissionGetController = async (req, res, next) => {
@@ -51,6 +52,7 @@ exports.admissionPostController = async (req, res, next) => {
             guardianPhone,
             guardianNID,
             address,
+            department,
         } = req.body;
         const group = 'A'
         const studentId = `CMT-${group}-${Math.floor(Math.random() * 100)}`
@@ -67,6 +69,7 @@ exports.admissionPostController = async (req, res, next) => {
             guardianNID,
             address,
             transcript,
+            department,
             result: [],
             attendance: [],
             payment: [],
@@ -76,6 +79,7 @@ exports.admissionPostController = async (req, res, next) => {
             profile: newStudent._id,
             name, email, url, role: "Applicant",
         })
+
         await newAuth.save();
         await newStudent.save()
         res.json({ error: false, message: "Successfully Submitted!" })
@@ -83,19 +87,35 @@ exports.admissionPostController = async (req, res, next) => {
         next(error)
     }
 }
-exports.admissionAprovePulController = async (req, res, next) => {
+exports.admissionAprovePutController = async (req, res, next) => {
     try {
-        const { _id } = req.body
+        const { _id, tutionFee } = req.body
+        console.log(req.body);
         const password = uuid();
         const hashPass = await hash(password, 10);
         const std = await Auth.findById(_id)
-        await Auth.findOneAndUpdate(_id, {
+        console.log(std);
+        await Auth.findOneAndUpdate({ _id }, {
             $set: {
                 password: hashPass,
                 role: "Student"
             }
+        }, { upsert: true });
+
+        console.log(std.profile);
+        const xx = await Student.findById(std.profile)
+        console.log({ xx });
+        await Student.findOneAndUpdate({ _id: std.profile }, {
+            $set: {
+                tutionFee
+            }
+        }, { upsert: true });
+
+        await Department.findOneAndUpdate(std['profile']['department'], {
+            $push: {
+                students: _id
+            }
         });
-        console.log(hashPass)
         sendEmail(std.email, std.name, password)
         res.json(new Formet(std, "Successfully Approved!"))
     } catch (error) {
