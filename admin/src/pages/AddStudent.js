@@ -24,9 +24,11 @@ const AddStudent = (props) => {
         Object.keys(std).forEach(key => {
             formData.append(key, std[key])
         });
-        props.admissionPostAction({ data: props.admission.data, newData: formData })
-        alert('Student Added Successfully')
-        return navigate("/students");
+        console.log(std);
+
+        // props.admissionPostAction({ data: props.admission.data, newData: formData })
+        // alert('Student Added Successfully')
+        // return navigate("/students");
 
     }
 
