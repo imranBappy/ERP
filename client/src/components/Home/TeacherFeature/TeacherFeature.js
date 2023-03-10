@@ -3,7 +3,7 @@ import "./TeacherFeature.css";
 
 const TeacherFeature = () => {
     return (
-        <div className='teacher_feature_container text-center mt-32 sm:w-4/5 h-3/4 mx-auto'>
+        <div className='teacher_feature_container text-center mt-4  sm:w-4/5 h-3/4 mx-auto'>
             <div className='welcome_header'>
                 <h1 className='text-4xl heading_h1'>Welcome to University</h1>
                 <h3 className='hed_pera'>Study Point is a international leader in teaching students to write effectively,learn from each other and think for themselves.</h3>

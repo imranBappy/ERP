@@ -31,7 +31,7 @@ const WelcomeSection = () => {
     ]
 
     return (
-        <div className='welcom_section'>
+        <div className='welcom_section mb-32'>
             <div className="wel_container max-w-[1500px] mx-auto">
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {

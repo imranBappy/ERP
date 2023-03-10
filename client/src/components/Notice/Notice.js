@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Notice.css";
 import NoticeBody from './NoticeBody';
 
@@ -65,6 +65,15 @@ const Notice = () => {
             icon: <i className="fa-solid fa-file-pdf"></i>
         },
     ]
+
+    const [notice,setNotice]= useState([]);
+    console.log(notice);
+    useEffect(()=>{
+        fetch("http://localhost:5000/notice")
+        .then((res)=>res.json())
+        .then((data)=>setNotice(data))
+    },[]);
+
     return (
         <div className='bg-slate-50 pt-16 pb-32'>
             <div className="overflow-x-auto w-4/5 mx-auto notice_height">
