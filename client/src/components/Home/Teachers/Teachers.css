@@ -104,3 +104,10 @@
 .hed_pera{
   margin-bottom: 5% !important;
 }
+
+
+.tea_img_container img{
+  max-width: 200px;
+  max-height: 200px;
+  margin: 10px;
+}

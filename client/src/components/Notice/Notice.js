@@ -67,7 +67,7 @@ const Notice = () => {
     ]
 
     const [notice,setNotice]= useState([]);
-    console.log(notice);
+    console.log(notice[0]);
     useEffect(()=>{
         fetch("http://localhost:5000/notice")
         .then((res)=>res.json())
