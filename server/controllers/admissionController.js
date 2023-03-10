@@ -54,6 +54,7 @@ exports.admissionPostController = async (req, res, next) => {
             address,
             department,
         } = req.body;
+
         const group = 'A'
         const studentId = `CMT-${group}-${Math.floor(Math.random() * 100)}`
         const transcript = req.files.transcript[0].filename
@@ -90,20 +91,19 @@ exports.admissionPostController = async (req, res, next) => {
 exports.admissionAprovePutController = async (req, res, next) => {
     try {
         const { _id, tutionFee } = req.body
-        console.log(req.body);
         const password = uuid();
         const hashPass = await hash(password, 10);
         const std = await Auth.findById(_id)
-        console.log(std);
+            .populate({
+                path: 'profile',
+                model: Student,
+            })
         await Auth.findOneAndUpdate({ _id }, {
             $set: {
                 password: hashPass,
                 role: "Student"
             }
         }, { upsert: true });
-
-        console.log(std.profile);
-        const xx = await Student.findById(std.profile)
         await Student.findOneAndUpdate({ _id: std.profile }, {
             $set: {
                 tutionFee
@@ -117,6 +117,7 @@ exports.admissionAprovePutController = async (req, res, next) => {
         });
         sendEmail(std.email, std.name, password)
         res.json(new Formet(std, "Successfully Approved!"))
+        return
     } catch (error) {
         next(error)
     }

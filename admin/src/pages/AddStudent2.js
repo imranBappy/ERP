@@ -14,7 +14,7 @@ const AddStudent2 = (props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [file, setFile] = useState(null);
     let navigate = useNavigate();
-    console.log(props.department);
+
     useEffect(() => {
         props.departmentGetAction()
         const subscription = watch((value, { name, type }) => {
@@ -31,6 +31,7 @@ const AddStudent2 = (props) => {
         Object.keys(data).forEach(key => {
             formData.append(key, data[key])
         });
+
         props.admissionPostAction(props.admission, formData)
         return navigate("/admission");
     };
