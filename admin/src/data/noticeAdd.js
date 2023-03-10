@@ -9,7 +9,7 @@ const NoticeAddField = [
     {
         label: 'PDF',
         type: 'file',
-        name: "pdf",
+        name: "notice",
         placeholder: 'Upload CV'
     }
 ]

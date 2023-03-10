@@ -1,29 +1,25 @@
 const Notice = require('../models/Notice')
-exports.noticeGetController = async (req, res, next)=>{
-    try{ 
-     
-            const allData =  await Notice.find({});
-            res.json(allData);
-       
-    }catch(error){
+exports.noticeGetController = async (req, res, next) => {
+    try {
+        const allData = await Notice.find({});
+        res.json(allData);
+    } catch (error) {
         next(error);
     }
 
 }
 
-exports.noticePostController = async (req, res, next)=>{
-    try{
+exports.noticePostController = async (req, res, next) => {
+    try {
         const newNotice = new Notice({
-           title: req.body.title,
-           file: req.file.filename,
-    
+            title: req.body.title,
+            notice: req.file.filename,
         })
-      await newNotice.save()
-      res.json({error:false, message: "Successfully Submitted!" })
+        await newNotice.save()
+        res.json({ error: false, message: "Successfully Submitted!" })
 
-    }catch(error){
+    } catch (error) {
         next(error);
-    
     }
 
 }

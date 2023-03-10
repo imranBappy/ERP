@@ -70,7 +70,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/accounts/add",
-                element: <AddStudent />
+                element: <AddAccount />
             },
             {
                 path: "/setting",
