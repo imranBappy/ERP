@@ -113,7 +113,7 @@ const Personal = () => {
                 className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"
               /> */}
 
-              <select className="select w-full " onChange={handleChange} name="department">
+              <select className="select dep w-full " onChange={handleChange} name="department">
                 <option disabled selected>Department</option>
                 {EduData.map(data =><option 
                 key={data._id}
