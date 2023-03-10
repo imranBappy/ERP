@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AdmissionApply from '../components/AdmissionList';
-
-const Students = () => {
+import { connect } from 'react-redux'
+import { studentGetAction } from '../app/actions/studentAction.js';
+import StudentsList from '../components/StudentsList';
+const Students = (props) => {
+    useEffect(() => {
+        props.studentGetAction()
+    }, [])
+    console.log(9999, props.student);
     return (
         <div>
-            <h1 className='page__title'>Students</h1>
-            {/* <StudentsList /> */}
-            <AdmissionApply />
+            {
+                props.student.isLoading ? <h1>Loading...</h1> :
+                    <>
+                        <h1 className='page__title'>Students</h1>
+                        <StudentsList body={props.student.data} />
+                    </>
+            }
+
         </div>
     );
 };
-
-export default Students;
+const mapStateToProps = (state) => {
+    return {
+        student: state.student
+    }
+}
+export default connect(mapStateToProps, { studentGetAction })(Students);

@@ -3,16 +3,17 @@ import axios from 'axios';
 
 export const studentGetAction = () => async dispatch => {
     try {
-        // dispatch({
-        //     type: Types.SET_DEPARTMENT,
-        //     payload: {
-        //         isLoading: true,
-        //         data: []
-        //     }
-        // })
-        const res = await axios.get('/department');
         dispatch({
-            type: Types.SET_DEPARTMENT,
+            type: Types.SET_STUDENT,
+            payload: {
+                isLoading: true,
+                data: []
+            }
+        })
+        const res = await axios.get('/student');
+        
+        dispatch({
+            type: Types.SET_STUDENT,
             payload: {
                 isLoading: false,
                 data: res.data
@@ -20,7 +21,7 @@ export const studentGetAction = () => async dispatch => {
         })
     } catch (error) {
         dispatch({
-            type: Types.SET_DEPARTMENT,
+            type: Types.SET_STUDENT,
             payload: {
                 isLoading: false,
                 data: []

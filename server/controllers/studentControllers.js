@@ -10,7 +10,7 @@ const Department = require("../models/Department");
 exports.studentGetController = async (req, res, next) => {
     try {
         const { page = 1, limit = 10 } = req.query;
-        const students = await Auth.find({ role: "Applicant" })
+        const students = await Auth.find({ role: "Student" })
             .populate({
                 path: 'profile',
                 model: Student,
