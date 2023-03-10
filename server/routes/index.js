@@ -8,8 +8,7 @@ const routes = [
     { path: '/notice', router: require('./noticeRoutes') },
     { path: '/admin', router: require('./adminRoutes.js') },
     { path: '/teacher', router: require('./teacherRoutes.js') },
-    { path: '/test', router: require('./test.js') }
-
+    { path: '/student', router: require('./studentRoutes.js') }
 ]
 
 

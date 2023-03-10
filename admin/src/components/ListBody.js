@@ -15,9 +15,9 @@ const ListBody = (props) => {
                         </td>
                         <td >{item?.profile?.studentId}</td>
                         <TableImg name={item['name']} image={`${URL_PREFIX}${item['url']}`} />
-                        <td >{item['profile']['phone']}</td>
-                        <td >{item['email']}</td>
-                        <td >{item['profile']['address']}</td>
+                        <td >{item?.profile?.phone}</td>
+                        <td >{item?.email}</td>
+                        <td >{item?.profile?.address}</td>
 
                         {/* {Object.keys(item).map((key, index2) => {
                             if (key !== 'profile') {

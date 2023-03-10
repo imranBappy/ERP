@@ -9,7 +9,6 @@ const AppriveBtn = (props) => {
     const handleAprove = () => {
         var num = Number(prompt("Enter Tution Fee: "));
         if (num) {
-            console.log(num);
             props.admissionAprovePutAction({ _id: stdId, tutionFee: num });
         }
         return navigate("/students");

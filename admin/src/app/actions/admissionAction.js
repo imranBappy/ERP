@@ -91,3 +91,34 @@ export const admissionAprovePutAction = ({ _id, tutionFee }) => async dispatch =
 };
 
 
+export const admissionRejectPutAction = (_id, data) => async dispatch => {
+    try {
+        const res = await axios.delete(`/admission?_id=${_id}`)
+        dispatch({
+            type: Types.SET_ALERT,
+            payload: {
+                message: res.data.message,
+                error: false
+            }
+        })
+        const filter = data.filter(item => item._id !== _id);
+        dispatch({
+            type: Types.SET_ADMISSION,
+            payload: {
+                isLoading: false,
+                data: [...filter]
+            }
+        })
+    } catch (error) {
+        dispatch({
+            type: Types.SET_ALERT,
+            payload: {
+                message: 'Server was a side error',
+                error: true
+            }
+        })
+    }
+};
+
+
+

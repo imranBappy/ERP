@@ -104,7 +104,6 @@ exports.admissionAprovePutController = async (req, res, next) => {
 
         console.log(std.profile);
         const xx = await Student.findById(std.profile)
-        console.log({ xx });
         await Student.findOneAndUpdate({ _id: std.profile }, {
             $set: {
                 tutionFee
@@ -123,3 +122,13 @@ exports.admissionAprovePutController = async (req, res, next) => {
     }
 }
 
+exports.admissionRejectDeleteController = async (req, res, next) => {
+    try {
+        const { _id } = req.query
+        const std = await Auth.findByIdAndDelete(_id)
+        await Student.findByIdAndDelete(std.profile)
+        res.json(new Formet(std, "Successfully Rejected!"))
+    } catch (error) {
+        next(error)
+    }
+}

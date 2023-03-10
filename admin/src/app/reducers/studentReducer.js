@@ -4,11 +4,12 @@ const init = {
     data: []
 }
 
-const admissionReducer = (state = init, action) => {
+const studentReducer = (state = init, action) => {
     switch (action.type) {
-        case Types.SET_ADMISSION:
+        case Types.SET_STUDENT:
             return action.payload
         default:
             return state
     }
 }
+export default studentReducer
