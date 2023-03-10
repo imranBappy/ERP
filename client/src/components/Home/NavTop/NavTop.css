@@ -1,12 +1,12 @@
 .nav_top_container{
-    display: flex;
-    align-items: center;
-    justify-content:center;
+
     background-color: #202c45;
     color: white;
     padding: 10px;
 }
 .nav_top_body{
+    display: flex;
+    justify-content: space-around;
     font-size: 14px;
     font-weight: 600;
 }

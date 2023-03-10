@@ -8,16 +8,16 @@ const General = () => {
 
 
   const haldeSubmit = () => {
-    // axios(
-    //   {
-    //     method: "post",
-    //     url: "http://localhost:5000/admission",
-    //     data: userData,
-    //     headers: { "Content-Type": "multipart/form-data" },
-    //   }
-    // ).then((response) => response.json())
-    //   .then((data) => console.log(data))
-    //   .catch((error) => console.log(error));
+    axios(
+      {
+        method: "post",
+        url: "http://localhost:5000/admission",
+        data: userData,
+        headers: { "Content-Type": "multipart/form-data" },
+      }
+    ).then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
 
     console.log(userData);
   }

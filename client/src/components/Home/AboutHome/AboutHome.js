@@ -4,9 +4,9 @@ import "./AboutHome.css";
 
 const AboutHome = () => {
     return (
-        <div className='home_bg_Clr '>
+        <div className='home_bg_Clr'>
             <div className='text-center  sm:w-4/5 h-3/4 mx-auto'>
-                <div className='welcome_header mt-8'>
+                <div className='welcome_header mt-32'>
                     <h1 className='text-4xl heading_h1'>About Return Zero University</h1>
                 </div>
                 <div className='w-4/5 mx-auto h-3/4 my-12'>

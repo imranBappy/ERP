@@ -2,15 +2,14 @@ import React from 'react';
 import { useStepperContext } from '../SetperContext';
 
 const Family = () => {
+ 
   const { userData, setUserData } = useStepperContext();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (e.target.type === 'file') {
-      setUserData({ ...userData, [name]: e.target.files[0] });
-    } else {
-      setUserData({ ...userData, [name]: value });
-    }
+    setUserData({ ...userData, [name]: value });
   };
+
   return (
     <div className="flex flex-col">
 
@@ -108,7 +107,7 @@ const Family = () => {
           <div className="my-2 flex rounded border border-gray-200 bg-white p-1">
             <input
               onChange={handleChange}
-              name="guardianPhone"
+              name="guardianNID"
               placeholder="Guradian NID Number"
               type="number"
               className="w-full appearance-none p-1 px-2 text-gray-800 outline-none"

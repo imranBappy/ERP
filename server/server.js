@@ -6,6 +6,7 @@ const setRoutes = require('./routes');
 const setMiddlewares = require('./middlewares');
 const Formet = require('./utils/dataFormet');
 const app = express();
+const cors = require('cors')
 
 dotenv.config({ path: './config/.env' })
 
@@ -15,7 +16,7 @@ connectDB();
 
 //static file
 app.use(express.static(__dirname + '\\public'))
-
+app.use(cors());
 //set middlewares
 setMiddlewares(app)
 

@@ -4,13 +4,17 @@ import { useStepperContext } from '../SetperContext';
 
 const Education = () => {
   const { userData, setUserData } = useStepperContext();
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (e.target.type === 'file') {
-      setUserData({ ...userData, [name]: e.target.files[0] });
-    } else {
+    if(e.target.name === 'transcript'){
+      setUserData({...userData,[e.target.name]:e.target.files[0]})
+    }
+    else{
       setUserData({ ...userData, [name]: value });
     }
+    
   };
   return (
     <div className="flex flex-col ">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Teacher from "./Teacher";
 import "./Teachers.css";
 
@@ -48,7 +49,7 @@ const Teachers = () => {
           ))}
         </div>
         <div className="teacher_btn_con">
-          <button className="teacher_more">View More</button>
+          <Link className="teacher_more text-center" to='/allTeacher'><button >View More</button></Link>
         </div>
       </div>
     </div>
