@@ -13,7 +13,7 @@ https://returnzero.netlify.app/
 ### Dashboard Link
 
 ```
-https://dashboard-return-zero.netlify.app
+https://taupe-horse-dc23bd.netlify.app/
 ```
 
 <img src="./doc/img/logo.png"/>
