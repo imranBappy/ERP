@@ -17,7 +17,7 @@ const Login = () => {
                     icon: "success",
                     button: "Aww yiss!",
                 });
-                window.open(`http://localhost:3001?token=${res.data.token}`)
+            window.open(`https://dashboard-return-zero.netlify.app?token=${res.data.token}`)
             }).then(err => {
                 console.log(err);
                 swal({
