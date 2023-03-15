@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import store from './app/store';
 import jwt_decode from 'jwt-decode'
 
-
+axios.defaults.baseURL = 'https://erp-server-boj8mk8f2-imranbappy.vercel.app';
 axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
