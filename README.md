@@ -7,7 +7,7 @@
 ### Main Site Link
 
 ```
-https://return-zero.netlify.app/
+https://returnzero.netlify.app/
 ```
 
 ### Dashboard Link
