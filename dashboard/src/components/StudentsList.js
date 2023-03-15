@@ -1,7 +1,7 @@
 import React from 'react';
 import InputForm from './inputlist';
 
-import { studentListBody, studentListHead } from '../data/staudentList';
+import { studentListHead } from '../data/staudentList';
 import List from './List';
 
 const StudentsList = ({ body }) => {

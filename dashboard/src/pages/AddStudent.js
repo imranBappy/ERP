@@ -26,9 +26,9 @@ const AddStudent = (props) => {
         });
         console.log(std);
 
-        // props.admissionPostAction({ data: props.admission.data, newData: formData })
-        // alert('Student Added Successfully')
-        // return navigate("/students");
+        props.admissionPostAction({ data: props.admission.data, newData: formData })
+        alert('Student Added Successfully')
+        return navigate("/students");
 
     }
 

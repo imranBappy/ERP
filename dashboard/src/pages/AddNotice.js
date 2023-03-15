@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Input from '../components/Input';
 import TeacherAddField from '../data/noticeAdd';
 import { useForm } from 'react-hook-form';
@@ -10,8 +10,8 @@ import { noticePostAction } from '../app/actions/noticeAction';
 import { useNavigate } from "react-router-dom";
 
 const AddNotice = (props) => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [file, setFile] = useState(null);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [file,] = useState(null);
 
     const formData = new FormData()
     let navigate = useNavigate();
