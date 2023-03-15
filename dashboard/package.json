@@ -94,7 +94,7 @@
     "netlify-cli": "^12.12.1",
     "tailwindcss": "^3.2.6"
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://erp-server-boj8mk8f2-imranbappy.vercel.app",
   "jest": {
     "roots": [
       "<rootDir>/src"

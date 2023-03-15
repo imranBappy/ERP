@@ -49,5 +49,5 @@
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "https://erp-server-boj8mk8f2-imranbappy.vercel.app"
 }
