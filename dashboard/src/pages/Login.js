@@ -24,7 +24,10 @@ const Login = (props) => {
                     errors={errors}
                     type="email"
                     placeholder="Email" />
+                defaultValue={'imran@gmail.com'}
+
                 <Input
+                    defaultValue={'pass123'}
                     name="password"
                     label='Password you email'
                     register={register}
